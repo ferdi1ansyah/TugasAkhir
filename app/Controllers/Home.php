@@ -14,3 +14,5 @@ class Home extends BaseController
 		return view('auth/registep');
 	}
 }
+
+

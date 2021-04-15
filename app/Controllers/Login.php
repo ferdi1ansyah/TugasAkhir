@@ -9,7 +9,11 @@
         // tampilan login
         function index() {
 
-            return view('login/V_login');
+            $session = \Config\Services::session();
+
+            $data['session'] = $session;
+
+            return view('login/V_login', $data);
         }
 
 
@@ -35,8 +39,7 @@
             $password = $this->request->getPost('password');
 
             // @TODO 2 : Kirim ke model
-            $modelLogin->ambilDataProfile( $username, $password );
-            
+            return $modelLogin->ambilDataProfile( $username, $password );
 
         }
 

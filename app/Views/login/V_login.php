@@ -1,5 +1,7 @@
 
-<?= $this->extend('Auth/templates/index'); ?>
+<?=
+
+$this->extend('Auth/templates/index');?>
 
 <?php //$this->extend('templates/template_login'); ?>
 
@@ -16,13 +18,20 @@
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
+
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                            
                             <div class="col-lg">
+                                
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+
+                                        <?php 
+                                        
+                                            echo $session->getFlashdata('pesan');
+                                        ?>
                                     </div>
                                     <form class="user" action="/login/proseslogin" method="POST">
                                         <div class="form-group">

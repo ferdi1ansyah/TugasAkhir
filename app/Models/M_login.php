@@ -9,12 +9,13 @@
         // ambil data tabel profile
         function ambilDataProfile( $username, $password ) {
 
-
+            // load config
             $db      = \Config\Database::connect();
+            $session = \Config\Services::session();
 
             /**
              *  To Do 3 : Mencocokan data 
-             *  1. Ambil data profile berdasarkan username (cek)
+             *  1. Ambil data tabel profile berdasarkan username (cek)
              *      jika ada -> lanjut ke step 2 
              *      jika tidak -> stop | akun tidak terdaftar / tidak ditemukan
              * 
@@ -35,20 +36,31 @@
 
                 
                 // @TODO 3.2 : Pengecekan password
+                /**
+                 * 
+                 *  @param $password = merupakan variabel yang menampung nilai dari view
+                 *  @param $data['password] = merupakan variabel untuk mengambil nilai dari database (profile)
+                 */
                 if ( password_verify( $password, $data['password'] ) ) {
 
-                    echo "Okee username dan password benar -> masuk dashboard";
+                    return redirect()->to( base_url('dashboard/index') );
 
                 } else{ // wrong password
 
-                    echo "Password salah";
+                    // memasang session flashdata untuk menampilkan pesan 
+                    $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';
+                    $session->setFlashdata('pesan', $elementHTML);
+                    
+                    return redirect()->to( base_url( 'login/index' ) );
                 }
 
             
             // username tidak ditemukan maka (tidak terdaftar)
             } else {
 
-                echo "Tidak terdaftar";
+                $session->setFlashdata('pesan', "Akun tidak terdaftar");
+
+                return redirect()->to( base_url('login/index') );
             }
 
         }

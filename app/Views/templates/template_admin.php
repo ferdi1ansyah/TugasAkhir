@@ -101,6 +101,13 @@
                   <span>Laporan</span>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) { echo "active"; }  ?>" href="/dataguru/index">
+                  <i class="material-icons">storage</i>
+                  <span>Data Guru</span>
+                </a>
+              </li>
               
             </ul>
           </div>

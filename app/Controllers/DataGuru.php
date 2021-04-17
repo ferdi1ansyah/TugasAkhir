@@ -8,6 +8,6 @@ class DataGuru extends Controller{
 
     function index() {
 
-        return view('admin/dataguru/V_dataGuru/);
+        return view("admin/dataguru/V_dataGuru");
     }
 }

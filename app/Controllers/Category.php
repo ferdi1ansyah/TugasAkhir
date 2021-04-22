@@ -110,14 +110,11 @@ class Category extends Controller{
 
             return $model->onUpdateSubCategory( $id_mapel_subkategori, $dataSubCategory );
         }
-
-
-
-
-
+    }
         function testing() {
 
             $password = "password";
             echo password_hash($password, PASSWORD_BCRYPT);
         }
-    }
+        
+    // }

@@ -14,4 +14,9 @@ class Dashboard extends Controller {
 
         return view('admin/dashboard/V_dashboard');
     }
+
+    function index2() {
+        
+        return view('guru/dashboard/V_dashboard');
+    }
 }

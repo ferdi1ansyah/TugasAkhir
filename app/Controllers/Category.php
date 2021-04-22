@@ -14,7 +14,8 @@ class Category extends Controller{
         function index() {
 
             $model = new M_category();
-            $data['mapel'] = $model->getDataCategory();
+            $data['mapel']      = $model->getDataCategory();
+            $data['submapel']   = $model->getDataSubKategori();
 
 
             return view('admin/kategori/V_kategori', $data);
@@ -54,5 +55,59 @@ class Category extends Controller{
 
             // @TODO 2 : Kirim nilai ke model 
             return $model->onInsertCategory( $namamapel, $status );
+        }
+
+
+
+        function prosesTambahSubKategori() {
+
+            $model = new M_category();
+
+            // ambil nilai 
+            $namamapel = $this->request->getPost('namamapel');
+            $submapel  = $this->request->getPost('namasubmapel');
+            $status    = $this->request->getPost('status');
+
+            $dataSubCategory = array(
+
+                'id_mapel_kategori' => $namamapel, 
+                'name'              => $submapel,
+                'status'            => $status
+            );
+
+            return $model->onInsertSubCategory( $dataSubCategory );
+        }
+
+
+
+
+        // proses hapus
+        function prosesHapusSubKategori( $id_mapel_subkategori ) {
+
+            $model = new M_category();
+
+            return $model->onDeleteSubCategory( $id_mapel_subkategori );
+        }
+
+
+        // proses update
+        function prosesUpdateSubKategori( $id_mapel_subkategori ) {
+
+
+            $model = new M_category();
+
+            // ambil nilai 
+            $namamapel = $this->request->getPost('namamapel');
+            $submapel  = $this->request->getPost('namasubmapel');
+            $status    = $this->request->getPost('status');
+
+            $dataSubCategory = array(
+
+                'id_mapel_kategori' => $namamapel, 
+                'name'              => $submapel,
+                'status'            => $status
+            );
+
+            return $model->onUpdateSubCategory( $id_mapel_subkategori, $dataSubCategory );
         }
     }

@@ -5,6 +5,17 @@
     class M_category extends Model{
 
 
+        // query data sub category
+        function getDataSubKategori() {
+
+            // load db
+            $db      = \Config\Database::connect();
+            $query = $db->table('mapel_subkategori')->get();
+
+            return $query;
+
+        }
+
 
         function getDataCategory() {
 
@@ -34,5 +45,66 @@
 
             // redirect
             return redirect()->to( base_url( 'category' ) );
+        }
+
+
+
+
+
+        function onInsertSubCategory( $dataSubCategory ) {
+
+            // load db
+            $db      = \Config\Database::connect();
+            $db->table('mapel_subkategori')->insert( $dataSubCategory );
+
+            // redirect
+            $url = base_url( 'category' );
+            return redirect()->to( $url );
+
+        }
+
+
+
+        // delete
+        function onDeleteSubCategory( $id_mapel_subkategori ){
+
+            // load db
+            $db      = \Config\Database::connect();
+            $session = \Config\Services::session();
+            
+            $db->table('mapel_subkategori')
+                ->where('id_mapel_subkategori', $id_mapel_subkategori)
+                ->delete();
+
+
+            $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> <small>Mapel subkategori berhasil terhapus</small></div>';
+            $session->setFlashdata('pesan', $elementHTML);
+            
+            // redirect
+            $url = base_url( 'category' );
+            return redirect()->to( $url );
+        }
+
+
+        // update
+        function onUpdateSubCategory( $id_mapel_subkategori, $dataSubCategory ){
+
+            // load db
+            $db      = \Config\Database::connect();
+            $session = \Config\Services::session();
+
+            $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> 
+                            <small>Mapel subkategori berhasil diperbarui</small>
+                            </div>';
+            $session->setFlashdata('pesan', $elementHTML);
+
+
+             $db->table('mapel_subkategori')
+                ->where('id_mapel_subkategori', $id_mapel_subkategori)
+                ->update( $dataSubCategory );
+ 
+             // redirect
+             $url = base_url( 'category' );
+             return redirect()->to( $url );
         }
     }

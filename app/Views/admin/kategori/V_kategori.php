@@ -153,7 +153,7 @@
                                 
                                 
                                 <br>
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambah-subkategori">Tambahkan Sub-kategori</button>
+                                <button class="btn btn-secondary" data-toggle="modal" data-target="#tambah-subkategori">Tambahkan Sub-kategori</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="tambah-subkategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">

@@ -4,7 +4,7 @@
     <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shards Dashboard Lite - Free Bootstrap Admin Template – DesignRevision</title>
+    <title>Pipel</title>
     <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -32,7 +32,7 @@
               <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
                   <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="<?php echo base_url() ?>/assets/images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-                  <span class="d-none d-md-inline ml-1">Shards Dashboard</span>
+                  <span class="d-none d-md-inline ml-1">Pipel Admin</span>
                 </div>
               </a>
               <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -68,7 +68,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "report" ) { echo "active"; }  ?>" href="/report/index">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "category" ) { echo "active"; }  ?>" href="/category/index">
                   <i class="material-icons">assignment</i>
                   <span>Master Kategori</span>
                 </a>

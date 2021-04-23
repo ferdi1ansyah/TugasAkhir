@@ -115,12 +115,42 @@
                                         
                                     ?>
                                     <li class="list-group-item">
-                                        <a href="">
+                                        
                                         
                                             <div style="font-weight: 400; color: #424242"><?php echo $nilai['nama'] ?></div>
                                             <small style="color: #757575">Dibuat pada <?php echo date('d M Y', strtotime( $nilai['created_at'] )) ?></small>
-                                        </a>
+                                            <a href=":;" class="btn btn-danger"  data-toggle="modal" data-target="#hapus-kategori-<?php echo $nilai['id_mapel_kategori'] ?>"><i class="material-icons">delete</i></a>
+                                            <a href=":;" data-toggle="modal" data-target="#update-kategori-<?php echo $nilai['id_mapel_kategori'] ?>" class="btn btn-warning"><i class="material-icons">edit</i></a>
+                                        
                                     </li>
+
+                                    <div class="modal fade" id="hapus-kategori-<?php echo $nilai['id_mapel_kategori'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Tambah Subkategori</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+
+                                      
+                                        <div class="modal-body">
+
+
+                                           
+                                           
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                            <a href="/category/prosesHapusKategori/<?php echo $nilai['id_mapel_kategori'] ?>" class="btn btn-danger">Hapus</a>
+                                        </div>
+                                     
+
+                                        </div>
+                                    </div>
+                                </div>
 
                                     <?php
                                             endforeach;
@@ -153,7 +183,7 @@
                                 
                                 
                                 <br>
-                                <button class="btn btn-secondary" data-toggle="modal" data-target="#tambah-subkategori">Tambahkan Sub-kategori</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#tambah-subkategori">Tambahkan Sub-kategori</button>
                                 <!-- Modal -->
                                 <div class="modal fade" id="tambah-subkategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">

@@ -107,4 +107,25 @@
              $url = base_url( 'category' );
              return redirect()->to( $url );
         }
+
+        function prosesHapusKategori( $id_mapel_kategori ){
+
+            // load db
+            $db      = \Config\Database::connect();
+            $session = \Config\Services::session();
+            
+            $db->table('mapel_kategori')
+                ->where('id_mapel_kategori', $id_mapel_kategori)
+                ->delete();
+
+
+            $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> <small>Mapel subkategori berhasil terhapus</small></div>';
+            $session->setFlashdata('pesan', $elementHTML);
+            
+            // redirect
+            $url = base_url( 'category' );
+            return redirect()->to( $url );
+        }
+
+
     }

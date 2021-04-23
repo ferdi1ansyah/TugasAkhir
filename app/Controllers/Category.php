@@ -112,6 +112,13 @@ class Category extends Controller{
         }
 
 
+        function prosesHapusKategori( $id_mapel_kategori ) {
+            $model = new M_category();
+
+            // ambil nilai 
+           
+            return $model->prosesHapusKategori( $id_mapel_kategori);
+        }
 
 
 

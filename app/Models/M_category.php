@@ -127,5 +127,27 @@
             return redirect()->to( $url );
         }
 
+        function onUpdateCategory( $id_mapel_kategori, $dataCategory ){
+
+            // load db
+            $db      = \Config\Database::connect();
+            $session = \Config\Services::session();
+
+            $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> 
+                            <small>Mapel subkategori berhasil diperbarui</small>
+                            </div>';
+            $session->setFlashdata('pesan', $elementHTML);
+
+
+             $db->table('mapel_subkategori')
+                ->where('id_mapel_subkategori', $id_mapel_kategori)
+                ->update( $dataCategory );
+ 
+             // redirect
+             $url = base_url( 'category' );
+             return redirect()->to( $url );
+        }
+
+
 
     }

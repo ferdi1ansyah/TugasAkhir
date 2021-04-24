@@ -173,6 +173,72 @@
 
                             </div>
 
+                             <!-- Edit -->
+                             <div class="modal fade" id="update-subkategori-<?php echo $submapel['id_mapel_kategori'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tambah Subkategori</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+
+                                                <form action="/category/prosesUpdateKategori/<?php echo $mapel['id_mapel_kategori'] ?>" method="POST">
+                                                <div class="modal-body">
+
+
+                                                    <div class="form-group">
+                                                        <label for="">Nama Kategori</label>
+                                                        <select name="namamapel" id="" class="form-control">
+                                                            
+                                                            <?php foreach ( $mapel->getResultArray() as $kategori ) : ?>
+                                                            
+                                                            <option 
+                                                                value="<?php echo $kategori['id_mapel_kategori'] ?>" 
+                                                                <?php if ( $submapel['id_mapel_kategori'] == $kategori['id_mapel_kategori'] ) {
+
+                                                                    echo 'selected="selected"';
+                                                                } ?>
+
+                                                                ><?php echo $kategori['nama'] ?></option>
+                                                            
+                                                            <?php endforeach; ?>
+                                                        </select>
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                    
+                                                        <label class="">Nama Kategori</label>
+                                                        <input type="text" class="form-control" name="namamapel" placeholder="Contoh IPA, MAT" required="" value="<?php echo $submapel['name'] ?>">
+                                                        <small>Berisi nama kategori mapel</small>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+                                                        <label>Status Mata Pelajaran</label> <br>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="status" id="inlineRadio1-<?php echo $submapel['id_mapel_subkategori'] ?>" value="aktif" <?php if ( $submapel['status'] == "aktif" ) { echo "checked"; } ?>>
+                                                            <label class="form-check-label" for="inlineRadio1-<?php echo $submapel['id_mapel_subkategori'] ?>">Aktif</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="status" id="inlineRadio2-<?php echo $submapel['id_mapel_subkategori'] ?>" value="nonaktif" <?php if ( $submapel['status'] == "nonaktif" ) { echo "checked"; }  ?>>
+                                                            <label class="form-check-label" for="inlineRadio2-<?php echo $submapel['id_mapel_subkategori'] ?>">Non-aktif</label>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                    <button class="btn btn-primary">Tambahkan dan Simpan</button>
+                                                </div>
+                                                </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
                             <div class="col-md-8">
                             
                                 <h5 style="margin: 0px">Kategori Mapel</h5>

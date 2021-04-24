@@ -112,6 +112,7 @@ class Category extends Controller{
         }
 
 
+
         function prosesHapusKategori( $id_mapel_kategori ) {
             $model = new M_category();
 
@@ -120,11 +121,38 @@ class Category extends Controller{
             return $model->prosesHapusKategori( $id_mapel_kategori);
         }
 
+        function prosesUpdateKategori( $id_mapel_kategori ) {
 
+
+            $model = new M_category();
+
+            // ambil nilai 
+            $namamapel = $this->request->getPost('namamapel');
+            $mapel  = $this->request->getPost('namamapel');
+            $status    = $this->request->getPost('status');
+            $
+
+            $dataSubCategory = array(
+
+                'id_mapel_kategori' => $namamapel, 
+                'name'              => $mapel,
+                'status'            => $status
+            );
+
+            return $model->onUpdateSubCategory( $id_mapel_kategori, $dataSubCategory );
+        }
+
+
+
+
+
+
+    
 
         function testing() {
 
             $password = "password";
             echo password_hash($password, PASSWORD_BCRYPT);
         }
+        
     }

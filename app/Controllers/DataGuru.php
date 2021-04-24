@@ -10,4 +10,8 @@ class DataGuru extends Controller{
 
         return view("admin/dataguru/V_dataGuru");
     }
+
+    function index2() {
+        return view("guru/datamateri/V_datamateri.php");
+    }
 }

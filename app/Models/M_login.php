@@ -43,9 +43,30 @@
                  */
                 if ( password_verify( $password, $data['password'] ) ) {
 
-                    return redirect()->to( base_url('dashboard/index') );
+                    switch( $data['hak_akses'] ) {
 
-                } else{ // wrong password
+                        case "superadmin":
+                            return redirect()->to( base_url('dashboard/index') );
+                            break;
+
+                        case "guru":
+                            return redirect()->to( base_url('dashboard/index2') );
+                            break;
+                         
+
+
+
+                        // . . .
+                    }
+
+                    
+
+
+                } 
+                
+                
+                
+                else{ // wrong password
 
                     // memasang session flashdata untuk menampilkan pesan 
                     $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';

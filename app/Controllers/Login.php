@@ -5,6 +5,17 @@
     use App\Models\M_login;
     
     class Login extends Controller {
+
+        // property
+        protected $session;
+
+        function __construct() {
+
+            $this->session = \Config\Services::session();
+
+            
+        }
+
     
         // tampilan login
         function index() {
@@ -43,6 +54,25 @@
 
         }
 
+
+
+
+
+
+
+
+
+
+
+        // proses logout
+        function proseslogout() {
+
+            $session = \Config\Services::session();
+            $session->destroy();
+
+            $url = base_url('login/index');
+            return redirect()->to( $url );
+        }
 
         function belajarEnkripsi() {
 

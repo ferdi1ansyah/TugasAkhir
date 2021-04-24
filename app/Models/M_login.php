@@ -43,19 +43,26 @@
                  */
                 if ( password_verify( $password, $data['password'] ) ) {
 
+
+                    $NilaiSession = array(
+
+                        'sess_id_profile'   => $data['id_profile'],
+                        'sess_username'     => $data['username'],
+                        'sess_hak_akses'     => $data['hak_akses'],
+                    );
+
+                    $session->set( $NilaiSession );
+
                     switch( $data['hak_akses'] ) {
 
                         case "superadmin":
+
                             return redirect()->to( base_url('dashboard/index') );
                             break;
 
                         case "guru":
                             return redirect()->to( base_url('dashboard/index2') );
                             break;
-                         
-
-
-
                         // . . .
                     }
 

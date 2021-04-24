@@ -1,11 +1,31 @@
 <?php 
 
-    namespace App\Controllers;
-    use CodeIgniter\Controller;
-    use App\Models\M_category;
+namespace App\Controllers;
+use CodeIgniter\Controller;
+use App\Models\M_category;
 
 class Category extends Controller{
 
+
+     // property
+    protected $session;
+
+    function __construct() { // konstruktor
+
+        $this->session = \Config\Services::session();   
+
+        // cek sesi aktif 
+        if ( empty( $this->session->get('sess_username') ) ) {
+
+            // flashdata
+            $this->session->setFlashdata('pesan', 'Harap login terlebih dahulu');
+
+            $url = base_url('login/index');
+            header('Location: '.$url);
+
+            exit(); 
+        }
+    }
 
         /**
          * 
@@ -127,19 +147,16 @@ class Category extends Controller{
             $model = new M_category();
 
             // ambil nilai 
-            $namamapel = $this->request->getPost('namamapel');
             $mapel  = $this->request->getPost('namamapel');
             $status    = $this->request->getPost('status');
-            $
 
-            $dataSubCategory = array(
+            $dataCategory = array(
 
-                'id_mapel_kategori' => $namamapel, 
-                'name'              => $mapel,
+                'nama'              => $mapel,
                 'status'            => $status
             );
 
-            return $model->onUpdateSubCategory( $id_mapel_kategori, $dataSubCategory );
+            return $model->onUpdateCategory( $id_mapel_kategori, $dataCategory );
         }
 
 

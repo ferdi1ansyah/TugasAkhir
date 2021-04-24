@@ -139,8 +139,8 @@
             $session->setFlashdata('pesan', $elementHTML);
 
 
-             $db->table('mapel_subkategori')
-                ->where('id_mapel_subkategori', $id_mapel_kategori)
+             $db->table('mapel_kategori')
+                ->where('id_mapel_kategori', $id_mapel_kategori)
                 ->update( $dataCategory );
  
              // redirect

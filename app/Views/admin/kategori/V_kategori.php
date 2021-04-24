@@ -125,32 +125,33 @@
                                     </li>
 
                                     <div class="modal fade" id="hapus-kategori-<?php echo $mapel['id_mapel_kategori'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Tambah Subkategori</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
+                                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tambah Subkategori</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+
+                                        
+                                                <div class="modal-body">
+                                                
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                    <a href="/category/prosesHapusKategori/<?php echo $mapel['id_mapel_kategori'] ?>" class="btn btn-danger">Hapus</a>
+                                                </div>
+                                        
+
+                                            </div>
                                         </div>
 
-                                      
-                                        <div class="modal-body">
-
-
-                                           
-                                           
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                            <a href="/category/prosesHapusKategori/<?php echo $mapel['id_mapel_kategori'] ?>" class="btn btn-danger">Hapus</a>
-                                        </div>
-                                     
-
-                                        </div>
                                     </div>
+                                    
 
+                                    <!-- Start Update -->
                                     <div class="modal fade" id="update-kategori-<?php echo $mapel['id_mapel_kategori'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                             <div class="modal-content">
@@ -164,9 +165,6 @@
                                                 <form action="/category/prosesUpdateKategori/<?php echo $mapel['id_mapel_kategori'] ?>" method="POST">
                                                 <div class="modal-body">
 
-
-                                                    
-                                                    
                                                     <div class="form-group">
                                                     
                                                         <label class="">Nama Kategori</label>
@@ -180,8 +178,8 @@
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" name="status" id="inlineRadio1-<?php echo $mapel['id_mapel_kategori'] ?>" value="aktif" <?php if ( $mapel['status'] == "aktif" ) { echo "checked"; } ?>>
                                                             <label class="form-check-label" for="inlineRadio1-<?php echo $mapel['id_mapel_kategori'] ?>">Aktif</label>
-                                                            </div>
-                                                            <div class="form-check form-check-inline">
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" name="status" id="inlineRadio2-<?php echo $mapel['id_mapel_kategori'] ?>" value="nonaktif" <?php if ( $mapel['status'] == "nonaktif" ) { echo "checked"; }  ?>>
                                                             <label class="form-check-label" for="inlineRadio2-<?php echo $mapel['id_mapel_kategori'] ?>">Non-aktif</label>
                                                         </div>
@@ -194,8 +192,7 @@
                                                     <button class="btn btn-primary">Tambahkan dan Simpan</button>
                                                 </div>
                                                 </form>
-
-                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>

@@ -14,7 +14,7 @@ class Category extends Controller{
         function index() {
 
             $model = new M_category();
-            $data['mapel']      = $model->getDataCategory();
+            $data['dataMapel']      = $model->getDataCategory();
             $data['submapel']   = $model->getDataSubKategori();
 
 

@@ -64,10 +64,6 @@ class Category extends Controller{
              *  5. End / kembali ke halaman sebelumnya
              *  
              */
-            
-            
-
-
 
             // @TODO 1 : Ambil nilai 
             $namamapel = $this->request->getPost('namamapel');

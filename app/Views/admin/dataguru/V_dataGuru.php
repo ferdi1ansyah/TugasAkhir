@@ -4,346 +4,117 @@
 
 ?>
 
-<?php $this->section('content') ?>
+<?php $this->section('content') 
 
 
- <div class="main-content-container container-fluid px-12">
+?>
+
+<div class="main-content-container container-fluid px-12">
 
  <div class="col-lg-12 grid-margin stretch-card">
+
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Striped Table</h4>
-                  <p class="card-description">
-                    Add class <code>.table-striped</code>
-                  </p>
+                  <h4 class="card-title">Tabel Data Guru</h4>
+                  <div class="card card-body">
+
+                    <div class="row">
+                            <button data-toggle="modal" data-target="#tambah-guru" style="margin-bottom: 20px"
+                             class="btn btn-primary btn-sm">
+                            <i class="material-icons">add</i> Tambah Data Guru</button>
                   <div class="table-responsive">
                     <table class="table table-striped">
+                    
                       <thead>
                         <tr>
                           <th>
-                            User
+                            Nama Lengkap
                           </th>
                           <th>
-                            First name
+                            Gender
                           </th>
                           <th>
-                            Progress
+                            Asal Sekolah
                           </th>
                           <th>
-                            Amount
+                            Pendidikan
                           </th>
                           <th>
-                            Deadline
+                            Email
+                          </th>
+                          <th>
+                            Telp
+                          </th>
+                          <th>
+                            Foto
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face1.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face2.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            Messsy Adam
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $245.30
-                          </td>
-                          <td>
-                            July 1, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face3.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            John Richards
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $138.00
-                          </td>
-                          <td>
-                            Apr 12, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face4.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            Peter Meggik
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face5.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            Edward
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 160.25
-                          </td>
-                          <td>
-                            May 03, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face6.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            John Doe
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 123.21
-                          </td>
-                          <td>
-                            April 05, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="py-1">
-                            <img src="../../images/faces/face7.jpg" alt="image"/>
-                          </td>
-                          <td>
-                            Henry Tom
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 150.00
-                          </td>
-                          <td>
-                            June 16, 2015
-                          </td>
-                        </tr>
-                      </tbody>
+                     
+                          <div class="modal fade" id="tambah-guru" tabindex="-1" role="dialog" 
+                          aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Tambah Data Guru</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        
+
+                                        <form action="/dataguru/prosesTambahGuru" method="POST">
+                                        <div class="modal-body">
+
+                                            
+                                            <div class="form-group">
+                                            
+                                                <label class="">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama_lengkap" placeholder="" required="">
+                                                <form action="">
+                                                <label class="">Jenis Kelamin</label>
+                                                     <p><input type="radio" name="gender" value="Laki-laki"> Laki-Laki
+                                                     <input type="radio" name="gender" value="Perempuan">  Perempuan
+                                                <label class="">Asal Sekolah</label>
+                                                <input type="text" class="form-control" name="asal_sekolah" placeholder="" required="">
+                                                <label class="">Pendidikan</label>
+                                                <input type="text" class="form-control" name="pendidikan" placeholder="" required="">
+                                                <label class="">Email</label>
+                                                <input type="email" class="form-control" name="email" placeholder="" required="">
+                                                <label class="">Telf</label>
+                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Foto</label>
+                      
+                                             <input type="file" name="foto" class="dropify" data-height="300">
+                                        </div>
+                                        
+                                            </div>
+                                            <div class="form-group">
+                                            <div class="form-group">
+                                        </div>
+                                        
+
+
+                                       
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                            <button class="btn btn-primary">Tambahkan dan Simpan</button>
+                                        </div>
+                                        </form>
+
+                                        </div>
+                                       
+                 
                     </table>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-lg-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">Bordered table</h4>
-                  <p class="card-description">
-                    Add class <code>.table-bordered</code>
-                  </p>
-                  <div class="table-responsive pt-3">
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr>
-                          <th>
-                            #
-                          </th>
-                          <th>
-                            First name
-                          </th>
-                          <th>
-                            Progress
-                          </th>
-                          <th>
-                            Amount
-                          </th>
-                          <th>
-                            Deadline
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            1
-                          </td>
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            Messsy Adam
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $245.30
-                          </td>
-                          <td>
-                            July 1, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            3
-                          </td>
-                          <td>
-                            John Richards
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $138.00
-                          </td>
-                          <td>
-                            Apr 12, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Peter Meggik
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Edward
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 160.25
-                          </td>
-                          <td>
-                            May 03, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            John Doe
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 123.21
-                          </td>
-                          <td>
-                            April 05, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            7
-                          </td>
-                          <td>
-                            Henry Tom
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 150.00
-                          </td>
-                          <td>
-                            June 16, 2015
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+       
+                      
                 </div>
-              </div>
-            </div>
+             
+            
 
 <?php $this->endSection() ?>

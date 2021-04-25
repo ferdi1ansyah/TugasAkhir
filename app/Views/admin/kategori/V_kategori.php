@@ -44,10 +44,12 @@
                                 <h5 style="margin: 0px">Kategori Mapel</h5>
                                 <label class="text-muted">Mohon isi mapel kategori dibawah ini</label>
 
-                                <button data-toggle="modal" data-target="#tambah-kategori" style="margin-bottom: 10px" class="btn btn-primary btn-sm"><i class="material-icons">add</i> Tambah Kategori</button>
+                                <button data-toggle="modal" data-target="#tambah-kategori" style="margin-bottom: 10px" 
+                                class="btn btn-primary btn-sm"><i class="material-icons">add</i> Tambah Kategori</button>
                                 
                                 <!-- Modal -->
-                                <div class="modal fade" id="tambah-kategori" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="tambah-kategori" tabindex="-1" role="dialog" 
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                         <div class="modal-content">
                                         <div class="modal-header">
@@ -63,7 +65,7 @@
 
                                             
                                             <div class="form-group">
-                                            
+
                                                 <label class="">Nama Kategori</label>
                                                 <input type="text" class="form-control" name="namamapel" placeholder="Contoh IPA, MAT" required="">
                                                 <small>Berisi nama kategori mapel</small>
@@ -93,13 +95,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
-
-
 
 
                                 <ul class="list-group list-group-flush">

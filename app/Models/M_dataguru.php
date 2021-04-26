@@ -4,6 +4,7 @@
 
     class M_dataguru extends Model{
 
+<<<<<<< Updated upstream
 
         // query data sub category
         function getDataGuru() {
@@ -49,3 +50,8 @@
 
 
     }
+=======
+        
+
+    }
+>>>>>>> Stashed changes

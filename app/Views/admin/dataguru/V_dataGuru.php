@@ -15,6 +15,7 @@
 
               <div class="card">
                 <div class="card-body">
+<<<<<<< Updated upstream
                   <h4 class="card-title">Tabel Data Guru</h4>
                   <div class="card card-body">
 
@@ -22,6 +23,12 @@
                             <button data-toggle="modal" data-target="#tambah-guru" style="margin-bottom: 20px"
                              class="btn btn-primary btn-sm">
                             <i class="material-icons">add</i> Tambah Data Guru</button>
+=======
+                  <h4 class="card-title">Data Guru</h4>
+                  <p class="card-description">
+                    Add class <code>.table-striped</code>
+                  </p>
+>>>>>>> Stashed changes
                   <div class="table-responsive">
                     <table class="table table-striped">
                     

@@ -43,9 +43,4 @@
         return redirect()->to( base_url( 'dataguru' ) );
     }
 
-
-
-
-
-
     }

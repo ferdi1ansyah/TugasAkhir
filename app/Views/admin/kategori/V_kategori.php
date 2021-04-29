@@ -105,7 +105,7 @@
                                     // cek apakah ada datanya ?
                                     if ( $dataMapel->getNumRows() > 0 ) {
                                         
-                                        // foreach
+                                        // `foreach`
                                         foreach ( $dataMapel->getResultArray() AS $mapel ) :
                                         
                                     ?>

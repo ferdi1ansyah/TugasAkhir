@@ -66,12 +66,14 @@
                                         <form action="/dataguru/prosesTambahGuru" method="POST">
                                         <div class="modal-body">
 
+                                       
                                             
                                             <div class="form-group">
                                             
+                                              
+                                                <form action="">
                                                 <label class="">Nama Lengkap</label>
                                                 <input type="text" class="form-control" name="nama_lengkap" placeholder="" required="">
-                                                <form action="">
                                                 <label class="">Jenis Kelamin</label>
                                                      <p><input type="radio" name="gender" value="Laki-laki"> Laki-Laki
                                                      <input type="radio" name="gender" value="Perempuan">  Perempuan
@@ -82,7 +84,7 @@
                                                 <label class="">Email</label>
                                                 <input type="email" class="form-control" name="email" placeholder="" required="">
                                                 <label class="">Telf</label>
-                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <input type="text" class="form-control" name="telp" placeholder="" required="">
                                                 <label class="">Foto</label>
                       
                                              <input type="file" name="foto" class="dropify" data-height="300">
@@ -92,10 +94,7 @@
                                             <div class="form-group">
                                             <div class="form-group">
                                         </div>
-                                        
-
-
-                                       
+                               
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                                             <button class="btn btn-primary">Tambahkan dan Simpan</button>
@@ -104,17 +103,39 @@
 
                                         </div>
                                        
-                 
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 grid-margin stretch-card">
-       
-                      
-                </div>
-             
-            
+                            
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
 
-<?php $this->endSection() ?>
+                     
+                            <ul class="list-group list-group-flush">
+
+
+                          <?php 
+                          // cek apakah ada datanya ?
+                          if ( $dataGuru->getNumRows() > 0 ) {
+                              
+                              // `foreach`
+                              foreach ( $dataGuru->getResultArray() AS $guru ) :
+                              
+                          ?>
+                          <li class="list-group-item">
+               
+
+                          <?php
+                                  endforeach;
+
+                              // mapel kosong
+                              } 
+                              
+                          ?>
+                          </ul>           
+                          </div>
+
+                                      <div class="col-lg-12 grid-margin stretch-card">
+                               
+
+                          <?php $this->endSection() 
+                          ?>

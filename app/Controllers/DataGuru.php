@@ -31,12 +31,11 @@ class DataGuru extends Controller{
     function index() {
 
         $model = new M_dataguru();
-        $data['dataGuru']      = $model->getDataGuru();
+        $guru['dataGuru']      = $model->getDataGuru();
 
-        return view("admin/dataguru/V_dataGuru" , $data);
+        return view("admin/dataguru/V_dataGuru" , $guru);
 
     }
-
 
     /**
          * 
@@ -68,11 +67,43 @@ class DataGuru extends Controller{
             $email           = $this->request->getPost('email');
             $telp            = $this->request->getPost('telp');
             $foto            = $this->request->getPost('foto');
+
+
+            
+
             
             // @TODO 2 : Kirim nilai ke model 
             return $model->onInsertGuru( $namalengkap, $gender, $asalsekolah, 
                                                 $pendidikan, $email, $telp, $foto);
         }
+        
+        // function prosesHapusKategori( $id_mapel_kategori ) {
+        //     $model = new M_dataguru();
+
+        //     // ambil nilai 
+           
+        //     return $model->prosesHapusKategori( $id_mapel_kategori);
+        // }
+
+        // function prosesUpdateKategori( $id_mapel_kategori ) {
+
+
+        //     $model = new M_dataguru();
+
+        //     // ambil nilai 
+        //     $mapel  = $this->request->getPost('namamapel');
+        //     $status    = $this->request->getPost('status');
+
+        //     $dataCategory = array(
+
+        //         'nama'              => $mapel,
+        //         'status'            => $status
+        //     );
+
+        //     return $model->onUpdateCategory( $id_mapel_kategori, $dataCategory );
+        // }
+
+
 
     function index2() {
         return view("guru/datamateri/V_datamateri.php");

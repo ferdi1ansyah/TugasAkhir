@@ -61,8 +61,19 @@
                     </tr>
                   </thead>
 
-                  
+                  <tbody>
+	<?php if ( $dataGuru->getNumRows() > 0 ) { ?>
 
+	<?php foreach ( $dataGuru->getResultArray() AS $guru ) :  ?>
+	<tr>
+
+		<td><?php echo $guru['nama_lengkap'] ?></td>
+                  
+        </tr>
+	<?php endforeach; ?>
+                  
+	<?php } ?>                  
+</tbody>
 
                 </table>
               </div>

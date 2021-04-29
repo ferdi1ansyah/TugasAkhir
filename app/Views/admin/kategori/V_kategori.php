@@ -105,7 +105,7 @@
                                     // cek apakah ada datanya ?
                                     if ( $dataMapel->getNumRows() > 0 ) {
                                         
-                                        // foreach
+                                        // `foreach`
                                         foreach ( $dataMapel->getResultArray() AS $mapel ) :
                                         
                                     ?>
@@ -391,7 +391,7 @@
                                                     <div class="form-group">
                                                     
                                                         <label class="">Nama Sub-kategori</label>
-                                                        <input type="text" class="form-control" name="namasubmapel" placeholder="Contoh IPA, MAT" required="" value="<?php echo $submapel['name'] ?>">
+                                                        <input type="text" class="form-control" name="namasubmapel" placeholder="Contoh IPA, MAT" required="" value="<?php echo $o['name'] ?>">
                                                         <small>Berisi nama kategori mapel</small>
                                                     </div>
 

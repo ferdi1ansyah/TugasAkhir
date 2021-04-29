@@ -4,24 +4,32 @@
 
 ?>
 
-<?php $this->section('content') ?>
+<?php $this->section('content') 
 
 
- <div class="main-content-container container-fluid px-12">
+?>
 
-
+<div class="main-content-container container-fluid px-12">
 
  <div class="col-lg-12 grid-margin stretch-card">
+
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Data Siswa</h4>
-                  <p class="card-description">Data siswa untuk mengetahui data yang yang dimiliki siswa
+
+                  <h4 class="card-title">Tabel Data Siswa</h4>
+                  <div class="card card-body">
+
+                    <div class="row">
+                            <button data-toggle="modal" data-target="#tambah-guru" style="margin-bottom: 20px"
+                             class="btn btn-primary btn-sm">
+                            <i class="material-icons">add</i> Tambah Data Siswa</button>
+
                   
-                  </p>
-                  <button class="btn btn-primary" type="submit">Add</button>
-                  <button class="btn btn-warning" type="submit" i class="material-icons">Edit</button>
+                 
+
                   <div class="table-responsive">
                     <table class="table table-striped">
+                    
                       <thead>
                         <tr>
                           <th>
@@ -31,78 +39,93 @@
                             Gender
                           </th>
                           <th>
-                            Domisili
+                            Asal Sekolah
                           </th>
                           <th>
-                            Tanggal Lahir
+                            Pendidikan
                           </th>
                           <th>
                             Email
                           </th>
                           <th>
-                          No telepon
-                          </th>
-                          <th>
-                        Alamat
-                          </th>
-                          <th>
-                            Pendidikan Sekarang
-                          </th>
-                          <th>
-                            Asal Sekolah
+                            Telp
                           </th>
                           <th>
                             Foto
                           </th>
-
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                        
-                          <td>
-                            Herman Beck
-                          </td>
-                          <td>
-                            Laki laki
-                          </td>
-                          <td>
-                            Malang
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
+                     
+                          <div class="modal fade" id="tambah-guru" tabindex="-1" role="dialog" 
+                          aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Tambah Data Siswa</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        
 
-                           <td>
-                            @hermansixpek
-                          </td>
-                          <td>
-                            086969696696
-                          </td>
-                          <td>
-                            Malang
-                          </td>
-                          <td>
-                           Mahasiswa
-                          </td>
-                          <td>
-                           Sdn Negeri Boston
-                          </td>
-                          <td>
-                          <td class="py-1">
-                            <img src="../../images/faces/face2.jpg" alt="image"/>
-                          </td>
-                          </td>
-                        </tr>
-                        <tr>
-                         
-                         
-                      </tbody>
+                                        <form action="/datasiswa/prosesTambahSiswa" method="POST">
+                                        <div class="modal-body">
+
+                                            
+                                            <div class="form-group">
+                                            
+                                                <label class="">Nama Lengkap</label>
+                                                <input type="text" class="form-control" name="nama_lengkap" placeholder="" required="">
+                                                <form action="">
+                                                <label class="">Jenis Kelamin</label>
+                                                     <p><input type="radio" name="gender" value="Laki-laki"> Laki-Laki
+                                                     <input type="radio" name="gender" value="Perempuan">  Perempuan
+                                                <label class="">Domisili</label>
+                                                <input type="text" class="form-control" name="asal_sekolah" placeholder="" required="">
+                                                <label class="">Tanggal Lahir</label>
+                                                <input type="text" class="form-control" name="pendidikan" placeholder="" required="">
+                                                <label class="">Email</label>
+                                                <input type="email" class="form-control" name="email" placeholder="" required="">
+                                                <label class="">Telf</label>
+                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Alamat</label>
+                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Pendidikan Sekarang</label>
+                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Asal Sekolah</label>
+                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Foto</label>
+                      
+                                             <input type="file" name="foto" class="dropify" data-height="300">
+                                        </div>
+                                        
+                                            </div>
+                                            <div class="form-group">
+                                            <div class="form-group">
+                                        </div>
+                                        
+
+
+                                       
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                            <button class="btn btn-primary">Tambahkan dan Simpan</button>
+                                        </div>
+                                        </form>
+
+                                        </div>
+                                       
+                 
                     </table>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="col-lg-12 grid-margin stretch-card">
+       
+                      
+                </div>
+             
             
 
 <?php $this->endSection() ?>

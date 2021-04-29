@@ -32,9 +32,9 @@ class DataGuru extends Controller{
     function index() {
 
         $model = new M_dataguru();
-        $data['dataGuru']      = $model->getDataGuru();
+        $guru['dataGuru']      = $model->getDataGuru();
 
-        return view("admin/dataguru/V_dataGuru" , $data);
+        return view("admin/dataguru/V_dataGuru" , $guru);
 
     }
 

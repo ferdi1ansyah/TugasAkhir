@@ -65,7 +65,7 @@ class DataGuru extends Controller{
             $asalsekolah     = $this->request->getPost('asal_sekolah');
             $pendidikan      = $this->request->getPost('pendidikan');
             $email           = $this->request->getPost('email');
-            $telp            = $this->request->getPost('telp');
+            $telp            = $this->request->getPost('telf');
             $foto            = $this->request->getPost('foto');
 
 

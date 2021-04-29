@@ -93,6 +93,13 @@
                   <span>Data Guru</span>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "datasiswa" ) { echo "active"; }  ?>" href="/datasiswa/index">
+                  <i class="material-icons">people</i>
+                  <span>Data Siswa</span>
+                </a>
+              </li>
               
             </ul>
           </div>

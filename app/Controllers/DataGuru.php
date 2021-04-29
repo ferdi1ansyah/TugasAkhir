@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\M_dataguru;
+use App\Models\M_category;
 
 class DataGuru extends Controller{
 
@@ -38,6 +39,14 @@ class DataGuru extends Controller{
     }
 
 
+    function tambah() {
+        $model = new M_category();
+        $data['mapel_kategori'] = $model->getDataKategoriAndSubKategori();
+
+        return view('admin/dataguru/V_dataGuru_tambah', $data);
+    }
+
+
     /**
          * 
          *  Proses : tambah guru
@@ -58,24 +67,60 @@ class DataGuru extends Controller{
              *  
              */
             
-        
+            
+            // print_r( $this->request->getPost() );
+
 
             // @TODO 1 : Ambil nilai 
-            $namalengkap     = $this->request->getPost('nama_lengkap');
-            $gender          = $this->request->getPost('gender');
-            $asalsekolah     = $this->request->getPost('asal_sekolah');
-            $pendidikan      = $this->request->getPost('pendidikan');
-            $email           = $this->request->getPost('email');
-            $telp            = $this->request->getPost('telf');
-            $foto            = $this->request->getPost('foto');
-            
-            // @TODO 2 : Kirim nilai ke model 
-            return $model->onInsertGuru( $namalengkap, $gender, $asalsekolah, 
-                                                $pendidikan, $email, $telp, $foto);
-        }
+            $password = $this->request->getPost('password');
+            $nilaiProfile = array(
 
-    function index2() {
-        return view("guru/datamateri/V_datamateri.php");
-    }
+                'username'  => $this->request->getPost('username'),
+                'password'  => password_hash( $password, PASSWORD_BCRYPT ),
+                'hak_akses' => "guru",
+                'status_akun' => "aktif",
+                'status_2fa'  => "nonaktif",
+                'code_2fa'    => null
+            );
+
+            $last_id_profile = $model->onInsertDataProfile( $nilaiProfile );
+
+            
+
+            
+
+            // tabel guru
+            $nilaiGuru = array(
+
+                'id_profile'        => $last_id_profile,
+                'nama_lengkap'  => $this->request->getPost('nama'),
+                'asal_sekolah'  => $this->request->getPost('asalsekolah'),
+                'pendidikan'    => $this->request->getPost('pendidikan'),
+                'email'     => $this->request->getPost('email'),
+                'telp'      => $this->request->getPost('telp'),
+                'foto'      => ""
+            );
+
+            $last_id_guru = $model->onInsertDataGuru( $nilaiGuru );
+
+
+            $mapel_kategori = $this->request->getPost('mapel_kategori');
+            $pemisah_id = explode('-', $mapel_kategori);
+
+            // echo $mapel_kategori;
+            // $id_mapel_kategori = $pemisah_id[0];
+            // $id_mapel_subkategori = $pemisah_id[1];
+            
+            // $pemisah_id = 
+            $nilaiKeahlian = array(
+
+                'id_guru'           => $last_id_guru,
+                'id_mapel_kategori' => $pemisah_id[0],
+                'id_mapel_subkategori' => $pemisah_id[1],
+            );
+
+            // insert
+            return $model->onInsertDataKeahlian( $nilaiKeahlian );
+        }
     
 }

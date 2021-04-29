@@ -4,6 +4,22 @@
 
     class M_category extends Model{
 
+        // gabungan antara kategori dan sub kategori
+        function getDataKategoriAndSubKategori() {
+
+            $db      = \Config\Database::connect();
+            $sql = "SELECT 
+                        mapel_kategori.id_mapel_kategori, mapel_kategori.nama AS nama_mapel, mapel_kategori.status, 
+                        mapel_subkategori.id_mapel_subkategori, mapel_subkategori.name AS nama_submapel, mapel_subkategori.status 
+                    FROM mapel_subkategori 
+                    INNER JOIN mapel_kategori 
+                    
+                    ON mapel_kategori.id_mapel_kategori = mapel_subkategori.id_mapel_kategori";
+        
+            $query = $db->query( $sql );
+            return $query;
+        }
+
 
         // query data sub category
         function getDataSubKategori() {

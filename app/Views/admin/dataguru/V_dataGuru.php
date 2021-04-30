@@ -104,7 +104,6 @@
                         </div>
                     </form>
 
-<<<<<<< Updated upstream
   <!-- Page Header -->
   <div class="page-header row no-gutters py-4">
     <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
@@ -184,7 +183,7 @@
 
                           <?php $this->endSection() 
                           ?>
-=======
+
                   </div>
 
 
@@ -196,9 +195,8 @@
     <div class="col-lg-12 grid-margin stretch-card">
        
                       
-                </div>
+                </d
              
             
 
 <?php $this->endSection() ?>
->>>>>>> Stashed changes

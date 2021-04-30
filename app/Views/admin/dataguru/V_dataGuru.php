@@ -181,8 +181,7 @@
 </diV>
 
 
-                          <?php $this->endSection() 
-                          ?>
+                         
 
                   </div>
 

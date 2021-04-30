@@ -62,8 +62,8 @@ class DataSiswa extends Controller{
             // @TODO 1 : Ambil nilai 
             $namalengkap     = $this->request->getPost('nama_lengkap');
             $gender          = $this->request->getPost('gender');
-            $domisili          = $this->request->getPost('domsili');
-            $tanggal_lahir          = $this->request->getPost('tanggal_lahir');
+            $domisili          = $this->request->getPost('domisili');
+            $tanggal_lahir         = $this->request->getPost('tanggal_lahir');
             $email           = $this->request->getPost('email');
             $telp            = $this->request->getPost('telp');
             $alamat                   = $this->request->getPost('alamat');

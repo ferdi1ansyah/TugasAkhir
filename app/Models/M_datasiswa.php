@@ -18,7 +18,7 @@
         }
 
      // proses tambah guru
-     function onInsertSiswa( $namalengkap, $gender,$domisili,$tanggal_lahir, $asalsekolah, $pendidikan_sekarang, $email, $telp ,$foto ) {
+     function onInsertSiswa( $namalengkap, $gender,$domisili,$tanggal_lahir, $asalsekolah,$pendidikan_sekarang, $email, $telp,$alamat, $foto ) {
 
         $db      = \Config\Database::connect();
 

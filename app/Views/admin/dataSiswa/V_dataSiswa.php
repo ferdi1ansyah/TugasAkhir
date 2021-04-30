@@ -81,19 +81,19 @@
                                                      <p><input type="radio" name="gender" value="Laki-laki"> Laki-Laki
                                                      <input type="radio" name="gender" value="Perempuan">  Perempuan
                                                 <label class="">Domisili</label>
-                                                <input type="text" class="form-control" name="asal_sekolah" placeholder="" required="">
+                                                <input type="text" class="form-control" name="domisili" placeholder="" required="">
                                                 <label class="">Tanggal Lahir</label>
-                                                <input type="text" class="form-control" name="pendidikan" placeholder="" required="">
+                                                <input type="text" class="form-control" name="tanggal_lahir" placeholder="" required="">
                                                 <label class="">Email</label>
                                                 <input type="email" class="form-control" name="email" placeholder="" required="">
-                                                <label class="">Telf</label>
-                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <label class="">Telp</label>
+                                                <input type="text" class="form-control" name="telp" placeholder="" required="">
                                                 <label class="">Alamat</label>
-                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <input type="text" class="form-control" name="alamat" placeholder="" required="">
                                                 <label class="">Pendidikan Sekarang</label>
-                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <input type="text" class="form-control" name="pendidikan_sekarang" placeholder="" required="">
                                                 <label class="">Asal Sekolah</label>
-                                                <input type="text" class="form-control" name="telf" placeholder="" required="">
+                                                <input type="text" class="form-control" name="asal_sekolah" placeholder="" required="">
                                                 <label class="">Foto</label>
                       
                                              <input type="file" name="foto" class="dropify" data-height="300">

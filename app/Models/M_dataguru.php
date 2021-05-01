@@ -36,7 +36,7 @@
         }
 
     // proses tambah guru
-    function onInsertGuru( $namalengkap, $gender, $asalsekolah, $pendidikan, $email, $telp ,$foto ) {
+    function onInsertGuru( $namalengkap, $asalsekolah, $pendidikan, $email, $telp ,$foto ) {
 
         $db      = \Config\Database::connect();
 
@@ -45,7 +45,6 @@
         $dataGuru = array(
 
             'nama_lengkap'      => $namalengkap,
-            'gender'            => $gender,
             'asal_sekolah'      => $asalsekolah,
             'pendidikan'        => $pendidikan,
             'email'             => $email,

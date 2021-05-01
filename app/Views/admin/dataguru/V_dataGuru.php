@@ -18,16 +18,21 @@
       <h4 class="card-title">Tabel Data Guru</h4>
       <div class="card card-body">
 
-        <div class="row">
-          <button data-toggle="modal" data-target="#tambah-guru" style="margin-bottom: 20px"
-            class="btn btn-primary btn-sm">
-            <i class="material-icons">add</i> Tambah Data Guru</button>
+      <div class="row">
+              <button data-toggle="modal" data-target="/dataguru/prosesTambahGuru" style="margin-bottom: 20px"
+                class="btn btn-primary btn-sm">
+        <b><a href="/dataguru/tambah"><i class="material-icons">add</i>Tambah Data Guru</a></b>
+                <form action="/dataguru/prosesTambahGuru" method="POST"></button>
+              <div class="table-responsive">
+                <table class="table table-striped">
+
+    
 
 
           <div class="table-responsive">
             <table class="table table-striped">
 
-              <thead>
+              <!-- <thead>
                 <tr>
                   <th>
                     Nama Lengkap
@@ -51,7 +56,7 @@
                     Foto
                   </th>
                 </tr>
-              </thead>
+              </thead> -->
 
               <div class="modal fade" id="tambah-guru" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -114,27 +119,16 @@
   </div>
   <!-- End Page Header -->
 
-  <div class="row">
-    <div class="col-lg-10 grid-margin stretch-card">
+  <!-- <div class="row">
+    <div class="col-lg-10 grid-margin stretch-card"> -->
 
-      <div class="card">
-        <div class="card-body">
-          <div class="">
-
-            <div class="row">
-              <button data-toggle="modal" data-target="#tambah-guru" style="margin-bottom: 20px"
-                class="btn btn-primary btn-sm">
-                <i class="material-icons">add</i> Tambah Data Guru</button>
-              <div class="table-responsive">
-                <table class="table table-striped">
-
+      <!-- <div class="card">
+        <div class="card-body"> -->
+       
                   <thead>
                     <tr>
                       <th>
                         Nama Lengkap
-                      </th>
-                      <th>
-                        Gender
                       </th>
                       <th>
                         Asal Sekolah
@@ -160,7 +154,14 @@
 	<?php foreach ( $dataGuru->getResultArray() AS $guru ) :  ?>
 	<tr>
 
-		<td><?php echo $guru['nama_lengkap'] ?></td>
+		<td><?php echo $guru['nama_lengkap'] ?> </td>
+    <td><?php echo $guru['asal_sekolah'] ?> </td>
+    <td><?php echo $guru['pendidikan'] ?></td>
+    <td><?php echo $guru['email'] ?></td>
+    <td><?php echo $guru['telp'] ?></td>
+    
+    
+   
                   
         </tr>
 	<?php endforeach; ?>

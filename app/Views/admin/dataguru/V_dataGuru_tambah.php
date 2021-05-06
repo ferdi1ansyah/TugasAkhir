@@ -38,7 +38,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-secondary-enabled page-loading">
+	<body id="kt_body" class="header-mobile-fixed subheader-enabled page-loading">
 		<!--begin::Main-->
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile">
@@ -207,6 +207,154 @@ License: You must have a valid license purchased only from themeforest(the above
 									<div class="col-md-4">Ferdi's Property</div>
 									<div class="col-md-4">Ferdi's Property</div>
 								</div>
+
+
+                                <div class="row justify-content-center">
+                                    <!-- start col -->
+                                    <div class="col-md-8">
+                                    
+                                    
+                                    
+
+                                        <!--begin::Card-->
+										<div class="card card-custom example example-compact">
+											<div class="card-header">
+												<h3 class="card-title">Section Separator</h3>
+												<div class="card-toolbar">
+													<div class="example-tools justify-content-center">
+														<span class="example-toggle" data-toggle="tooltip" title="View code"></span>
+														<span class="example-copy" data-toggle="tooltip" title="Copy code"></span>
+													</div>
+												</div>
+											</div>
+											<!--begin::Form-->
+											<form class="form">
+												<div class="card-body">
+													<div class="form-group">
+														<label>Nama Lengkap</label>
+														<input type="text" name="nama" class="form-control" placeholder="Enter full name" />
+														<span class="form-text text-muted">Please enter your full name</span>
+													</div>
+													<div class="separator separator-dashed my-5"></div>
+													<div class="form-group">
+														<label>Email address:</label>
+														<input type="email" class="form-control" placeholder="Enter email" />
+														<span class="form-text text-muted">We'll never share your email with anyone else</span>
+													</div>
+													<div class="separator separator-dashed my-5"></div>
+													<div class="form-group">
+														<label>Subscription</label>
+														<div class="input-group">
+															<div class="input-group-prepend">
+																<span class="input-group-text">$</span>
+															</div>
+															<input type="text" class="form-control" placeholder="99.9" />
+														</div>
+													</div>
+													<div class="separator separator-dashed my-5"></div>
+													<div class="form-group">
+														<label>Communication:</label>
+														<div class="checkbox-list">
+															<label class="checkbox">
+															<input type="checkbox" />
+															<span></span>Email</label>
+															<label class="checkbox">
+															<input type="checkbox" />
+															<span></span>SMS</label>
+															<label class="checkbox">
+															<input type="checkbox" />
+															<span></span>Phone</label>
+														</div>
+													</div>
+													<!--begin: Code-->
+													<div class="example-code mt-10">
+														<ul class="example-nav nav nav-tabs nav-bold nav-tabs-line nav-tabs-line-2x">
+															<li class="nav-item">
+																<a class="nav-link active" data-toggle="tab" href="#example_code_html_2">HTML</a>
+															</li>
+														</ul>
+														<div class="tab-content">
+															<div class="tab-pane active" id="example_code_html_2" role="tabpanel">
+																<div class="example-highlight">
+																	<pre style="height:400px">
+                                                                    <code class="language-html">
+                                                                            &lt;form class="form"&gt;
+                                                                            &lt;div class="card-body"&gt;
+                                                                            &lt;div class="form-group"&gt;
+                                                                            &lt;label&gt;Full Name:&lt;/label&gt;
+                                                                            &lt;input type="email" class="form-control" placeholder="Enter full name"/&gt;
+                                                                            &lt;span class="form-text text-muted"&gt;Please enter your full name&lt;/span&gt;
+                                                                            &lt;/div&gt;
+
+                                                                            &lt;div class="separator separator-dashed my-5"&gt;&lt;/div&gt;
+
+                                                                            &lt;div class="form-group"&gt;
+                                                                            &lt;label&gt;Email address:&lt;/label&gt;
+                                                                            &lt;input type="email" class="form-control" placeholder="Enter email"/&gt;
+                                                                            &lt;span class="form-text text-muted"&gt;We'll never share your email with anyone else&lt;/span&gt;
+                                                                            &lt;/div&gt;
+
+                                                                            &lt;div class="separator separator-dashed my-5"&gt;&lt;/div&gt;
+
+                                                                            &lt;div class="form-group"&gt;
+                                                                            &lt;label&gt;Subscription&lt;/label&gt;
+                                                                            &lt;div class="input-group"&gt;
+                                                                                &lt;div class="input-group-prepend"&gt;&lt;span class="input-group-text" &gt;$&lt;/span&gt;&lt;/div&gt;
+                                                                                &lt;input type="text" class="form-control" placeholder="99.9"/&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;/div&gt;
+
+                                                                            &lt;div class="separator separator-dashed my-5"&gt;&lt;/div&gt;
+
+                                                                            &lt;div class="form-group"&gt;
+                                                                            &lt;label&gt;Communication:&lt;/label&gt;
+                                                                            &lt;div class="checkbox-list"&gt;
+                                                                                &lt;label class="checkbox"&gt;
+                                                                                &lt;input type="checkbox"/&gt;
+                                                                                &lt;span&gt;&lt;/span&gt;
+                                                                                Email
+                                                                                &lt;/label&gt;
+                                                                                &lt;label class="checkbox"&gt;
+                                                                                &lt;input type="checkbox"/&gt;
+                                                                                &lt;span&gt;&lt;/span&gt;
+                                                                                SMS
+                                                                                &lt;/label&gt;
+                                                                                &lt;label class="checkbox"&gt;
+                                                                                &lt;input type="checkbox"/&gt;
+                                                                                &lt;span&gt;&lt;/span&gt;
+                                                                                Phone
+                                                                                &lt;/label&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;div class="card-footer"&gt;
+                                                                            &lt;button type="reset" class="btn btn-primary mr-2"&gt;Submit&lt;/button&gt;
+                                                                            &lt;button type="reset" class="btn btn-secondary"&gt;Cancel&lt;/button&gt;
+                                                                            &lt;/div&gt;
+                                                                            &lt;/form&gt;
+                                                                            </code>
+                                                                    </pre>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!--end: Code-->
+												</div>
+												<div class="card-footer">
+													<button type="reset" class="btn btn-primary mr-2">Submit</button>
+													<button type="reset" class="btn btn-secondary">Cancel</button>
+												</div>
+											</form>
+											<!--end::Form-->
+										</div>
+										<!--end::Card-->
+
+
+
+									</div>
+                                    <!-- End col -->
+                                
+                                </div>
 							</div>
 						</div>
 									

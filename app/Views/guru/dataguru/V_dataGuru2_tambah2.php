@@ -1,8 +1,7 @@
 
 
 
-
-<form action="/dataguru/prosesTambahGuru" method="POST" enctype="multipart/form-data">
+<form action="/dataguru2/ProsesTambahGuru2" method="POST" enctype="multipart/form-data">
 
     <h2>Informasi Guru</h2>
     <hr>
@@ -44,7 +43,7 @@
     </select><br><br>
 
 
-    
+
 
 
 

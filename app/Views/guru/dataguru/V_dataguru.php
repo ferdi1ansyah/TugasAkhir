@@ -1,6 +1,6 @@
 <?php
 
-    $this->extend('templates/template_admin');
+    $this->extend('templates/template_guru2');
 
 ?>
 
@@ -21,8 +21,8 @@
       <div class="row">
               <button data-toggle="modal" data-target="/dataguru/prosesTambahGuru" 
               style="margin-bottom: 20px" style =" color: black;" class="btn btn-basic">
-        <b><a href="/dataguru/tambah"><i class="material-icons">add</i>Tambah Data Guru</a></b>
-                <form action="/dataguru/prosesTambahGuru" method="POST"></button>
+        <b><a href="/dataguru2/tambah2"><i class="material-icons">add</i>Tambah Data Guru</a></b>
+                <form action="/dataguru2/prosesTambahGuru2" method="POST"></button>
               <div class="table-responsive">
                 <table class="table table-striped">
 
@@ -149,24 +149,9 @@
                   </thead>
 
                   <tbody>
-	<?php if ( $dataGuru->getNumRows() > 0 ) { ?>
-
-	<?php foreach ( $dataGuru->getResultArray() AS $guru ) :  ?>
-	<tr>
-
-		<td><?php echo $guru['nama_lengkap'] ?> </td>
-    <td><?php echo $guru['asal_sekolah'] ?> </td>
-    <td><?php echo $guru['pendidikan'] ?></td>
-    <td><?php echo $guru['email'] ?></td>
-    <td><?php echo $guru['telp'] ?></td>
-    
-    
-   
+	
                   
-        </tr>
-	<?php endforeach; ?>
-                  
-	<?php } ?>                  
+	                 
 </tbody>
 
                 </table>

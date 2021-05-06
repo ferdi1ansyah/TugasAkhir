@@ -1,3 +1,8 @@
+<?php
+
+  $session = \Config\Services::session();
+?>
+
 <!doctype html>
 <html class="no-js h-100" lang="en">
   <head>
@@ -32,7 +37,7 @@
               <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
                   <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="<?php echo base_url() ?>/assets/images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-                  <span class="d-none d-md-inline ml-1">Halaman Guru</span>
+                  <span class="d-none d-md-inline ml-1">Pipel Admin</span>
                 </div>
               </a>
               <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -62,20 +67,41 @@
 
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboardguru">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) echo "active"; ?>" href="/dataguru/tambah">
                   <i class="material-icons">home</i>
                   <span>Halaman Utama</span>
+
+                  
                 </a>
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) echo "active"; ?>" href="/datamateri">
-                  <i class="material-icons">book</i>
-                  <span>Data Materi</span>
+              <!-- </li>
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "category" ) { echo "active"; }  ?>" href="/category/index">
+                  <i class="material-icons">assignment</i>
+                  <span>Master Kategori</span>
                 </a>
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "" ) echo "active"; ?>" href="/dataguru2">
-                  <i class="material-icons">person</i>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "report" ) { echo "active"; }  ?>" href="/report/index">
+                  <i class="material-icons">assignment</i>
+                  <span>Laporan</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) { echo "active"; }  ?>" href="/dataguru/index">
+                  <i class="material-icons">storage</i>
                   <span>Data Guru</span>
                 </a>
-  
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "datasiswa" ) { echo "active"; }  ?>" href="/datasiswa/index">
+                  <i class="material-icons">people</i>
+                  <span>Data Siswa</span>
+                </a>
+              </li> -->
               
             </ul>
           </div>
@@ -112,7 +138,7 @@
                           <i class="material-icons">&#xE6E1;</i>
                         </div>
                       </div>
-                      <div class="notification__content">
+                      <!-- <div class="notification__content">
                         <span class="notification__category">Analytics</span>
                         <p>Your website’s active users count increased by <span class="text-success text-semibold">28%</span> in the last week. Great job!</p>
                       </div>
@@ -133,18 +159,18 @@
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle mr-2" src="<?php echo base_url() ?>/assets/images/avatars/0.jpg" alt="User Avatar"> <span class="d-none d-md-inline-block">Sierra Brooks</span>
+                    <img class="user-avatar rounded-circle mr-2" src="<?php echo base_url() ?>/assets/images/avatars/0.jpg" alt="User Avatar"> <span class="d-none d-md-inline-block"><?php echo ucfirst($session->get('sess_username')) ?></span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item" href="user-profile-lite.html"><i class="material-icons">&#xE7FD;</i> Profile</a>
                     <a class="dropdown-item" href="components-blog-posts.html"><i class="material-icons">vertical_split</i> Blog Posts</a>
                     <a class="dropdown-item" href="add-new-post.html"><i class="material-icons">note_add</i> Add New Post</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#">
+                    <a class="dropdown-item text-danger" href="/login/proseslogout">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>
                   </div>
                 </li>
-              </ul>
+              </ul> -->
               <nav class="nav">
                 <a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left" data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
                   <i class="material-icons">&#xE5D2;</i>
@@ -158,29 +184,79 @@
 
 
 
-
         <?php $this->renderSection('content') ?>
-
-
-
 
           <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
             <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-              </li>
+            <form action="/dataguru/prosesTambahGuru" method="POST" enctype="multipart/form-data">
+
+<h2>Informasi Guru</h2>
+<hr>
+<label for="">Nama Lengkap</label>
+<input type="text" name="nama" placeholder="Masukkan nama guru"><br><br>
+
+<label for="">Asal Sekolah</label>
+<input type="text" name="asalsekolah" placeholder="Masukkan asal sekolah"><br><br>
+
+<label for="">Pendidikan</label>
+<input type="text" name="pendidikan" placeholder="Masukkan pendidikan"><br><br>
+
+<label for="">Email</label>
+<input type="email" name="email" placeholder="Masukkan email"><br><br>
+
+<label for="">Telepon</label>
+<input type="text" name="telp" placeholder="Masukkan telepon"><br><br>
+
+<label for="">Foto</label>
+<input type="file" name="foto" placeholder=""><br><br>
+
+
+
+<h2>Bidang Keahlian</h2>
+<hr>
+
+
+<label for="">Keahlian</label>
+<select name="mapel_kategori" id="">
+    <?php foreach( $mapel_kategori->getResultArray() AS $mapel ) :
+        
+        $id_mapel_kategori      = $mapel['id_mapel_kategori'];
+        $id_mapel_subkategori   = $mapel['id_mapel_subkategori'];
+
+        $value = $id_mapel_kategori.'-'.$id_mapel_subkategori;
+    ?>
+    <option value="<?php echo $value ?>"><?php echo $mapel['nama_mapel'].' '.$mapel['nama_submapel'] ?></option>
+    <?php endforeach; ?>
+</select><br><br>
+
+
+
+
+
+
+
+<h2>Akun guru</h2>
+<hr>
+
+
+<label for="">Username</label>
+<input type="text" name="username"><br><br>
+
+<label for="">Kata sandi</label>
+<input type="text" name="password"><br><br>
+
+
+<label for="">Status Akun</label>
+<br>
+<label for="aktif">Aktif</label>
+<input type="radio" id="aktif" name="status_akun" value="aktif">
+
+<label for="nonaktif">Nonaktif</label>
+<input type="radio" id="nonaktif" name="status_akun" value="nonaktif">
+
+
+<button>Simpan</button>
+</form>
             </ul>
             <span class="copyright ml-auto my-auto mr-2">Copyright © 2018 <a href="https://designrevision.com" rel="nofollow">DesignRevision</a></span>
           </footer>

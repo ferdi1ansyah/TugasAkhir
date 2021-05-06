@@ -1,11 +1,11 @@
-<?php 
-
+<?php
 namespace App\Controllers;
-use CodeIgniter\Controller;
 use App\Models\M_dataguru;
 use App\Models\M_category;
+use CodeIgniter\Controller;
 
-class DataGuru extends Controller{
+class DataGuru2 extends Controller {
+
 
     protected $session;
 
@@ -24,35 +24,34 @@ class DataGuru extends Controller{
             $url = base_url('login/index');
             header('Location: '.$url);
             exit(); 
-
            
         }
     }
 
-    function index() {
+
+
+    function index () {
 
         $model = new M_dataguru();
         $guru['dataGuru']      = $model->getDataGuru();
 
-        return view("admin/dataguru/V_dataGuru" , $guru);
+        return view("guru/dataguru/V_dataguru.php", $guru);
 
-    }
+        }
 
+        function tambah2() {
+            $model = new M_category();
+            $data['mapel_kategori'] = $model->getDataKategoriAndSubKategori();
+    
+            return view('guru/dataguru/V_dataGuru2_tambah2', $data);
+        }
 
-    function tambah() {
-        $model = new M_category();
-        $data['mapel_kategori'] = $model->getDataKategoriAndSubKategori();
-
-        return view('admin/dataguru/V_dataGuru_tambah', $data);
-    }
-
-
-    /**
+         /**
          * 
          *  Proses : tambah guru
          * 
          */
-        function prosesTambahGuru() {
+        function prosesTambahGuru2() {
 
             // akses model 
             $model = new M_dataguru();
@@ -126,8 +125,17 @@ class DataGuru extends Controller{
     
 
 
-    function viewDataMateri() {
-
-        return view('guru/upload/V_upload');
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+

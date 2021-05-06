@@ -1,13 +1,29 @@
 
 
+<div class="card card-custom example example-compact">
+
+<div class="card-header">
+												<h3 class="card-title">Section Separator</h3>
+												<div class="card-toolbar">
+													<div class="example-tools justify-content-center">
+														<span class="example-toggle" data-toggle="tooltip" title="View code"></span>
+														<span class="example-copy" data-toggle="tooltip" title="Copy code"></span>
+													</div>
+												</div>
+											</div>
 
 
 <form action="/dataguru/prosesTambahGuru" method="POST" enctype="multipart/form-data">
 
+<div class="card-body">
+													<div class="form-group">
+
     <h2>Informasi Guru</h2>
     <hr>
     <label for="">Nama Lengkap</label>
-    <input type="text" name="nama" placeholder="Masukkan nama guru"><br><br>
+    <input type="text" class="form-control" name="nama" placeholder="Masukkan nama guru" >
+    <span class="form-text text-muted">please enter your name</span>
+    </div>
     
     <label for="">Asal Sekolah</label>
     <input type="text" name="asalsekolah" placeholder="Masukkan asal sekolah"><br><br>
@@ -71,3 +87,5 @@
 
     <button>Simpan</button>
 </form>
+
+</div>

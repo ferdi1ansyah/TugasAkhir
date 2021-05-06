@@ -92,8 +92,14 @@ class DataSiswa extends Controller{
             // tabel guru
             $nilaiSiswa = array(
 
+                
                 'id_profile'        => $last_id_profile,
                 'nama_lengkap'  => $this->request->getPost('nama'),
+                'gender'  => $this->request->getPost('gender'),
+                'domisili'  => $this->request->getPost('domisili'),
+                'tanggal_lahir'  => $this->request->getPost('tanggal_lahir'),
+                'alamat'  => $this->request->getPost('alamat'),
+
                 'asal_sekolah'  => $this->request->getPost('asal_sekolah'),
                 'pendidikan_sekarang'    => $this->request->getPost('pendidikan_sekarang'),
                 'email'     => $this->request->getPost('email'),

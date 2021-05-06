@@ -31,8 +31,7 @@
 <label for="">Asal Sekolah</label>
 <input type="text" name="asal_sekolah" placeholder=""><br><br>
 
-<label for="">Asal Sekarang</label>
-<input type="text" name="asal_sekarang" placeholder=""><br><br>
+
 
 <label for="">Foto</label>
 <input type="file" name="foto" placeholder=""><br><br>

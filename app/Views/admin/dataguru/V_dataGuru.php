@@ -19,10 +19,10 @@
       <div class="card card-body">
 
       <div class="row">
-              <button data-toggle="modal" data-target="/dataguru/prosesTambahGuru" style="margin-bottom: 20px"
-                class="btn btn-primary btn-sm">
-        <b><a href="/dataguru/tambah"><i class="material-icons">add</i>Tambah Data Guru</a></b>
-                <form action="/dataguru/prosesTambahGuru" method="POST"></button>
+
+              <a href="/dataguru/tambah" class="btn btn-primary btn-sm">
+                <i class="material-icons">add</i>Tambah Data Guru
+                </a>
               <div class="table-responsive">
                 <table class="table table-striped">
 

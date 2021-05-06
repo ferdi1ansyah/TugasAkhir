@@ -77,7 +77,7 @@ class DataSiswa extends Controller{
 
                 'username'  => $this->request->getPost('username'),
                 'password'  => password_hash( $password, PASSWORD_BCRYPT ),
-                'hak_akses' => "guru",
+                'hak_akses' => "siswa",
                 'status_akun' => "aktif",
                 'status_2fa'  => "nonaktif",
                 'code_2fa'    => null
@@ -94,33 +94,14 @@ class DataSiswa extends Controller{
 
                 'id_profile'        => $last_id_profile,
                 'nama_lengkap'  => $this->request->getPost('nama'),
-                'asal_sekolah'  => $this->request->getPost('asalsekolah'),
+                'asal_sekolah'  => $this->request->getPost('asal_sekolah'),
                 'pendidikan_sekarang'    => $this->request->getPost('pendidikan_sekarang'),
                 'email'     => $this->request->getPost('email'),
                 'telp'      => $this->request->getPost('telp'),
                 'foto'      => ""
             );
 
-            $last_id_siswa = $model->onInsertDataSiswa( $nilaiSiswa );
-
-
-            $mapel_kategori = $this->request->getPost('mapel_kategori');
-            $pemisah_id = explode('-', $mapel_kategori);
-
-            // echo $mapel_kategori;
-            // $id_mapel_kategori = $pemisah_id[0];
-            // $id_mapel_subkategori = $pemisah_id[1];
-            
-            // $pemisah_id = 
-            $nilaiKeahlian = array(
-
-                'id_siswa'           => $last_id_siswa,
-                'id_mapel_kategori' => $pemisah_id[0],
-                'id_mapel_subkategori' => $pemisah_id[1],
-            );
-
-            // insert
-            return $model->onInsertDataKeahlian( $nilaiKeahlian );
+            return $model->onInsertDataSiswa( $nilaiSiswa );
         }
     
 }

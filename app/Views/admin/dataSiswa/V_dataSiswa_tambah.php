@@ -28,6 +28,9 @@
 <label for="">Pendidikan Sekarang</label>
 <input type="text" name="pendidikan_sekarang" placeholder=""><br><br>
 
+<label for="">Asal Sekolah</label>
+<input type="text" name="asal_sekolah" placeholder=""><br><br>
+
 <label for="">Asal Sekarang</label>
 <input type="text" name="asal_sekarang" placeholder=""><br><br>
 

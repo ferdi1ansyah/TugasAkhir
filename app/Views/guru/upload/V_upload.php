@@ -1,4 +1,4 @@
-?php
+<?php
 
 $this->extend('templates/template_guru');
 

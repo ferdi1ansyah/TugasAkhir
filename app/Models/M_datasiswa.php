@@ -83,16 +83,9 @@
         $this->db->table('data_siswa')->insert( $nilaiSiswa );
         $last_id = $this->db->insertID();
 
-        return $last_id;
+        return redirect()->to(base_url('datasiswa/index'));
     }
-    // fungsi insert mapel 
-    // function onInsertDataKeahlian( $nilaiKeahlian ) {
-
-    //     $this->db->table('guru_mapel')->insert( $nilaiKeahlian );
-
-    //     return redirect()->to( base_url('dataguru/index') );
-    // }
-
+  
 
 
 

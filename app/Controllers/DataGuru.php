@@ -123,4 +123,10 @@ class DataGuru extends Controller{
             return $model->onInsertDataKeahlian( $nilaiKeahlian );
         }
     
+
+
+    function viewDataMateri() {
+
+        return view('guru/upload/V_upload');
+    }
 }

@@ -1,37 +1,25 @@
 
 
-<form action="/datasiswa/prosesTambahSiswa" method="POST" enctype="multipart/form-data">
 
-<h2>Informasi Siswa</h2>
+
+<form action="/dataguru/prosesUpdateGuru" method="POST" enctype="multipart/form-data">
+
+<h2>Informasi Guru</h2>
 <hr>
 <label for="">Nama Lengkap</label>
-<input type="text" name="nama" placeholder="Masukkan nama Siswa"><br><br>
-
-<label for="">Gender</label>
-<input type="text" name="gender" placeholder="Masukkan gender"><br><br>
-
-<label for="">Domisili</label>
-<input type="text" name="domisili" placeholder="Masukkan Domisili"><br><br>
-
-<label for="">Tanggal Lahir</label>
-<input type="date" name="tanggal_lahir" placeholder=""><br><br>
-
-<label for="">Email</label>
-<input type="email" name="email" placeholder=""><br><br>
-
-<label for="">Telepon</label>
-<input type="text" name="telp" placeholder=""><br><br>
-
-<label for="">Alamat</label>
-<input type="text" name="alamat" placeholder=""><br><br>
-
-<label for="">Pendidikan Sekarang</label>
-<input type="text" name="pendidikan_sekarang" placeholder=""><br><br>
+<input type="text" name="nama" placeholder="Masukkan nama guru"><br><br>
 
 <label for="">Asal Sekolah</label>
-<input type="text" name="asal_sekolah" placeholder=""><br><br>
+<input type="text" name="asalsekolah" placeholder="Masukkan asal sekolah"><br><br>
 
+<label for="">Pendidikan</label>
+<input type="text" name="pendidikan" placeholder="Masukkan pendidikan"><br><br>
 
+<label for="">Email</label>
+<input type="email" name="email" placeholder="Masukkan email"><br><br>
+
+<label for="">Telepon</label>
+<input type="text" name="telp" placeholder="Masukkan telepon"><br><br>
 
 <label for="">Foto</label>
 <input type="file" name="foto" placeholder=""><br><br>
@@ -61,7 +49,7 @@
 
 
 
-<h2>Akun Siswa</h2>
+<h2>Akun guru</h2>
 <hr>
 
 

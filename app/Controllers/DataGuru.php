@@ -126,6 +126,43 @@ class DataGuru extends Controller{
     
 
 
+        function prosesHapusGuru( $last_id_guru ) {
+            $model = new M_dataguru();
+
+            // ambil nilai 
+           
+            return $model->prosesHapusGuru( $last_id_guru);
+        }
+
+        function prosesUpdateGuru( $last_id_guru ) {
+
+
+            $model = new M_dataguru();
+
+            // ambil nilai 
+                $namalengkap  = $this->request->getPost('nama_lengkap');
+                $asalsekolah    = $this->request->getPost('asal_sekolah');
+                $pendidikan    = $this->request->getPost('pendidikan');
+                $email    = $this->request->getPost('email');
+                $telp    = $this->request->getPost('telp');
+                $foto    = $this->request->getPost('foto');
+
+
+            $dataGuru = array(
+
+            'nama_lengkap'      => $namalengkap,
+            'asal_sekolah'      => $asalsekolah,
+            'pendidikan'        => $pendidikan,
+            'email'             => $email,
+            'telp'              => $telp,
+            'foto'              => $foto
+
+            );
+
+            return $model->onUpdateCategory( $last_id_guru,$dataGuru);
+        }
+
+
     function viewDataMateri() {
 
         return view('guru/upload/V_upload');

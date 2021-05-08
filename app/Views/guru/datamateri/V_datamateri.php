@@ -34,11 +34,13 @@ $this->extend('templates/template_guru');
         <!-- Small Stats Blocks -->
         <div class="row">
 
+            <?php if ( $materi->getNumRows() != 0 ) { ?>
             
+            <?php foreach ( $materi->getResultArray() AS $kolom ) : ?>
             <div class="col-xs-6 col-sm-6 col-md-3" style="margin-bottom: 20px">
                 <div class="stats-small stats-small--1 card card-small">
                     <a href="">
-                        <img class="card-img-top" src="<?php echo base_url('assets/images/lol.gif') ?>" alt="Card image cap">
+                        <img class="card-img-top" src="<?php echo base_url('assets/images/ai2.jpg') ?>" alt="Card image cap">
                     </a>
                     <div class="card-body">
                         <div class="d-flex flex-column m-auto">
@@ -56,17 +58,43 @@ $this->extend('templates/template_guru');
                                         <label style="font-size: 10px">10 Enrollment</label>
                                     </div>
                                     <div class="col-sm-6 col-md-6">
-                                        <label style="color: #9e9e9e"><?php echo date('d M Y') ?></label>
+                                        <label style="color: #9e9e9e"><?php echo date('d M Y', strtotime( $kolom['tanggal'] )) ?></label>
                                     </div>
                                 </div>
 
 
-                                <span class="my-2" style="font-size: 20px !important">Machine Learning</span>
-                                <label class="text-muted" style="font-size: 13px !important">Materi yang membahas tentang pembuatan development game</label>
+                                <span class="my-2" style="font-size: 20px !important">
+                                    <?php 
+                                    
+                                        $panjangjudul = strlen( $kolom['judul'] );
+
+                                        if ( $panjangjudul > 17 ) {
+
+                                            echo substr( $kolom['judul'], 0, 17 ).' . . .';
+                                        } else {
+
+                                            echo $kolom['judul'];
+                                        }
+                                    
+                                    ?>
+                                </span>
+                                <label class="text-muted" style="font-size: 13px !important">
+                                <?php
+
+                                    $panjangDeskripsi = strlen( $kolom['deskripsi'] );
+                                    if( $panjangDeskripsi > 32 ) {
+
+                                        echo substr( $kolom['deskripsi'],0, 32 ).'..';
+                                    } else {
+
+                                        echo $kolom['deskripsi'];
+                                    }
+                                
+                                ?></label>
 
                                 <div>
-                                    <a href="" class="btn"><i class="fas fa-times"></i></a>
-                                    <a href="" class="btn"><i class="fas fa-edit"></i></a>
+                                    <a href="/datamateri/proseshapus/<?php echo $kolom['id_materi'] ?>" onclick="return confirm('Apakah anda ingin menghapus materi ini ?')" class="btn"><i class="fas fa-times"></i></a>
+                                    <a href="/datamateri/edit/<?php echo $kolom['id_materi'] ?>" class="btn"><i class="fas fa-edit"></i></a>
                                     <a href="" class="btn"><i class="fas fa-list-ul"></i></a>
                                 </div>
 
@@ -75,6 +103,9 @@ $this->extend('templates/template_guru');
                     </div>
                 </div>
             </div>
+            <?php endforeach; ?>
+
+            <?php } ?>
             
         </div>
 

@@ -61,6 +61,19 @@
                             break;
 
                         case "guru":
+
+                            // data guru 
+                            $id_profile = $data['id_profile'];
+                            $query = "SELECT * FROM `data_guru` WHERE id_profile = '$id_profile'";
+                            $getGuruByIdProfile = $db->query( $query );
+
+
+                            $data_guru = $getGuruByIdProfile->getRowArray();
+
+                            // session guru
+                            $session->set('sess_id_guru', $data_guru['id_guru']);
+                            $session->set('sess_nama_lengkap', $data_guru['nama_lengkap']);
+
                             return redirect()->to( base_url('dashboard/index2') );
                             break;
                         // . . .

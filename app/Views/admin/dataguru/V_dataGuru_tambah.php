@@ -224,7 +224,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</div>
 											</div>
 											<!--begin::Form-->
-											<form class="form">
+											<form class="form" action="/dataguru/prosesTambahGuru" method="POST">
 												<div class="card-body">
 													<div class="form-group">
 														<label>Nama Lengkap</label>

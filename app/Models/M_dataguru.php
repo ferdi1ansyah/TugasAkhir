@@ -89,6 +89,45 @@
         return redirect()->to( base_url('dataguru/index') );
     }
 
+    function prosesHapusGuru( $last_id_guru ){
+
+        // load db
+        $db      = \Config\Database::connect();
+        $session = \Config\Services::session();
+        
+        $db->table('data_guru')
+            ->where('id_guru', $last_id_guru)
+            ->delete();
+
+
+        $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> <small>Mapel subkategori berhasil terhapus</small></div>';
+        $session->setFlashdata('pesan', $elementHTML);
+        
+        // redirect
+        $url = base_url( 'dataguru' );
+        return redirect()->to( $url );
+    }
+
+    function onUpdateCategory( $last_id_guru, $dataGuru){
+
+        // load db
+        $db      = \Config\Database::connect();
+        $session = \Config\Services::session();
+
+        $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> 
+                        <small>Mapel subkategori berhasil diperbarui</small>
+                        </div>';
+        $session->setFlashdata('pesan', $elementHTML);
+
+
+         $db->table('data_guru')
+            ->where('id_guru', $last_id_guru)
+            ->update( $dataGuru );
+
+         // redirect
+         $url = base_url( 'dataguru' );
+         return redirect()->to( $url );
+    }
 
 
 

@@ -292,7 +292,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<hr>
 										
 										<h3 class="card-title">Akun Guru</h3>
-										<hr>
+										
 
 
 										<div class="form-group">

@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<!--begin::Page Heading-->
 									<div class="d-flex align-items-baseline flex-wrap mr-5">
 										<!--begin::Page Title-->
-										<h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Dashboard</h2>
+										<h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Tambah Data Guru</h2>
 										<!--end::Page Title-->
 									</div>
 									<!--end::Page Heading-->
@@ -99,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 											<!--end::Svg Icon-->
 										</span>
-										<span class="d-none d-md-inline">New Member</span>
+									
 									</a>
 									<!--end::Button-->
 									<!--begin::Dropdown-->
@@ -117,7 +117,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												</svg>
 												<!--end::Svg Icon-->
 											</span>
-											<span class="d-none d-md-inline">New Report</span>
+											<span class="d-none d-md-inline">Back </span>
 										</a>
 										<div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
 											<!--begin::Navigation-->
@@ -202,11 +202,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="container">
 								<!--begin::Dashboard-->
 								<!--begin::Row-->
-								<div class="row">
-								
-									<div class="col-md-4">Ferdi's Property</div>
-									<div class="col-md-4">Ferdi's Property</div>
-								</div>
+							
 
 
                                 <div class="row justify-content-center">
@@ -219,7 +215,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                         <!--begin::Card-->
 										<div class="card card-custom example example-compact">
 											<div class="card-header">
-												<h3 class="card-title">Section Separator</h3>
+												<h3 class="card-title">Masukan Data Guru</h3>
 												<div class="card-toolbar">
 													<div class="example-tools justify-content-center">
 														<span class="example-toggle" data-toggle="tooltip" title="View code"></span>
@@ -237,35 +233,98 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 													<div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
-														<label>Email address:</label>
-														<input type="email" class="form-control" placeholder="Enter email" />
-														<span class="form-text text-muted">We'll never share your email with anyone else</span>
+														<label>Asal Sekolah:</label>
+														<input type="text" name="asalsekolah" class="form-control" placeholder="Enter email" />
+														<span class="form-text text-muted">Asa pendidikan Tedrakhir</span>
 													</div>
+
 													<div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
-														<label>Subscription</label>
-														<div class="input-group">
-															<div class="input-group-prepend">
-																<span class="input-group-text">$</span>
-															</div>
-															<input type="text" class="form-control" placeholder="99.9" />
-														</div>
+														<label>Pendidikan</label>
+														<input type="text" name="pendidikan" class="form-control" placeholder="Enter email" />
+														<span class="form-text text-muted">Asa pendidikan Tedrakhir</span>
 													</div>
+
+
 													<div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
-														<label>Communication:</label>
-														<div class="checkbox-list">
-															<label class="checkbox">
-															<input type="checkbox" />
-															<span></span>Email</label>
-															<label class="checkbox">
-															<input type="checkbox" />
-															<span></span>SMS</label>
-															<label class="checkbox">
-															<input type="checkbox" />
-															<span></span>Phone</label>
-														</div>
+														<label>email</label>
+														<input type="email" name="email" class="form-control" placeholder="Enter email" />
+														<span class="form-text text-muted">Asa pendidikan Tedrakhir</span>
 													</div>
+
+													<div class="separator separator-dashed my-5"></div>
+													<div class="form-group">
+														<label>Telepon</label>
+														<input type="text" name="telp" class="form-control" placeholder="Masukan Telp" />
+														<span class="form-text text-muted">Asa pendidikan Tedrakhir</span>
+													</div>
+
+													<div class="separator separator-dashed my-5"></div>
+													<div class="form-group">
+														<label>Foto</label>
+														<input type="File" name="foto" class="form-control" placeholder="Masukan Fotomu" />
+														<span class="form-text text-muted">Asa pendidikan Tedrakhir</span>
+													</div>
+
+
+													 <!--begin::Card-->
+
+													 <hr>
+										
+												<h3 class="card-title">Keahlian</h3>
+												
+												<label for="">Keahlian</label>
+
+												<select name="mapel_kategori" id="">
+        <?php foreach( $mapel_kategori->getResultArray() AS $mapel ) :
+            
+            $id_mapel_kategori      = $mapel['id_mapel_kategori'];
+            $id_mapel_subkategori   = $mapel['id_mapel_subkategori'];
+
+            $value = $id_mapel_kategori.'-'.$id_mapel_subkategori;
+        ?>
+        <option value="<?php echo $value ?>"><?php echo $mapel['nama_mapel'].' '.$mapel['nama_submapel'] ?></option>
+        <?php endforeach; ?>
+    </select><br><br>
+
+
+	<hr>
+										
+										<h3 class="card-title">Akun Guru</h3>
+										<hr>
+
+
+										<div class="form-group">
+														<label>Username</label>
+														<input type="text" name="username" class="form-control" placeholder="username" />
+														<span class="form-text text-muted">Please enter your full name</span>
+													</div>
+
+													<div class="form-group">
+														<label>Kata Sandi</label>
+														<input type="text" name="password" class="form-control" placeholder="masukan password" />
+														<span class="form-text text-muted">Password anda</span>
+													</div>
+
+													
+													<label for="">Status Akun</label>
+    <br>
+    <label for="aktif">Aktif</label>
+    <input type="radio" id="aktif" name="status_akun" value="aktif">
+    
+    <label for="nonaktif">Nonaktif</label>
+    <input type="radio" id="nonaktif" name="status_akun" value="nonaktif">
+
+
+
+
+
+
+										
+
+
+
 													<!--begin: Code-->
 													<div class="example-code mt-10">
 														<ul class="example-nav nav nav-tabs nav-bold nav-tabs-line nav-tabs-line-2x">
@@ -341,7 +400,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<!--end: Code-->
 												</div>
 												<div class="card-footer">
-													<button type="reset" class="btn btn-primary mr-2">Submit</button>
+													<button type="submit" class="btn btn-primary mr-2">Submit</button>
 													<button type="reset" class="btn btn-secondary">Cancel</button>
 												</div>
 											</form>

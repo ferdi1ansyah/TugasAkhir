@@ -27,7 +27,10 @@
 
 
   
+   <?php if ( $txt == "love" ) {
 
+       hjgjhghjgjhg
+   } ?>
    <?= $this->renderSection('content'); ?>
 
     <!-- Bootstrap core JavaScript-->

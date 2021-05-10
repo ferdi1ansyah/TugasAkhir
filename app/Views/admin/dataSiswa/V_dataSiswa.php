@@ -19,9 +19,9 @@
       <div class="card card-body">
 
       <div class="row">
-              <button data-toggle="modal" data-target="/datasiswa/prosesTambahSiswa" style="margin-bottom: 20px"
-                class="btn btn-primary btn-sm">
-        <b><a href="/datasiswa/tambah"><i class="material-icons">add</i>Tambah Data Siswa</a></b>
+              
+        <a href="/datasiswa/tambah" class="btn btn-primary btn-sm">
+        <i class="material-icons">add</i>Tambah Data Siswa</a></b>
                 <form action="/datasiswa/prosesTambahSiswa" method="POST"></button>
               <div class="table-responsive">
                 <table class="table table-striped">

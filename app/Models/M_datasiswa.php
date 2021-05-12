@@ -35,6 +35,24 @@
             return $query;
         }
 
+        // ambil data siswa berdasarkan id_siswa
+        function getDataSiswaById( $id_siswa ) {
+
+            $sql = "SELECT 
+                        data_siswa.*, profile.* 
+                        
+                    FROM profile
+                    JOIN data_siswa ON data_siswa.id_profile = profile.id_profile
+                    
+                    WHERE data_siswa.id_siswa = '$id_siswa'";
+
+            $query = $this->db->query( $sql );
+
+            // $query = $this->db->table('data_siswa')->where('id_siswa', $id_siswa)->get();
+            return $query;
+        }
+
+
     // proses tambah guru
     function onInsertSiswa( $namalengkap,$gender, $domisili,$tanggallahir, $asalsekolah, $pendidikansekarang, $email, $telp ,$foto ) {
 
@@ -99,6 +117,22 @@
         $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> <small>Mapel subkategori berhasil terhapus</small></div>';
         $session->setFlashdata('pesan', $elementHTML);
         
+        // redirect
+        $url = base_url( 'datasiswa' );
+        return redirect()->to( $url );
+    }
+
+
+
+
+    function prosesUpdate( $id_profile, $id_siswa, $dataSiswa, $dataAkun ) {
+
+        // data siswa
+        $this->db->table('data_siswa')->where('id_siswa', $id_siswa)->update( $dataSiswa );
+       
+        // data siswa
+        $this->db->table('profile')->where('id_profile', $id_profile)->update( $dataAkun );
+
         // redirect
         $url = base_url( 'datasiswa' );
         return redirect()->to( $url );

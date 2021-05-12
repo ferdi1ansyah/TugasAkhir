@@ -144,7 +144,7 @@ class DataSiswa extends Controller{
             'nama_lengkap'      => $namalengkap,
             'gender'            => $gender,
             'domisili'          => $domisili,
-            'tanggal_lahir'     => $tanggl_lahir,
+            'tanggal_lahir'     => $tanggal_lahir,
             'alamat'            => $alamat,
             'asal_sekolah'      => $asalsekolah,
             'pendidikan_sekarang'        => $pendidikan_sekarang,
@@ -162,5 +162,64 @@ class DataSiswa extends Controller{
 
         return view('siswa/upload/V_upload');
     }
+
+
+
+
+
+
+    // view edit siswa
+    function edit( $id_siswa ) {
+
+        $model = new M_category();
+        $model_siswa = new M_datasiswa();
+
+        $ambilDataSiswa = $model_siswa->getDataSiswaById( $id_siswa );
+        $data['data_siswa']     = $ambilDataSiswa->getRowArray();
+
+        return view('admin/dataSiswa/V_dataSiswa_edit', $data);
+    }
     
+
+
+    // ubah 
+    function prosesUbahSiswa( $id_siswa, $id_profile ) {
+
+        $model_siswa = new M_datasiswa();
+
+        $namalengkap  = $this->request->getPost('nama');
+        $gender = $this->request->getPost('gender');
+        $domisili  = $this->request->getPost('domisili');
+        $tanggal_lahir  = $this->request->getPost('tanggal_lahir');
+        $alamat  = $this->request->getPost('alamat');
+        $asalsekolah    = $this->request->getPost('asal_sekolah');
+        $pendidikan_sekarang    = $this->request->getPost('pendidikan_sekarang');
+        $email    = $this->request->getPost('email');
+        $telp    = $this->request->getPost('telp');
+        $foto    = $this->request->getPost('foto');
+        
+        // siswa
+        $dataSiswa = array(
+
+            'nama_lengkap'      => $namalengkap,
+            'gender'            => $gender,
+            'domisili'          => $domisili,
+            'tanggal_lahir'     => $tanggal_lahir,
+            'alamat'            => $alamat,
+            'asal_sekolah'      => $asalsekolah,
+            'pendidikan_sekarang'        => $pendidikan_sekarang,
+            'email'             => $email,
+            'telp'              => $telp,
+            'foto'              => $foto
+
+        );
+
+        // profile  atau akunsiswa
+        $dataAkun = array(
+
+            'status_akun'   => $this->request->getPost('status_akun')
+        );
+
+        return $model_siswa->prosesUpdate( $id_profile, $id_siswa, $dataSiswa, $dataAkun );
+    }
 }

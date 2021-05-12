@@ -276,7 +276,7 @@ License: You must have a valid license purchased only from themeforest(the above
 												
 												<label for="">Keahlian</label>
 
-												<select name="mapel_kategori" id="">
+												<select name="mapel_kategori" class ="form-control"id="">
         <?php foreach( $mapel_kategori->getResultArray() AS $mapel ) :
             
             $id_mapel_kategori      = $mapel['id_mapel_kategori'];

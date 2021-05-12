@@ -85,7 +85,24 @@
 
         return redirect()->to(base_url('datasiswa/index'));
     }
-  
+    function prosesHapusSiswa( $last_id_siswa ){
+
+        // load db
+        $db      = \Config\Database::connect();
+        $session = \Config\Services::session();
+        
+        $db->table('data_siswa')
+            ->where('id_siswa', $last_id_siswa)
+            ->delete();
+
+
+        $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> <small>Mapel subkategori berhasil terhapus</small></div>';
+        $session->setFlashdata('pesan', $elementHTML);
+        
+        // redirect
+        $url = base_url( 'datasiswa' );
+        return redirect()->to( $url );
+    }
 
 
 

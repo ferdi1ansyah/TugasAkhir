@@ -109,5 +109,58 @@ class DataSiswa extends Controller{
 
             return $model->onInsertDataSiswa( $nilaiSiswa );
         }
+
+
+
+
+        function prosesHapusSiswa( $last_id_siswa ) {
+            $model = new M_datasiswa();
+
+            // ambil nilai 
+           
+            return $model->prosesHapusSiswa( $last_id_siswa);
+        }
+
+        function prosesUpdateSiswa( $last_id_siswa ) {
+
+
+            $model = new M_datasiswa();
+
+            // ambil nilai 
+                $namalengkap  = $this->request->getPost('nama_lengkap');
+                $gender = $this->request->getPost('gender');
+                $domisili  = $this->request->getPost('domisili');
+                $tanggal_lahir  = $this->request->getPost('tanggal_lahir');
+                $alamat  = $this->request->getPost('alamat');
+                $asalsekolah    = $this->request->getPost('asal_sekolah');
+                $pendidikan_sekarang    = $this->request->getPost('pendidikan_sekarang');
+                $email    = $this->request->getPost('email');
+                $telp    = $this->request->getPost('telp');
+                $foto    = $this->request->getPost('foto');
+
+
+            $dataSiswa = array(
+
+            'nama_lengkap'      => $namalengkap,
+            'gender'            => $gender,
+            'domisili'          => $domisili,
+            'tanggal_lahir'     => $tanggl_lahir,
+            'alamat'            => $alamat,
+            'asal_sekolah'      => $asalsekolah,
+            'pendidikan_sekarang'        => $pendidikan_sekarang,
+            'email'             => $email,
+            'telp'              => $telp,
+            'foto'              => $foto
+
+            );
+
+            return $model->onUpdateCategory( $last_id_siswa,$dataSiswa);
+        }
+
+
+    function viewDataMateri() {
+
+        return view('siswa/upload/V_upload');
+    }
     
 }

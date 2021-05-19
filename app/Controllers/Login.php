@@ -54,16 +54,6 @@
 
         }
 
-
-
-
-
-
-
-
-
-
-
         // proses logout
         function proseslogout() {
 
@@ -86,6 +76,18 @@
             echo $encode = base64_encode( $password );
             echo "<br> hasil decode ". base64_decode( $encode );
         }
+
+        public function register() {
+            return view('auth/registep');
+        }
+
+
+
+
+
+
+
+
     
     }
     

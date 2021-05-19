@@ -36,7 +36,7 @@
                                             id="exampleRepeatPassword" placeholder="Repeat Password">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                <a href="index" class="btn btn-primary btn-user btn-block">
                                     Register Account
                                 </a>
                                

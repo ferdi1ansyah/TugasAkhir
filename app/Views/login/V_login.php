@@ -26,7 +26,7 @@ $this->extend('Auth/templates/index');?>
                                 
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Assalamualaikum</h1>
 
                                         <?php 
                                         
@@ -60,7 +60,7 @@ $this->extend('Auth/templates/index');?>
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="register">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

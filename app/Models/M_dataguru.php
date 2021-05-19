@@ -35,6 +35,30 @@
             return $query;
         }
 
+        function getDataGuruById( $id_guru ) {
+
+            $sql = "    SELECT 
+                        data_guru.*, profile.* 
+                        
+                    FROM profile
+                    JOIN data_guru ON data_guru.id_profile = profile.id_profile
+                    
+                    WHERE data_guru.id_guru = '$id_guru'";
+
+            $query = $this->db->query( $sql );
+
+            // $query = $this->db->table('data_siswa')->where('id_siswa', $id_siswa)->get();
+            return $query;
+        }
+
+
+
+
+
+
+
+
+
     // proses tambah guru
     function onInsertGuru( $namalengkap, $asalsekolah, $pendidikan, $email, $telp ,$foto ) {
 
@@ -108,25 +132,18 @@
         return redirect()->to( $url );
     }
 
-    function onUpdateCategory( $last_id_guru, $dataGuru){
+    function prosesUpdate( $id_profile, $id_guru, $dataGuru, $dataAkunGuru) {
 
-        // load db
-        $db      = \Config\Database::connect();
-        $session = \Config\Services::session();
-
-        $elementHTML = '<div class="alert alert-success">Pemberitahuan <br> 
-                        <small>Mapel subkategori berhasil diperbarui</small>
-                        </div>';
-        $session->setFlashdata('pesan', $elementHTML);
+        // data siswa
+        $this->db->table('data_guru')->where('id_guru', $id_guru)->update( $dataGuru );
+       
+        // // data siswa
+        $this->db->table('profile')->where('id_profile', $id_profile)->update( $dataAkunGuru );
 
 
-         $db->table('data_guru')
-            ->where('id_guru', $last_id_guru)
-            ->update( $dataGuru );
-
-         // redirect
-         $url = base_url( 'dataguru' );
-         return redirect()->to( $url );
+        // redirect
+        $url = base_url( 'dataguru' );
+        return redirect()->to( $url );
     }
 
 

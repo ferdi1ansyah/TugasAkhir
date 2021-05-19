@@ -59,21 +59,17 @@
                                   <?php if ( $dataGuru->getNumRows() > 0 ) { ?>
 
                                   <?php foreach ( $dataGuru->getResultArray() AS $guru ) :  ?>
+    <div class="modal fade" id="hapus-guru-<?php echo $guru['id_guru'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
 
+                   <div class="modal-body">
 
-                          
-                                    
-                                        <div class="modal fade" id="hapus-guru-<?php echo $guru['id_guru'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                                                    <div class="modal-content">
-
-                                                    <div class="modal-body">
-
-                                                        <div class="text-center">
+        <div class="text-center">
                                                            
-                                                        </div>
-                                                        <h4>Hapus Guru</h4>
-                                                        <p>Apakah anda yakin ingin mengahapus <?php echo $guru['nama_lengkap'] ?> dari Data Guru ? </p>
+                        </div>
+           <h4>Hapus Guru</h4>
+             <p>Apakah anda yakin ingin mengahapus <?php echo $guru['nama_lengkap'] ?> dari Data Guru ? </p>
                                                         
                                                         
                                                     </div>
@@ -117,7 +113,8 @@
                                                
                                     <td>  
                                         <a href=":;" class="btn btn-danger"  data-toggle="modal" data-target="#hapus-guru-<?php echo $guru['id_guru'] ?>"><i class="material-icons">delete</i></a>
-                                        <a href=":;" data-toggle="modal" data-target="#update-guru-<?php echo $guru['id_guru'] ?>" class="btn btn-warning"><i class="material-icons">edit</i></a>
+                                        <a href="/dataguru/edit/<?php echo $guru['id_guru'] ?>" class="btn btn-warning"><i class="material-icons">edit</i></a>
+                    </td>
                                     </td>
 
                                         </tr>

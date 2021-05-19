@@ -167,4 +167,55 @@ class DataGuru extends Controller{
 
         return view('guru/upload/V_upload');
     }
+
+
+    function edit( $id_guru ) {
+
+        $model = new M_category();
+        $model_guru = new M_dataguru();
+
+        $ambilDataGuru = $model_guru->getDataGuruById( $id_guru );
+        $data['data_guru']     = $ambilDataGuru->getRowArray();
+
+        return view('admin/dataGuru/V_dataGuru_edit', $data);
+
+    }
+
+    function prosesUbahGuru( $id_guru, $id_profile ) {
+
+        $model_guru = new M_dataguru();
+
+        $namalengkap  = $this->request->getPost('nama_lengkap');
+                $asalsekolah    = $this->request->getPost('asal_sekolah');
+                $pendidikan    = $this->request->getPost('pendidikan');
+                $email    = $this->request->getPost('email');
+                $telp    = $this->request->getPost('telp');
+                $foto    = $this->request->getPost('foto');
+        
+        // 
+        $dataGuru = array(
+
+            'nama_lengkap'      => $namalengkap,
+            'asal_sekolah'      => $asalsekolah,
+            'pendidikan'        => $pendidikan,
+            'email'             => $email,
+            'telp'              => $telp,
+            'foto'              => $foto
+          
+
+        );
+
+        // profile  atau akunsiswa
+        $dataAkunGuru = array(
+
+            'status_akun'   => $this->request->getPost('status_akun')
+        );
+
+        return $model_guru->prosesUpdate( $id_profile, $id_guru, $dataGuru, $dataAkunGuru ); 
+    }
+
+
+
+
+
 }

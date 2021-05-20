@@ -230,15 +230,27 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="form-text text-muted">Please enter your full name</span>
 													</div>
 
-                                                    <div class="separator separator-dashed my-5"></div>
-													<div class="form-group">
-														<label>Gender</label>
-														<input type="text" name="gender" value="<?php echo $data_siswa['gender'] ?>" class="form-control" placeholder="select gender" />
-														<span class="form-text text-muted">gender anda</span>
-													</div>
+                                                   
 
                                                     <div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
+
+
+													
+													<div class="form-group">
+														<label for="exampleSelectd">Default Select</label>
+														<select class="form-control" name="gender"  id="exampleSelectd">
+															<option value="L"<?php if ( $data_siswa['gender'] == "L" ) { echo 'selected="selected"'; } ?> >Laki Laki</option>
+															<option Value="P" <?php if ( $data_siswa['gender'] == "P" ) { echo 'selected="selected"'; } ?> >Perempuan</option>
+															
+														</select>
+													</div>
+													
+
+
+
+
+
 														<label>Domisili</label>
 														<input type="text" name="domisili" value="<?php echo $data_siswa['domisili'] ?>" class="form-control" placeholder="domisili anda" />
 														<span class="form-text text-muted">isi domsili anda</span>

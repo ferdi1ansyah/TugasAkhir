@@ -230,21 +230,14 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="form-text text-muted">Please enter your full name</span>
 													</div>
 
-                                                    <div class="separator separator-dashed my-5"></div>
-													<div class="form-group">
-														<label>Gender</label>
-														<input type="text" name="gender" class="form-control" placeholder="select gender" />
-														<span class="form-text text-muted">gender anda</span>
-													</div>
+                                                
 
 													<div class="form-group">
 														<label for="exampleSelectd">Default Select</label>
 														<select class="form-control" name="gender"  id="exampleSelectd">
-															<option>1</option>
-															<option>2</option>
-															<option>3</option>
-															<option>4</option>
-															<option>5</option>
+															<option value="L">Laki Laki</option>
+															<option Value="P">Perempuan</option>
+															
 														</select>
 													</div>
 													
@@ -314,7 +307,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													 <!--begin::Card-->
 
 													 <hr>
-										
+<!-- 										
 												<h3 class="card-title">Keahlian</h3>
 												
 												<label for="">Keahlian</label>
@@ -332,7 +325,7 @@ License: You must have a valid license purchased only from themeforest(the above
     </select><br><br>
 
 
-	<hr>
+	<hr> -->
 										
 										<h3 class="card-title">Akun Siswa</h3>
 										
@@ -361,7 +354,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 	<label class="checkbox checkbox-rounded">
 	<input type="radio" id="nonaktif" checked="checked" name="status_akun" value="nonaktif" />
-	<span></span>Aktif</label>
+	<span></span>Non Aktif</label>
 	</div>
 	
 

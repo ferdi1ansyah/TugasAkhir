@@ -237,6 +237,20 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="form-text text-muted">gender anda</span>
 													</div>
 
+													<div class="form-group">
+														<label for="exampleSelectd">Default Select</label>
+														<select class="form-control" name="gender"  id="exampleSelectd">
+															<option>1</option>
+															<option>2</option>
+															<option>3</option>
+															<option>4</option>
+															<option>5</option>
+														</select>
+													</div>
+													
+
+
+
                                                     <div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
 														<label>Domisili</label>
@@ -339,11 +353,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													
 													<label for="">Status Akun</label>
     <br>
-    <label for="aktif">Aktif</label>
-    <input type="radio" id="aktif" name="status_akun" value="aktif">
-    
-    <label for="nonaktif">Nonaktif</label>
-    <input type="radio" id="nonaktif" name="status_akun" value="nonaktif">
+	<div class="checkbox-inline">
+	
+	<label class="checkbox checkbox-rounded">
+	<input type="radio" id="aktif" checked="checked" name="status_akun" value="aktif" />
+	<span></span>Aktif</label>
+
+	<label class="checkbox checkbox-rounded">
+	<input type="radio" id="nonaktif" checked="checked" name="status_akun" value="nonaktif" />
+	<span></span>Aktif</label>
+	</div>
+	
+
 
 
 

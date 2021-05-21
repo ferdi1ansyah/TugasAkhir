@@ -17,11 +17,7 @@
 
       <h4 class="card-title">Tabel Data Guru</h4>
       <div class="card card-body">
-
       
-
-      
-
       <div class="row">
 
               <a href="/dataguru/tambah" class="btn btn-primary btn-sm">
@@ -130,9 +126,7 @@
         </div>
       </div>
 
-    </diV>
-  </div>
-</diV>
+    
 
 
                         

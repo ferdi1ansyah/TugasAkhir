@@ -182,11 +182,20 @@ License: You must have a valid license purchased only from themeforest(the above
 														<span class="form-text text-muted">Isikan alamat / tempat tinggal anda</span>
 													</div>
 
+												
+
 
                                                     <div class="separator separator-dashed my-5"></div>
 													<div class="form-group">
-														<label>Pendidikan Sekarang</label>
-														<input type="text" name="pendidikan_sekarang" class="form-control" placeholder="" />
+														<label for="exampleSelectd" >Pendidikan Sekarang</label>
+														<select class="form-control" name="pendidikan_sekarang" id="exampleSelectd" >
+															<option value="SD" >SD</option>
+															<option Value="SMP"  >SMP</option>
+															<option value="SMA">SMA</option>
+															<option Value="Universitas" >Universitas</option>
+															<option Value="Umum"  >Umum<option>
+															
+														</select>
 														<span class="form-text text-muted">Isikan pendidikan yang ditempuh sekarang</span>
 													</div>
 

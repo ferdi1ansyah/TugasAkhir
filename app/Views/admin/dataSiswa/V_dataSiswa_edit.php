@@ -193,10 +193,18 @@ License: You must have a valid license purchased only from themeforest(the above
 													</div>
 
 
-                                                    <div class="separator separator-dashed my-5"></div>
+                                               
+
 													<div class="form-group">
-														<label>Pendidikan Sekarang</label>
-														<input type="text" name="pendidikan_sekarang" class="form-control" placeholder="" value="<?php echo $data_siswa['pendidikan_sekarang'] ?>" />
+														<label for="exampleSelectd" >Pendidikan Sekarang</label>
+														<select class="form-control" name="pendidikan_sekarang" id="exampleSelectd" >
+															<option value="SD"<?php if ( $data_siswa['pendidikan_sekarang'] == "SD" ) { echo 'selected="selected"'; } ?> >SD</option>
+															<option Value="SMP" <?php if ( $data_siswa['pendidikan_sekarang'] == "SMP" ) { echo 'selected="selected"'; } ?> >SMP</option>
+															<option value="SMA"<?php if ( $data_siswa['pendidikan_sekarang'] == "SMA" ) { echo 'selected="selected"'; } ?> >SMA</option>
+															<option Value="Universitas" <?php if ( $data_siswa['pendidikan_sekarang'] == "Universitas" ) { echo 'selected="selected"'; } ?> >Universitas</option>
+															<option Value="Umum" <?php if ( $data_siswa['pendidikan_sekarang'] == "Umum" ) { echo 'selected="selected"'; } ?> >Umum<option>
+															
+														</select>
 														<span class="form-text text-muted">Isikan pendidikan yang ditempuh sekarang</span>
 													</div>
 

@@ -23,7 +23,7 @@ $this->extend('templates/template_guru');
 
         <div class="row" style="margin-bottom: 32px">
             <div class="col-md-12">
-                <a href="/dataguru/tambah" class="btn btn-primary btn-sm">
+                <a href="/datamateri/tambah" class="btn btn-primary btn-sm">
                     <i class="material-icons">add</i>Tambah Data Guru
                 </a>
             </div>
@@ -40,7 +40,18 @@ $this->extend('templates/template_guru');
             <div class="col-xs-6 col-sm-6 col-md-3" style="margin-bottom: 20px">
                 <div class="stats-small stats-small--1 card card-small">
                     <a href="">
-                        <img class="card-img-top" src="<?php echo base_url('assets/images/ai2.jpg') ?>" alt="Card image cap">
+                        <?php
+
+                            $img = "https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png"; // gambar default
+
+                            // gambar terdapat upload
+                            if ( $kolom['media'] ) {
+
+                                $img = base_url('assets/images/thumbnail-material/'. $kolom['media']);
+                            }
+                        
+                        ?>
+                        <img class="card-img-top" src="<?php echo $img ?>" alt="Card image cap" style="object-fit: cover; height: 150px">
                     </a>
                     <div class="card-body">
                         <div class="d-flex flex-column m-auto">

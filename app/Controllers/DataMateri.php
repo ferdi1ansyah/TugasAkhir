@@ -52,6 +52,7 @@ class Datamateri extends Controller {
     function prosestambah(){
 
         helper(['form', 'url']);
+        $validation =  \Config\Services::validation();
 
         // model 
         $model = new M_datamateri();
@@ -60,43 +61,49 @@ class Datamateri extends Controller {
         $sess_id_guru = $this->session->get('sess_id_guru');
 
         $thumbnail = "";
-
         $config = array(
 
             'thumbnail' => [
-                'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/gif,image/png]|max_size[berkas,2048]',
+                'rules' => 'uploaded[thumbnail]|mime_in[thumbnail,image/jpg,image/jpeg,image/gif,image/png]|max_size[thumbnail,2048]',
 				'errors' => [
-					'uploaded' => 'Harus Ada File yang diupload',
-					'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
-					'max_size' => 'Ukuran File Maksimal 2 MB'
+					'uploaded' => 'Masukkan foto thumnail materi',
+					'mime_in' => 'Ekstensi file setidaknya jpg, jpeg, gif, atau png',
+					'max_size' => 'Ukuran foto maksimal 2 MB'
 				]
             ],
         );
 
+        
+
         // menyeting konfigurasi upload
         $set_upload = $this->validate( $config );
 
+        $thumbnail = "";
         if ( $set_upload ) {
 
             // upload berhasil / memenuhi syarat 
             $file = $this->request->getFile('thumbnail');
-            $file->move(WRITEPATH . 'public\assets\images\thumbnail-material');
-
             // set nilai
-            $thumbnail = $file->getName();
+            $thumbnail = $file->getRandomName();
+
+            $file->move('assets/images/thumbnail-material/', $thumbnail);            
 
         } else {
 
-            echo "Upload error";
-        }
+            $msg =  $validation->listErrors();
 
+            $html = '<div class="alert alert-danger">'.$msg.'</div>';
+            session()->setFlashdata( 'msg', $html );
+
+            // redirect
+            return redirect()->to(base_url('datamateri/tambah'));
+        }
 
 
         // ambil nilai 
         $modul          = $this->request->getPost('judul_materi');
         $deskripsi      = $this->request->getPost('deskripsi');
         $status         = $this->request->getPost('status');
-        $foto    = null;
 
 
         $dataMateri = array(
@@ -108,10 +115,7 @@ class Datamateri extends Controller {
             'materi_status' => $status
         );
 
-        print_r( $dataMateri );
-        // return $model->simpanDataMateri( $dataMateri );
-
-
+        return $model->simpanDataMateri( $dataMateri );
     }
 
 
@@ -121,6 +125,16 @@ class Datamateri extends Controller {
     function proseshapus( $id_materi ) {
 
         $model = new M_datamateri();
+
+
+        $dataMateriById = $model->tampilDataMateriById( $id_materi );
+
+        // hapus file lama
+        if ( $dataMateriById['media'] ) {
+
+            $oldFile = $dataMateriById['media'];
+            unlink('assets/images/thumbnail-material/'. $oldFile);
+        }
 
         return $model->hapusDataMateri( $id_materi );
     }
@@ -159,21 +173,81 @@ class Datamateri extends Controller {
         // model 
         $model = new M_datamateri();
 
+        helper(['form', 'url']);
+        $validation =  \Config\Services::validation();
+
+        $dataMateriById = $model->tampilDataMateriById( $id_materi );
+
+        $thumbnail = "";
+        if ( $_FILES['thumbnail']['name'] ) {
+
+
+            
+            $config = array(
+
+                'thumbnail' => [
+                    'rules' => 'uploaded[thumbnail]|mime_in[thumbnail,image/jpg,image/jpeg,image/gif,image/png]|max_size[thumbnail,2048]',
+                    'errors' => [
+                        'uploaded' => 'Masukkan foto thumnail materi',
+                        'mime_in' => 'Ekstensi file setidaknya jpg, jpeg, gif, atau png',
+                        'max_size' => 'Ukuran foto maksimal 2 MB'
+                    ]
+                ],
+            );
+
+            
+
+            // menyeting konfigurasi upload
+            $set_upload = $this->validate( $config );
+            if ( $set_upload ) {
+
+
+                // hapus file lama
+                if ( $dataMateriById['media'] ) {
+
+                    $oldFile = $dataMateriById['media'];
+                    unlink('assets/images/thumbnail-material/'. $oldFile);
+                }
+
+
+                // upload berhasil / memenuhi syarat 
+                $file = $this->request->getFile('thumbnail');
+                
+                // set nilai
+                $thumbnail = $file->getRandomName();
+                $file->move('assets/images/thumbnail-material/', $thumbnail);
+
+            } else {
+
+                $msg =  $validation->listErrors();
+
+                $html = '<div class="alert alert-danger">'.$msg.'</div>';
+                session()->setFlashdata( 'msg', $html );
+
+                // redirect
+                return redirect()->to(base_url('datamateri/edit/'. $id_materi));
+            }
+        } else {
+
+            $thumbnail = $dataMateriById['media'];
+        }
+
+
         // ambil nilai 
         $modul          = $this->request->getPost('judul_materi');
         $deskripsi      = $this->request->getPost('deskripsi');
         $status         = $this->request->getPost('status');
-        $foto    = null;
 
 
         $dataMateri = array(
 
             'judul'         => $modul,
             'deskripsi'     => $deskripsi,
-            'media'         => $foto,
+            'media'         => $thumbnail,
             'materi_status' => $status
         );
 
+        print_r( $dataMateri );
         return $model->editDataMateri( $id_materi, $dataMateri );
     } 
 

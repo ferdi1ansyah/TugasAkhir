@@ -23,8 +23,12 @@
             <!-- Small Stats Blocks -->
             <div class="row justify-content-center">
 
+                
+
                 <div class="col-md-8">
 
+
+                    <?php echo session()->getFlashdata('msg') ?>
 
                     <form action="/datamateri/prosestambah" method="POST" enctype="multipart/form-data">
                     <div class="card">
@@ -45,7 +49,7 @@
                                     <div class="form-group">
 
                                         <label for="">Modul</label>
-                                        <input type="text" name="judul_materi" class="form-control" placeholder="Masukkan judul seperti IPA, MATEMATIKA, GEOGRAFI . . .">
+                                        <input type="text" name="judul_materi" class="form-control" placeholder="Masukkan judul seperti IPA, MATEMATIKA, GEOGRAFI . . ." required="" >
                                         <small>Berisi modul materi</small>
                                     
                                     </div>
@@ -53,7 +57,7 @@
                                     <div class="form-group">
 
                                         <label for="">Deskripsi</label>
-                                        <textarea name="deskripsi" class="form-control" placeholder="Berikan keterangan atau deskripsi materi . . ." id="" cols="30"></textarea>
+                                        <textarea name="deskripsi" class="form-control" placeholder="Berikan keterangan atau deskripsi materi . . ." id="" cols="30" required=""></textarea>
                                         <small>Berisi modul materi</small>
                                     
                                     </div>
@@ -64,7 +68,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label for="">Thumnail Materi</label>
-                                                <input type="file" name="thumbnail" class="form-control" />
+                                                <input type="file" name="thumbnail" class="form-control" required="" />
                                                 <small>Masukkan thumnail modul</small>
                                             </div>
                                         </div>

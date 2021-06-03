@@ -51,12 +51,46 @@ class Datamateri extends Controller {
     // proses simpan
     function prosestambah(){
 
+        helper(['form', 'url']);
 
         // model 
         $model = new M_datamateri();
 
         // session guru
         $sess_id_guru = $this->session->get('sess_id_guru');
+
+        $thumbnail = "";
+
+        $config = array(
+
+            'thumbnail' => [
+                'rules' => 'uploaded[berkas]|mime_in[berkas,image/jpg,image/jpeg,image/gif,image/png]|max_size[berkas,2048]',
+				'errors' => [
+					'uploaded' => 'Harus Ada File yang diupload',
+					'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+					'max_size' => 'Ukuran File Maksimal 2 MB'
+				]
+            ],
+        );
+
+        // menyeting konfigurasi upload
+        $set_upload = $this->validate( $config );
+
+        if ( $set_upload ) {
+
+            // upload berhasil / memenuhi syarat 
+            $file = $this->request->getFile('thumbnail');
+            $file->move(WRITEPATH . 'public\assets\images\thumbnail-material');
+
+            // set nilai
+            $thumbnail = $file->getName();
+
+        } else {
+
+            echo "Upload error";
+        }
+
+
 
         // ambil nilai 
         $modul          = $this->request->getPost('judul_materi');
@@ -70,12 +104,12 @@ class Datamateri extends Controller {
             'id_guru'       => $sess_id_guru,
             'judul'         => $modul,
             'deskripsi'     => $deskripsi,
-            'media'         => $foto,
+            'media'         => $thumbnail,
             'materi_status' => $status
         );
 
-
-        return $model->simpanDataMateri( $dataMateri );
+        print_r( $dataMateri );
+        // return $model->simpanDataMateri( $dataMateri );
 
 
     }

@@ -26,7 +26,7 @@
                 <div class="col-md-8">
 
 
-                    <form action="/datamateri/prosestambah" method="POST">
+                    <form action="/datamateri/prosestambah" method="POST" enctype="multipart/form-data">
                     <div class="card">
                         <div class="card-body">
 
@@ -64,7 +64,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label for="">Thumnail Materi</label>
-                                                <input type="file" name="thumnail" class="form-control" />
+                                                <input type="file" name="thumbnail" class="form-control" />
                                                 <small>Masukkan thumnail modul</small>
                                             </div>
                                         </div>

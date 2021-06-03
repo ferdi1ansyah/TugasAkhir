@@ -16,7 +16,7 @@
             
         }
 
-    
+        
         // tampilan login
         function index() {
 
@@ -77,15 +77,8 @@
             echo "<br> hasil decode ". base64_decode( $encode );
         }
 
-        public function register() {
-            return view('auth/registep');
-        }
-
-
-
-
-
-
+        // public function register() {
+        //     return view('auth/registep');
 
 
     

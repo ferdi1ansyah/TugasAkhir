@@ -18,6 +18,17 @@
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="<?php echo base_url() ?>/assets/styles/shards-dashboards.1.1.0.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/styles/extras.1.1.0.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+    <!-- Plugins -->
+
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+
+
+
+    <!-- End Plugins -->
   </head>
   <body class="h-100">
     
@@ -238,5 +249,21 @@
     <script src="<?php echo base_url() ?>/assets/scripts/extras.1.1.0.min.js"></script>
     <script src="<?php echo base_url() ?>/assets/scripts/shards-dashboards.1.1.0.min.js"></script>
     <script src="<?php echo base_url() ?>/assets/scripts/app/app-blog-overview.1.1.0.min.js"></script>
+
+
+    <!-- Plugins -->
+
+    <!-- DataTables -->
+    <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+    
+      $(document).ready( function () {
+        
+          $('#myTable').DataTable();
+      });
+
+    </script>
+
+    <!-- End Plugins -->
   </body>
 </html>

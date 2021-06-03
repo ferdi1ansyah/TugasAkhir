@@ -20,11 +20,16 @@
                              
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-user" id="exampleInputUsername"
-                                        placeholder="Username">
+                                        placeholder="Email">
+                                </div>
+
+                                        <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputUsername"
+                                        placeholder="Full Name">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                        placeholder="Username">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -33,7 +38,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            id="exampleRepeatPassword" placeholder="Confirm Password">
                                     </div>
                                 </div>
                                 <a href="index" class="btn btn-primary btn-user btn-block">
@@ -42,11 +47,11 @@
                                
                             </form>
                             <hr>
-                            <div class="text-center">
+                            <!-- <div class="text-center">
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div>
+                            </div> -->
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="index">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

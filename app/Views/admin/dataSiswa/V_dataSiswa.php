@@ -94,7 +94,7 @@
                             <div class="text-center">
 
                             </div>
-                            <h4>Hapus Guru</h4>
+                            <h4>Hapus Siswa </h4>
                             <p>Apakah anda yakin ingin mengahapus <?php echo $siswa['nama_lengkap'] ?> dari Data Siswa ?
                             </p>
 

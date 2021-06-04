@@ -26,7 +26,7 @@
               <div class="table-responsive">
                 <table class="table table-striped">
 
-                    </form>
+                    
                   <thead>
                     <tr>
                       <th>
@@ -44,6 +44,7 @@
                       <th>
                         Telp
                       </th>
+                      <th> Opsi </th>
                       <!-- <th>
                         Foto
                       </th> -->

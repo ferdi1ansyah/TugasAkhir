@@ -199,5 +199,7 @@
     <script src="<?php echo base_url() ?>/assets/scripts/extras.1.1.0.min.js"></script>
     <script src="<?php echo base_url() ?>/assets/scripts/shards-dashboards.1.1.0.min.js"></script>
     <script src="<?php echo base_url() ?>/assets/scripts/app/app-blog-overview.1.1.0.min.js"></script>
+
+
   </body>
 </html>

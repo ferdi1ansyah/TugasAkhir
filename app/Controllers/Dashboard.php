@@ -46,6 +46,12 @@ class Dashboard extends Controller {
         return view('guru/dashboard/V_dashboard');
     }
 
+    function index3() {
+
+        // echo $this->session->get('sess_username');
+        return view('siswa/V_dashboard');
+    }
+
 
 
 }

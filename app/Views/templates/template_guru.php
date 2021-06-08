@@ -70,10 +70,7 @@
                   <i class="material-icons">book</i>
                   <span>Data Materi</span>
                 </a>
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "" ) echo "active"; ?>" href="/dataguru2">
-                  <i class="material-icons">person</i>
-                  <span>Data Guru</span>
-                </a>
+               
   
               </li>
               

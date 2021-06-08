@@ -1,6 +1,6 @@
 <?php
 
-    $this->extend('templates/template_admin');
+    $this->extend('templates/template_guru');
 
 ?>
 
@@ -92,7 +92,7 @@
 
 
                                     <div class="form-group text-right">
-                                        <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                                  <button><a href="/datamateri" class="btn btn- btn-sm"> Batal </button>                                    
                                         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                                     </div>
                                 </div>

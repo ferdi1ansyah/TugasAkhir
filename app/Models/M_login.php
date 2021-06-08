@@ -76,6 +76,11 @@
 
                             return redirect()->to( base_url('dashboard/index2') );
                             break;
+
+                        case "siswa":
+                            
+                            return redirect()->to (base_url('dashboard/index3') );
+                            break;
                         // . . .
                     }
 

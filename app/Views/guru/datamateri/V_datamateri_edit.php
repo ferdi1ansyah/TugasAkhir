@@ -91,7 +91,7 @@
 
 
                                     <div class="form-group text-right">
-                                        <button type="reset" class="btn btn-default btn-sm">Reset</button>
+                                    <button><a href="/datamateri" class="btn btn- btn-sm"> Batal </button>  
                                         <button type="submit" class="btn btn-warning btn-sm">Perbarui</button>
                                     </div>
                                 </div>

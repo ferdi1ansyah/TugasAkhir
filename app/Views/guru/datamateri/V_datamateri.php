@@ -24,7 +24,7 @@ $this->extend('templates/template_guru');
         <div class="row" style="margin-bottom: 32px">
             <div class="col-md-12">
                 <a href="/datamateri/tambah" class="btn btn-primary btn-sm">
-                    <i class="material-icons">add</i>Tambah Data Guru
+                    <i class="material-icons">add</i>Tambah Data Materi
                 </a>
             </div>
         </div>

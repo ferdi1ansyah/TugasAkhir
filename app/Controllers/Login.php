@@ -24,7 +24,7 @@
 
             $data['session'] = $session;
 
-            return view('login/V_login', $data);
+            return view('Auth/login', $data);
         }
 
 

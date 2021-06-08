@@ -1,11 +1,5 @@
 <!-- manu -->
 
-<<<<<<< Updated upstream
-manuk 
-=======
-
-
-
 <!DOCTYPE html>
 <html class="no-js" lang="">
 

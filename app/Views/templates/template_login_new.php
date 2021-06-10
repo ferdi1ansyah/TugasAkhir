@@ -12,11 +12,16 @@ Purchase: https://1.envato.market/EA4JP
 Renew Support: https://1.envato.market/EA4JP
 License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
+
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../">
 		<meta charset="utf-8" />
-		<title>Login Page 1 | Keenthemes</title>
+
+		<title>Welcome</title>
+
+
+
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -35,10 +40,22 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/favicon.ico" />
 	</head>
+
+
+
+
+
+	
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_body" class="header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-secondary-enabled page-loading">
 		<!--begin::Main-->
+
+		<?= $this->section('content'); ?>
+
+
+
+		
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Login-->
 			<div class="login login-1 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
@@ -52,7 +69,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->
-						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Selamat Datang di Pipel website Pembelajaran A11y
+						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Selamat Datang di Pipel Website Pembelajaran A11y
 						<br />Accessibility All Areas</h3>
 						<!--end::Aside title-->
 					</div>
@@ -70,12 +87,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Signin-->
 						<div class="login-form login-signin">
 							<!--begin::Form-->
-							<form class="form" novalidate="novalidate" id="kt_login_signin_form">
+							<form class="form" novalidate="novalidate" action="/login/proseslogin" method="POST">
 								<!--begin::Title-->
 								<div class="pb-13 pt-lg-0 pt-5">
 									<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Welcome To Pipel Academy</h3>
 									<span class="text-muted font-weight-bold font-size-h4">New Here?
-									<a href="javascript:;" id="kt_login_signup" class="text-primary font-weight-bolder">Create an Account</a></span>
+									<a href="/register/index" id="" class="text-primary font-weight-bolder">Create an Account</a></span>
 								</div>
 								<!--begin::Title-->
 								<!--begin::Form group-->
@@ -95,13 +112,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--end::Form group-->
 								<!--begin::Action-->
 								<div class="pb-lg-0 pb-5">
-									<button type="button" id="kt_login_select_submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Log in</button>
-									<button type="button" class="btn btn-light-primary font-weight-bolder px-8 py-4 my-3 font-size-lg">
-									<span class="svg-icon svg-icon-md">
+									<button type="submit" id="" class="btn btn-primary font-weight-bolder font-size-h4 px-8 py-4 my-3 mr-3">Log in</button>
+									
 										<!--begin::Svg Icon | path:assets/media/svg/social-icons/google.svg-->
 									
-										<!--end::Svg Icon-->
-									</span>Sign Up</button>
+									
+									
 								</div>
 								<!--end::Action-->
 							</form>
@@ -136,6 +152,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 
 						
+					
+
 
 						<!------End::Select Sebagai-->
 

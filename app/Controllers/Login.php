@@ -24,7 +24,7 @@
 
             $data['session'] = $session;
 
-            return view('Auth/login', $data);
+            return view('login/V_login', $data);
         }
 
 
@@ -63,23 +63,6 @@
             $url = base_url('login/index');
             return redirect()->to( $url );
         }
-
-        function belajarEnkripsi() {
-
-            $password = 123;
-            echo password_hash( $password, PASSWORD_BCRYPT );
-            echo '<hr>';
-
-            echo md5( $password );
-            echo '<hr>';
-
-            echo $encode = base64_encode( $password );
-            echo "<br> hasil decode ". base64_decode( $encode );
-        }
-
-        // public function register() {
-        //     return view('auth/registep');
-
 
     
     }

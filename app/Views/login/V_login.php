@@ -1,7 +1,8 @@
  
 <?=
 
-$this->extend('Auth/templates/login');?>
+// $this->extend('Auth/templates/index');
+$this->extend('templates/template_login_new');?>
 
 <?php //$this->extend('templates/template_login'); ?>
 

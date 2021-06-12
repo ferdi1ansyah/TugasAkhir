@@ -42,7 +42,7 @@ class Datamateri extends Controller {
 
     // tambah data materi
     function tambah() {
-        $data['sess_id_guru']       = $this->session->get('sess_id_guru');
+        $data['sess_id_profile']       = $this->session->get('sess_id_profile');
         $data['sess_nama_lengkap']  = $this->session->get('sess_nama_lengkap');
         return view('guru/datamateri/V_datamateri_tambah', $data);
     }
@@ -58,7 +58,7 @@ class Datamateri extends Controller {
         $model = new M_datamateri();
 
         // session guru
-        $sess_id_guru = $this->session->get('sess_id_guru');
+        $sess_id_profile = $this->session->get('sess_id_profile');
 
         $thumbnail = "";
         $config = array(
@@ -108,7 +108,7 @@ class Datamateri extends Controller {
 
         $dataMateri = array(
 
-            'id_guru'       => $sess_id_guru,
+            'id_profile'       => $sess_id_profile,
             'judul'         => $modul,
             'deskripsi'     => $deskripsi,
             'media'         => $thumbnail,
@@ -151,7 +151,7 @@ class Datamateri extends Controller {
 
             $model = new M_datamateri();
 
-            $data['sess_id_guru']       = $this->session->get('sess_id_guru');
+            $data['sess_id_profile']       = $this->session->get('sess_id_profile');
             $data['sess_nama_lengkap']  = $this->session->get('sess_nama_lengkap');
             $data['materi'] = $model->tampilDataMateriById( $id_materi );
 
@@ -159,7 +159,8 @@ class Datamateri extends Controller {
             return view('guru/datamateri/V_datamateri_edit', $data);
         } else {
 
-            echo "Hayoo ngapain, nakal ya ?";
+            // menampilkan halaman 404
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
         
     }
@@ -250,6 +251,29 @@ class Datamateri extends Controller {
         print_r( $dataMateri );
         return $model->editDataMateri( $id_materi, $dataMateri );
     } 
+
+
+
+
+
+
+    // detail
+    function detail( $id_materi = null ) {
+
+        // cek id
+        if ( $id_materi ) {
+
+            $data['id_materi'] = $id_materi;
+            return view('guru/datamateri/V_datamateri_detail', $data);
+
+
+        } else {
+
+            // id tidak ditemukan, yaitu dengan menampilkan halaman 404
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    }
+    
 
 
 }

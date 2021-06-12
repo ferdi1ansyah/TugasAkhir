@@ -22,8 +22,8 @@ class M_datamateri extends Model{
     // fungsi tampil materi
     function tampilDataMateri() {
 
-        $sess_id_guru = $this->session->get('sess_id_guru');
-        $sql = "SELECT * FROM data_materi WHERE id_guru = '$sess_id_guru'";
+        $sess_id_profile = $this->session->get('sess_id_profile');
+        $sql = "SELECT * FROM data_materi WHERE id_profile = '$sess_id_profile'";
 
         $query = $this->db->query( $sql );
         return $query;

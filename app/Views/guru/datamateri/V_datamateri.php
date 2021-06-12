@@ -106,7 +106,7 @@ $this->extend('templates/template_guru');
                                 <div>
                                     <a href="/datamateri/proseshapus/<?php echo $kolom['id_materi'] ?>" onclick="return confirm('Apakah anda ingin menghapus materi ini ?')" class="btn"><i class="fas fa-times"></i></a>
                                     <a href="/datamateri/edit/<?php echo $kolom['id_materi'] ?>" class="btn"><i class="fas fa-edit"></i></a>
-                                    <a href="" class="btn"><i class="fas fa-list-ul"></i></a>
+                                    <a href="/datamateri/detail/<?php echo $kolom['id_materi'] ?>" class="btn"><i class="fas fa-list-ul"></i></a>
                                 </div>
 
                             </div>

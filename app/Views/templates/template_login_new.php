@@ -92,8 +92,11 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="pb-13 pt-lg-0 pt-5">
 									<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Welcome To Pipel Academy</h3>
 									<span class="text-muted font-weight-bold font-size-h4">New Here?
-									<a href="/register/index" id="" class="text-primary font-weight-bolder">Create an Account</a></span>
+									
+									<a href="/register/opsi2" id="" class="text-primary font-weight-bolder">Create an Account</a></span>
 								</div>
+
+								
 								<!--begin::Title-->
 								<!--begin::Form group-->
 								<div class="form-group">
@@ -115,7 +118,10 @@ License: You must have a valid license purchased only from themeforest(the above
 									<button type="submit" id="" class="btn btn-primary font-weight-bolder font-size-h4 px-8 py-4 my-3 mr-3">Log in</button>
 									
 										<!--begin::Svg Icon | path:assets/media/svg/social-icons/google.svg-->
-									
+										<?php 
+                                        
+										echo $session->getFlashdata('pesan');
+									?>
 									
 									
 								</div>
@@ -202,6 +208,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<a href="#">terms and conditions</a>.</div>
 									</label>
 								</div>
+
+								
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								<div class="form-group d-flex flex-wrap pb-lg-0 pb-3">

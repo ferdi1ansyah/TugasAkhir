@@ -1,11 +1,11 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\M_datamateri;
+use App\Models\M_datamateriadmin;
 use CodeIgniter\Controller;
 
 
-class Datamateri extends Controller {
+class Datamateriadmin extends Controller {
 
 
     private $session;
@@ -29,10 +29,10 @@ class Datamateri extends Controller {
 
     function index () {
 
-        $model = new M_datamateri();
+        $model = new M_datamateriadmin();
 
         $data['materi'] = $model->tampilDataMateri();
-        return view("guru/datamateri/V_datamateri", $data);
+        return view("admin/datamateri/V_datamateri", $data);
     }
 
 
@@ -42,7 +42,7 @@ class Datamateri extends Controller {
     function tambah() {
         $data['sess_id_profile']       = $this->session->get('sess_id_profile');
         $data['sess_nama_lengkap']  = $this->session->get('sess_nama_lengkap');
-        return view('guru/datamateri/V_datamateri_tambah', $data);
+        return view('admin/datamateri/V_datamateri_tambah', $data);
     }
 
 
@@ -53,7 +53,7 @@ class Datamateri extends Controller {
         $validation =  \Config\Services::validation();
 
         // model 
-        $model = new M_datamateri();
+        $model = new M_datamateriadmin();
 
         // session guru
         $sess_id_profile = $this->session->get('sess_id_profile');
@@ -94,7 +94,7 @@ class Datamateri extends Controller {
             session()->setFlashdata( 'msg', $html );
 
             // redirect
-            return redirect()->to(base_url('datamateri/tambah'));
+            return redirect()->to(base_url('Datamateriadmin/tambah'));
         }
 
 
@@ -122,7 +122,7 @@ class Datamateri extends Controller {
 
     function proseshapus( $id_materi ) {
 
-        $model = new M_datamateri();
+        $model = new M_datamateriadmin();
 
 
         $dataMateriById = $model->tampilDataMateriById( $id_materi );
@@ -147,18 +147,17 @@ class Datamateri extends Controller {
         if ( $id_materi != null ) {
 
 
-            $model = new M_datamateri();
+            $model = new M_datamateriadmin();
 
             $data['sess_id_profile']       = $this->session->get('sess_id_profile');
             $data['sess_nama_lengkap']  = $this->session->get('sess_nama_lengkap');
             $data['materi'] = $model->tampilDataMateriById( $id_materi );
 
 
-            return view('guru/datamateri/V_datamateri_edit', $data);
+            return view('admin/datamateri/V_datamateri_edit', $data);
         } else {
 
-            // menampilkan halaman 404
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            echo "Hayoo ngapain, nakal ya ?";
         }
         
     }
@@ -170,7 +169,7 @@ class Datamateri extends Controller {
     function prosesedit( $id_materi ) {
 
         // model 
-        $model = new M_datamateri();
+        $model = new M_datamateriadmin();
 
         helper(['form', 'url']);
         $validation =  \Config\Services::validation();
@@ -249,29 +248,6 @@ class Datamateri extends Controller {
         print_r( $dataMateri );
         return $model->editDataMateri( $id_materi, $dataMateri );
     } 
-
-
-
-
-
-
-    // detail
-    function detail( $id_materi = null ) {
-
-        // cek id
-        if ( $id_materi ) {
-
-            $data['id_materi'] = $id_materi;
-            return view('guru/datamateri/V_datamateri_detail', $data);
-
-
-        } else {
-
-            // id tidak ditemukan, yaitu dengan menampilkan halaman 404
-            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
-        }
-    }
-    
 
 
 }

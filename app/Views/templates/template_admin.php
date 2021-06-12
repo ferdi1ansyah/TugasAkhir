@@ -98,25 +98,31 @@
 
               <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "report" ) { echo "active"; }  ?>" href="/report/index">
-                  <i class="material-icons">assignment</i>
+                  <i class="material-icons">help</i>
                   <span>Laporan</span>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) { echo "active"; }  ?>" href="/dataguru/index">
-                  <i class="material-icons">storage</i>
+                  <i class="material-icons">person_add_alt_1</i>
                   <span>Data Guru</span>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "datasiswa" ) { echo "active"; }  ?>" href="/datasiswa/index">
-                  <i class="material-icons">people</i>
+                  <i class="material-icons">person_add_alt</i>
                   <span>Data Siswa</span>
                 </a>
               </li>
-              
+              <li class="nav-item">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "Datamateriadmin" ) { echo "active"; }  ?>" href="/Datamateriadmin/index">
+                  <i class="material-icons">cake</i>
+                  <span>Data Materi</span>
+                </a>
+              </li>
+
             </ul>
           </div>
         </aside>

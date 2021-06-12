@@ -3,6 +3,7 @@
     namespace App\Controllers;
     use CodeIgniter\Controller;
     use App\Models\M_login;
+    use App\Libraries\Notification;
     
     class Login extends Controller {
 
@@ -12,7 +13,7 @@
         function __construct() {
 
             $this->session = \Config\Services::session();
-
+            $this->notif = new Notification();
             
         }
 
@@ -50,6 +51,7 @@
             $password = $this->request->getPost('password');
 
             // @TODO 2 : Kirim ke model
+            $this->notif->message('username atau password anda salah', 'danger');
             return $modelLogin->ambilDataProfile( $username, $password );
 
         }

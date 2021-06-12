@@ -55,17 +55,13 @@ class Dashboard extends Controller {
     function index4() {
 
 
-        return view('templates/template_video_pembelajaran')
+        return view('templates/template_video_pembelajaran');
     }
 
 
     function index5() {
 
 
-        return view('templates/template_detail_konten')
+        return view('templates/template_detail_konten');
     }
-
-
-
-
 }

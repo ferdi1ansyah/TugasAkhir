@@ -23,8 +23,9 @@ class M_datamateriadmin extends Model{
     function tampilDataMateri() {
 
         $sess_id_profile = $this->session->get('sess_id_profile');
-        $sql = "SELECT * FROM data_materi WHERE id_profile = '$sess_id_profile'";
-
+        $sql = "SELECT data_materi.*, profile.*, profile.* 
+        FROM data_materi 
+        INNER JOIN profile ON data_materi.id_profile = profile.id_profile";
         $query = $this->db->query( $sql );
         return $query;
     }

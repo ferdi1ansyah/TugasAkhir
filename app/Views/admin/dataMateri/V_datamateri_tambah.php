@@ -92,7 +92,7 @@
 
 
                                     <div class="form-group text-right">
-                                  <button><a href="/datamateriadmin" class="btn btn- btn-sm"> Batal </button>                                    
+                                  <button><a href="/Datamateriadmin" class="btn btn- btn-sm"> Batal </button>                                    
                                         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                                     </div>
                                 </div>

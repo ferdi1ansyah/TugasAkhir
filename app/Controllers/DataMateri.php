@@ -263,7 +263,11 @@ class Datamateri extends Controller {
         // cek id
         if ( $id_materi ) {
 
+            $model = new M_datamateri();
+
             $data['id_materi'] = $id_materi;
+            $data['materi'] = $model->tampilDataMateriById( $id_materi );
+
             return view('guru/datamateri/V_datamateri_detail', $data);
 
 

@@ -16,7 +16,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Metronic Live preview | Keenthemes</title>
+		<title>Pembelajaran Pipel</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -266,73 +266,17 @@ License: You must have a valid license purchased only from themeforest(the above
 								
 									<!--end::Button-->
 									<!--begin::Dropdown-->
-									<div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
+									
 										<a href="#" class="btn btn-primary btn-fixed-height font-weight-bold px-2 px-lg-5 mr-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<span class="svg-icon svg-icon-lg">
-												<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File.svg-->
-												<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-													<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-														<polygon points="0 0 24 0 24 24 0 24" />
-														<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-														<rect fill="#000000" x="6" y="11" width="9" height="2" rx="1" />
-														<rect fill="#000000" x="6" y="15" width="5" height="2" rx="1" />
-													</g>
-												</svg>
-												<!--end::Svg Icon-->
-											</span>
+										<span class="svg-icon svg-icon-primary svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo3\dist/../src/media/svg/icons\Home\Home.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect x="0" y="0" width="24" height="24"/>
+        <path d="M3.95709826,8.41510662 L11.47855,3.81866389 C11.7986624,3.62303967 12.2013376,3.62303967 12.52145,3.81866389 L20.0429,8.41510557 C20.6374094,8.77841684 21,9.42493654 21,10.1216692 L21,19.0000642 C21,20.1046337 20.1045695,21.0000642 19,21.0000642 L4.99998155,21.0000673 C3.89541205,21.0000673 2.99998155,20.1046368 2.99998155,19.0000673 L2.99999828,10.1216672 C2.99999935,9.42493561 3.36258984,8.77841732 3.95709826,8.41510662 Z M10,13 C9.44771525,13 9,13.4477153 9,14 L9,17 C9,17.5522847 9.44771525,18 10,18 L14,18 C14.5522847,18 15,17.5522847 15,17 L15,14 C15,13.4477153 14.5522847,13 14,13 L10,13 Z" fill="#000000"/>
+    </g>
+</svg><!--end::Svg Icon--></span>
 											<span class="d-none d-md-inline" btn-shadow>Back To Home</span>
 										</a>
-										<div class="dropdown-menu p-0 m-0 dropdown-menu-md dropdown-menu-right">
-											<!--begin::Navigation-->
-											<ul class="navi navi-hover">
-												<li class="navi-header font-weight-bold py-4">
-													<span class="font-size-lg">Choose Label:</span>
-													<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-												</li>
-												<li class="navi-separator mb-3 opacity-70"></li>
-												<li class="navi-item">
-													<a href="#" class="navi-link">
-														<span class="navi-text">
-															<span class="label label-xl label-inline label-light-success">Customer</span>
-														</span>
-													</a>
-												</li>
-												<li class="navi-item">
-													<a href="#" class="navi-link">
-														<span class="navi-text">
-															<span class="label label-xl label-inline label-light-danger">Partner</span>
-														</span>
-													</a>
-												</li>
-												<li class="navi-item">
-													<a href="#" class="navi-link">
-														<span class="navi-text">
-															<span class="label label-xl label-inline label-light-warning">Suplier</span>
-														</span>
-													</a>
-												</li>
-												<li class="navi-item">
-													<a href="#" class="navi-link">
-														<span class="navi-text">
-															<span class="label label-xl label-inline label-light-primary">Member</span>
-														</span>
-													</a>
-												</li>
-												<li class="navi-item">
-													<a href="#" class="navi-link">
-														<span class="navi-text">
-															<span class="label label-xl label-inline label-light-dark">Staff</span>
-														</span>
-													</a>
-												</li>
-												<li class="navi-separator mt-3 opacity-70"></li>
-												<li class="navi-footer py-4">
-													<a class="btn btn-clean font-weight-bold btn-sm" href="#">
-													<i class="ki ki-plus icon-sm"></i>Add new</a>
-												</li>
-											</ul>
-											<!--end::Navigation-->
-										</div>
+										
 									</div>
 									<!--end::Dropdown-->
 									<!--begin::Button-->

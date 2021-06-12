@@ -123,7 +123,7 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Dashboard</a>
                     <a class="dropdown-item" href="#">Edit Profile</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
+                   <center> <a class="text-secondary" href="/login/proseslogout">Log Out</a>
                   </div>
                 </li>
               </ul>

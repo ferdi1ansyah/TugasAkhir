@@ -16,17 +16,17 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../">
 		<meta charset="utf-8" />
-		<title>ECommerce Dashboard 6 | Keenthemes</title>
-		<meta name="description" content="Derail Materi" />
+		<title>Detail Pembelajaran</title>
+		<meta name="description" content="ECommerce Dashboard 6" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="href="<?php echo base_url() ?>assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="href="<?php echo base_url() ?>assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="href="<?php echo base_url() ?>assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
@@ -40,7 +40,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div id="kt_header_mobile" class="header-mobile">
 			<!--begin::Logo-->
 			<a href="index.html">
-				<img alt="Logo" src="assets/meetro/media/logos/logo-letter-2.png" class="logo-default max-h-30px" />
+				<img href="<?php echo base_url() ?>alt="Logo"  src="assets/metro/media/logos/logo-letter-2.png" class="logo-default max-h-30px" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -57,7 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<div class="d-flex flex-row flex-column-fluid page">
 				
 				<!--begin::Wrapper-->
-				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+				
 					<!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Subheader-->
@@ -66,14 +66,12 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Info-->
 								<div class="d-flex align-items-center mr-1">
 									<!--begin::Mobile Toggle-->
-									<button class="burger-icon burger-icon-left mr-4 d-inline-block d-lg-none" id="kt_subheader_mobile_toggle">
-										<span></span>
-									</button>
+								
 									<!--end::Mobile Toggle-->
 									<!--begin::Page Heading-->
-									<div class="d-flex align-items-baseline flex-wrap mr-5">
+									<div class="d-flex align-items-baseline flex-wrap mr-5"> 
 										<!--begin::Page Title-->
-										<h2 class="d-flex align-items-center text-dark font-weight-bold my-1 mr-3">Konten Pembelajaran</h2>
+										<h2 class="font-weight-bolder text-dark mb-7 "style="font-size: 42px;">Detail Pembelajaran</h2> 
 										<!--end::Page Title-->
 										
 									</div>
@@ -103,7 +101,7 @@ License: You must have a valid license purchased only from themeforest(the above
 																<!--begin::Image-->
 																<div class="card card-custom card-stretch">
 																	<div class="card-body p-0 rounded px-10 py-15 d-flex align-items-center justify-content-center" style="background-color: #FFCC69;">
-																		<img src="assets/metro/media/products/21.png" class="mw-100 w-200px" style="transform: scale(1.6);" />
+																		<img src="<?php echo base_url() ?>/assets/metro/media/products/21.png" class="mw-100 w-200px" style="transform: scale(1.6);" />
 																	</div>
 																</div>
 																<!--end::Image-->
@@ -161,9 +159,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#1BC5BD", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#6993FF", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#1BC5BD", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#E1E9FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
-		<script src="assets/metro/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/metro/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="assets/metro/js/scripts.bundle.js"></script>
+		<script src="<?php echo base_url() ?>/assets/metro/plugins/global/plugins.bundle.js"></script>
+		<script src="<?php echo base_url() ?>assets/metro/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="<?php echo base_url() ?>assets/metro/js/scripts.bundle.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

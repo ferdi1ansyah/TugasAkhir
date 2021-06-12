@@ -1,3 +1,7 @@
+<?php
+
+  $session = \Config\Services::session();
+?>
 <!doctype html>
 <html class="no-js h-100" lang="en">
   <head>
@@ -79,6 +83,14 @@
         </aside>
         <!-- End Main Sidebar -->
 
+        <?php
+            
+            $currentURL = current_url();
+            $uri = new \CodeIgniter\HTTP\URI( $currentURL );
+
+            
+            ?>
+
 
         <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
           <div class="main-navbar sticky-top bg-white">
@@ -129,15 +141,15 @@
                   </div>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <img class="user-avatar rounded-circle mr-2" src="<?php echo base_url() ?>/assets/images/avatars/0.jpg" alt="User Avatar"> <span class="d-none d-md-inline-block">Sierra Brooks</span>
-                  </a>
+                  <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" 
+                  href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img class="user-avatar rounded-circle mr-2" src="<?php echo base_url() 
+                    ?>/assets/images/avatars/0.jpg" alt="User Avatar"> <span class="d-none d-md-inline-block"><?php echo ucfirst($session->get('sess_username')) ?></span>
+                    </a>
                   <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item" href="user-profile-lite.html"><i class="material-icons">&#xE7FD;</i> Profile</a>
-                    <a class="dropdown-item" href="components-blog-posts.html"><i class="material-icons">vertical_split</i> Blog Posts</a>
-                    <a class="dropdown-item" href="add-new-post.html"><i class="material-icons">note_add</i> Add New Post</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#">
+                    <a class="dropdown-item text-danger" href="/login/proseslogout">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>
                   </div>
                 </li>

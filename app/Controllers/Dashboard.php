@@ -64,4 +64,8 @@ class Dashboard extends Controller {
 
         return view('templates/template_detail_konten');
     }
+
+    function index6() {
+        return view('templates/template_landingpage_utama');
+    }
 }

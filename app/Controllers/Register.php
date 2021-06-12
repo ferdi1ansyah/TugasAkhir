@@ -22,6 +22,11 @@ class Register extends Controller {
         return view('register/v_register');
     }
 
+    public function opsi2()
+    {
+        return view('register/v_menuopsi');
+    }
+
     public function process()
     {
         if (!$this->validate(

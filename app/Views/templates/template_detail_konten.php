@@ -43,8 +43,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				<img href="<?php echo base_url() ?>alt="Logo"  src="/assets/metro/media/logos/logo-letter-2.png" class="logo-default max-h-30px" />
 			</a>
 			<!--end::Logo-->
-			<!--begin::Toolbar-->
-			<div class="d-flex align-items-center">
+
+
+
+            <div class="d-flex align-items-center">
 				<button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
 					<span></span>
 				</button>
@@ -61,35 +63,58 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Subheader-->
-						<div class="subheader py-3 py-lg-8" id="kt_subheader">
-							<div class="d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-								<!--begin::Info-->
-								<div class="d-flex align-items-center mr-1">
-									<!--begin::Mobile Toggle-->
-								
-									<!--end::Mobile Toggle-->
-									<!--begin::Page Heading-->
-									<div class="d-flex align-items-baseline flex-wrap mr-5"> 
-										<!--begin::Page Title-->
-										<h2 class="font-weight-bolder text-dark mb-7 "style="font-size: 42px;">Detail Pembelajaran</h2> 
-										<!--end::Page Title-->
-										
-									</div>
-									<!--end::Page Heading-->
-								</div>
-								<!--end::Info-->
-								
-							</div>
-						</div>
+						
 						<!--end::Subheader-->
 						<!--begin::Entry-->
 						<div class="d-flex flex-column-fluid">
+
+
+
+
+
+							
 							<!--begin::Container-->
 							<div class="container">
 								<!--begin::Page Layout-->
 								<div class="d-flex flex-row">
 									<!--begin::Layout-->
 									<div class="flex-row-fluid">
+										<!--begin::Section-->
+
+										<div class="subheader py-3 py-lg-8" id="kt_subheader">
+											<div class="d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+												<!--begin::Info-->
+												<div class="d-flex align-items-center mr-1">
+													<!--begin::Mobile Toggle-->
+												
+													<!--end::Mobile Toggle-->
+													<!--begin::Page Heading-->
+													<div class="d-flex align-items-baseline flex-wrap mr-5"> 
+														<!--begin::Page Title-->
+														<h2 class="font-weight-bolder text-dark mb-7 "style="font-size: 42px;">Detail Pembelajaran</h2> 
+														<!--end::Page Title-->
+														
+													</div>
+													<!--end::Page Heading-->
+												</div>
+												<!--end::Info-->
+												
+											</div>
+										</div>
+
+
+										<!----->
+
+
+
+
+
+
+
+
+
+
+
 										<!--begin::Section-->
 										<div class="row">
 											<div class="col-md-7 col-lg-12 col-xxl-7">

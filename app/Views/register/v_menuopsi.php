@@ -103,67 +103,34 @@ License: You must have a valid license purchased only from themeforest(the above
 
 				
                 
-                <div class="login-form" style="margin-bottom: 100 px;">
+                <div class="login-form login-signup">
 							<!--begin::Form-->
-							<form class="form" novalidate="novalidate" id="kt_login_forgot_form">
+							<form class="form" novalidate="novalidate" id="kt_login_signup_form">
 								<!--begin::Title-->
 								
-									<h2 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Registrasi Guru</h2>
-									<p class="text-muted font-weight-bold font-size-h4">Silahkan memasukkan data diri anda</p>
+									<h2 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Registrasi</h2>
+									<p class="text-muted font-weight-bold font-size-h4">Silahkan pilih opsi register</p>
 								</div>
 								<!--end::Title-->
 								<!--begin::Form group-->
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Username" name="username" autocomplete="off" />
+								<div class="pb-13 pt-lg-0 pt-5">
+								<center>	<h3 class="font-weight-bolder text-dark font-size-h4 font-size-h1-lg">Pilih opsi akun sebagai</h3> </center>
+									<p class="text-muted font-weight-bold font-size-h4">Silahkan pilih opsi registrasi dibawah ini</p>
 								</div>
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Konfirmasi Password" name="password_conf" autocomplete="off" />
-								</div>
-								<!--end::Form group-->
-								<!--begin::Form group-->
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Nama Lengkap" name="nama_lengkap" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Asal Sekolah" name="asal_sekolah" autocomplete="off" />
-								</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Pendidikan" name="pendidikan" autocomplete="off" />
-								</div>
-                                <div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" autocomplete="off" />
-            					</div>
-								<div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Telp" name="telp" autocomplete="off" />
-            					</div>
-                                
+                            <a href="/register/index" class="btn btn-outline-primary btn-lg btn-block"><i class="flaticon2-poll-symbol">Registrasi Sebagai Guru</i></a> 	
+                            <a href="/registersiswa/index" class="btn btn-outline-primary btn-lg btn-block"><i class="flaticon2-poll-symbol">Registrasi Sebagai Siswa</i></a> 	
+         
+							
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								
 					
 								<!--end::Form group-->
 								<!--begin::Form group-->
-								<div class="form-group">
-									<label class="checkbox mb-0">
-										<input type="checkbox" name="agree" />
-										<span></span>
-										<div class="ml-2">Saya setuju
-										<a href="">syarat dan ketentuan</a></div>
-									</label>
-								</div>
-								<!--end::Form group-->
-								<!--begin::Form group-->
-								<div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
-									<button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
-									
-								<a href="/login/index" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">
-                                            Cancel
-                                        </a>
+								
 								<!--end::Form group-->
     </main>
  

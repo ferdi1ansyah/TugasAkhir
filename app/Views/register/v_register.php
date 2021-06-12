@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->
-						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Selamat Datang di Pipel website Pembelajaran A11y
+						<h3 class="font-weight-bolder text-center font-size-h4 font-size-h1-lg" style="color: #986923;">Selamat Datang di Pipel Website Pembelajaran A11y
 						<br />Accessibility All Areas</h3>
 						<!--end::Aside title-->
 					</div>
@@ -115,17 +115,27 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="form-group">
 									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Password" name="password" autocomplete="off" />
 								</div>
+								<div class="form-group">
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Konfirmasi Password" name="password_conf" autocomplete="off" />
+								</div>
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								<div class="form-group">
 									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Nama Lengkap" name="nama_lengkap" autocomplete="off" />
 								</div>
+								<div class="form-group">
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Asal Sekolah" name="asal_sekolah" autocomplete="off" />
+								</div>
+								<div class="form-group">
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Pendidikan" name="pendidikan" autocomplete="off" />
+								</div>
                                 <div class="form-group">
 									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="email" placeholder="Email" name="email" autocomplete="off" />
-            </div>
-                                <div class="form-group">
-									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="password" placeholder="Konfirmasi Password" name="password_conf" autocomplete="off" />
-								</div>
+            					</div>
+								<div class="form-group">
+									<input class="form-control form-control-solid h-auto py-6 px-6 rounded-lg font-size-h6" type="text" placeholder="Telp" name="telp" autocomplete="off" />
+            					</div>
+                                
 								<!--end::Form group-->
 								<!--begin::Form group-->
 								

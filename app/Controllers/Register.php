@@ -53,7 +53,32 @@ class Register extends Controller {
                     'max_length' => '{field} Maksimal 50 Karakter',
                 ]
             ],
+            'asal_sekolah' => [
+                
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'min_length' => '{field} Minimal 4 Karakter',
+                    'max_length' => '{field} Maksimal 50 Karakter',
+                ]
+            ],
+            'pendidikan' => [
+                
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'min_length' => '{field} Minimal 4 Karakter',
+                    'max_length' => '{field} Maksimal 50 Karakter',
+                ]
+            ],
+            
             'email' => [
+                
+                'errors' => [
+                    'required' => '{field} Harus diisi',
+                    'min_length' => '{field} Minimal 4 Karakter',
+                    'max_length' => '{field} Maksimal 50 Karakter',
+                ]
+            ],
+            'telp' => [
                 
                 'errors' => [
                     'required' => '{field} Harus diisi',

@@ -24,13 +24,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="<?php echo base_url() ?>assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="<?php echo base_url() ?>assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="<?php echo base_url() ?>assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo base_url() ?>/assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo base_url() ?>/assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url() ?>/assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>assets/metro/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/favicon.ico" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -40,7 +40,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div id="kt_header_mobile" class="header-mobile">
 			<!--begin::Logo-->
 			<a href="index.html">
-				<img href="<?php echo base_url() ?>alt="Logo"  src="assets/metro/media/logos/logo-letter-2.png" class="logo-default max-h-30px" />
+				<img href="<?php echo base_url() ?>alt="Logo"  src="/assets/metro/media/logos/logo-letter-2.png" class="logo-default max-h-30px" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -160,8 +160,8 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Config-->
 		<!--begin::Global Theme Bundle(used by all pages)-->
 		<script src="<?php echo base_url() ?>/assets/metro/plugins/global/plugins.bundle.js"></script>
-		<script src="<?php echo base_url() ?>assets/metro/plugins/custom/prismjs/prismjs.bundle.js"></script>
-		<script src="<?php echo base_url() ?>assets/metro/js/scripts.bundle.js"></script>
+		<script src="<?php echo base_url() ?>/assets/metro/plugins/custom/prismjs/prismjs.bundle.js"></script>
+		<script src="<?php echo base_url() ?>/assets/metro/js/scripts.bundle.js"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

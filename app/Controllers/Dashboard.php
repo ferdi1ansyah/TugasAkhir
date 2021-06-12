@@ -52,6 +52,20 @@ class Dashboard extends Controller {
         return view('siswa/V_dashboard');
     }
 
+    function index4() {
+
+
+        return view('templates/template_video_pembelajaran')
+    }
+
+
+    function index5() {
+
+
+        return view('templates/template_detail_konten')
+    }
+
+
 
 
 }

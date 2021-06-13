@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
-    <title>Logo Icon</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Shards---Dashboard---Overview-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-118.000000, -54.000000)">
-        <g id="Sidebar" fill="#007BFF">
-            <g id="Logo" transform="translate(118.000000, 54.000000)">
-                <path d="M21.9333011,30.314967 L18.0691155,18.8037699 L24.5642017,14.9387788 L28.0175608,19.8727243 L21.9333011,30.314967 Z M19.4087321,32.609151 L12.6663444,21.1801192 L16.4902529,19.8646689 L20.3133559,31.0463992 L19.4087321,32.609151 Z M20.2311906,7.39084904 L23.8488803,13.5991622 L12.1733527,19.8066699 L20.2311906,7.39084904 Z M20,0 C8.95440632,0 0,8.95440632 0,20 C0,31.0455937 8.95440632,40 20,40 C31.0447881,40 39.9991945,31.0455937 39.9991945,20 C39.9991945,8.95440632 31.0447881,0 20,0 L20,0 Z" id="Logo-Icon"></path>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="20" fill="url(#paint0_linear)"/>
+<path d="M29.5919 18.8889C29.5919 22.8705 26.0577 26.2963 21.4437 26.2963C16.8297 26.2963 13.2956 22.8705 13.2956 18.8889C13.2956 14.9073 16.8297 11.4815 21.4437 11.4815C26.0577 11.4815 29.5919 14.9073 29.5919 18.8889Z" stroke="white" stroke-width="2.96296"/>
+<path d="M12.1845 16.6667L14.777 16.6667V30H11.8141L12.1845 16.6667Z" fill="white"/>
+<path d="M11.4437 13.3333C12.0363 13.6296 12.9252 15.4321 13.2956 16.2963L18.8511 10.7407C17.9869 10.7407 16.2585 10.3704 15.8882 10.3704C15.3644 10.3704 11.0734 10 9.96225 10C8.85114 10 8.85114 12.2222 9.22151 12.5926C9.59188 12.963 10.703 12.963 11.4437 13.3333Z" fill="white"/>
+<defs>
+<linearGradient id="paint0_linear" x1="20" y1="-4.5076e-07" x2="33" y2="60.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#512BF5"/>
+<stop offset="1" stop-color="#BAACFA"/>
+</linearGradient>
+</defs>
 </svg>

@@ -92,7 +92,7 @@
               </button>
               <div class="subscribe-wrapper
     <form action=" #" class="subscribe-form">
-                <input type="text" name="search-module" class="search-module" id="subs-email" placeholder="Your Email">
+                <input type="text"  name="search-module" class="search-module" id="subs-email" placeholder="Search">
                 
                 </form>
 

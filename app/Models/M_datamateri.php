@@ -41,6 +41,21 @@ class M_datamateri extends Model{
 
 
 
+    // tampil materi detail 
+    function tampilDataMateriDetail( $where = null ) {
+
+        if ( $where ) {
+
+            $builder = $this->db->table('data_materi_detail')->where($where)->orderBy('created_at', 'DESC');
+            return $builder->get();
+        } else {
+
+            return $this->db->table('data_materi_detail')->orderBy('created_at', 'DESC')->get();
+        }
+    }
+
+
+
     // fungsi simpan materi
     function simpanDataMateri( $dataMateri ) {
 
@@ -68,5 +83,15 @@ class M_datamateri extends Model{
                  ->update( $dataMateri );
 
         return redirect()->to(base_url('datamateri/index'));
+    }
+
+
+
+
+    // simpan data materi detail 
+    function simpanDataMateriDetail( $id_materi, $dataMateri ) {
+
+        $this->db->table('data_materi_detail')->insert( $dataMateri );
+        return redirect()->to(base_url('datamateri/detail/'. $id_materi));
     }
 }

@@ -265,8 +265,9 @@ class Datamateri extends Controller {
 
             $data['id_materi'] = $id_materi;
             $data['materi'] = $model->tampilDataMateriById( $id_materi );
+            $data['materi_detail'] = $model->tampilDataMateriDetail(['id_materi' => $id_materi]);
 
-            return view('guru/datamateri/V_datamateri_detail', $data);
+           return view('guru/datamateri/V_datamateri_detail', $data);
 
 
         } else {
@@ -274,6 +275,65 @@ class Datamateri extends Controller {
             // id tidak ditemukan, yaitu dengan menampilkan halaman 404
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
+    }
+
+
+
+
+
+
+    // tambah detail 
+    function tambah_detail( $id_materi ) {
+
+
+        // cek id
+        if ( $id_materi ) {
+
+            $model = new M_datamateri();
+
+            $data['id_materi'] = $id_materi;
+            $data['materi'] = $model->tampilDataMateriById( $id_materi );
+
+            return view('guru/datamateri/V_datamateri_detail_tambah', $data);
+
+
+        } else {
+
+            // id tidak ditemukan, yaitu dengan menampilkan halaman 404
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    } 
+
+
+
+
+
+    // proses tambah detail
+    function prosestambahdetail( $id_materi ) {
+
+        // lib session
+        $session = \Config\Services::session();
+
+        // model 
+        $model = new M_datamateri();
+
+        $id_profile = $session->get('sess_id_profile');
+        $dataMateriDetail = array(
+
+            'id_materi' => $id_materi,
+            'id_profile'=> $id_profile,
+            'judul'     => $this->request->getPost('judul_materi'),
+            'materi'    => $this->request->getPost('deskripsi'),
+            'tipe_materi' => $this->request->getPost('tipe_materi'),
+            'link_video'  => $this->request->getPost('link'),
+            'status_materi' => $this->request->getPost('status'),
+            'sumber_author' => $this->request->getPost('author'),
+            'sumber_link'   => $this->request->getPost('reference')
+        );
+
+        return $model->simpanDataMateriDetail( $id_materi, $dataMateriDetail );
+
+
     }
     
 

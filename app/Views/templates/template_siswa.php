@@ -568,7 +568,7 @@
           var logo = document.querySelector('.navbar-brand img');
           if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2.svg') ?>';
+            logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2B.svg') ?>';
           } else {
             header_navbar.classList.remove("sticky");
             logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2.svg') ?>';

@@ -54,8 +54,13 @@ class Dashboard extends Controller {
 
     function index4() {
 
+<<<<<<< Updated upstream
 
         return view('templates/template_video_pembelajaran');
+=======
+         // echo $this->session->get('sess_username');
+         return view('guru/V_dashboard');
+>>>>>>> Stashed changes
     }
 
 

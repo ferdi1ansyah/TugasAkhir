@@ -38,7 +38,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary" />
 	</head>
 
 

@@ -42,7 +42,7 @@ class Dashboard extends Controller {
 
     function index2() {
 
-        // echo $this->session->get('sess_username');
+        echo $this->session->get('sess_username');
         return view('guru/dashboard/V_dashboard');
     }
 
@@ -55,7 +55,12 @@ class Dashboard extends Controller {
     function index4() {
 
 
+
         return view('templates/template_video_pembelajaran');
+
+         // echo $this->session->get('sess_username');
+         return view('guru/V_dashboard');
+
     }
 
 
@@ -63,5 +68,13 @@ class Dashboard extends Controller {
 
 
         return view('templates/template_detail_konten');
+    }
+
+    function index6() {
+        return view('templates/template_landingpage_utama');
+    }
+
+    function index7() {
+        return view('templates/template_landingGuru');
     }
 }

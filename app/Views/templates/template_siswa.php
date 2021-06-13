@@ -92,7 +92,7 @@
               </button>
               <div class="subscribe-wrapper
     <form action=" #" class="subscribe-form">
-                <input type="text" name="search-module" class="search-module" id="subs-email" placeholder="Your Email">
+                <input type="text"  name="search-module" class="search-module" id="subs-email" placeholder="Search">
                 
                 </form>
 
@@ -123,7 +123,7 @@
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Dashboard</a>
                     <a class="dropdown-item" href="#">Edit Profile</a>
-                    <a class="dropdown-item" href="#">Log Out</a>
+                   <center> <a class="text-secondary" href="/login/proseslogout">Log Out</a>
                   </div>
                 </li>
               </ul>
@@ -568,7 +568,7 @@
           var logo = document.querySelector('.navbar-brand img');
           if (window.pageYOffset > sticky) {
             header_navbar.classList.add("sticky");
-            logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2.svg') ?>';
+            logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2B.svg') ?>';
           } else {
             header_navbar.classList.remove("sticky");
             logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2.svg') ?>';

@@ -8,7 +8,7 @@
 <title>Pipel - Pipel Edukasi dan pembelajaran </title>
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>/assets/saaspal/img/favicon.png" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
 
 <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 <link rel="stylesheet" href="<?php echo base_url() ?>/assets/saaspal/css/bootstrap-5.0.0-alpha-2.min.css" />
@@ -110,7 +110,7 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 </div>
 <div class="col-lg-6">
 <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
-<img src="assets/img/hero/hero-nyar.png" alt="">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/hero/hero-nyar.png" alt="">
 </div>
 </div>
 </div>
@@ -165,8 +165,8 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="col-xl-6 col-lg-6">
 <div class="about-img">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-1.png" alt="" class="w-100">
-<img src="<?php echo base_url() ?>assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
-<img src="<?php echo base_url() ?>assets/saaspal/img/about/left-dots.svg" alt="" class="shape shape-2">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/left-dots.svg" alt="" class="shape shape-2">
 </div>
 </div>
 <div class="col-xl-6 col-lg-6">
@@ -324,7 +324,7 @@ Yang Kami Sediakan</h1>
     <div class="single-pricing">
     <div class="pricing-header">
     <h1 class="price">Daftar Guru</h1><br>
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
+    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
     
     </div>
     <div class="content">
@@ -347,7 +347,7 @@ Yang Kami Sediakan</h1>
     <div class="single-pricing">
     <div class="pricing-header">
     <h1 class="price">Daftar Siswa</h1><br>
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/online-learning.png" class="card-img-top" alt="...">
+    <img src="/assets/img/subscribe/online-learning.png" class="card-img-top" alt="...">
     
     </div>
     <div class="content">
@@ -423,8 +423,21 @@ Yang Kami Sediakan</h1>
     
   
   <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
+    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
 
+    <h3>Daftar Guru</h3>
+    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+  </div>
+</div>
+ 
+  </div>
+  
+  <div class="col-lg-4 row col-md-8 col-sm-4">
+  <div class="single-pricing">
+    
+  
+  <div class="content">
+    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
     <h3>Daftar Guru</h3>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
   </div>

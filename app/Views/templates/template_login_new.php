@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
 						<!--begin::Aside header-->
 						<a href="#" class="text-center mb-10">
-							<img src="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary.svg" class="max-h-70px" alt="" />
+							<img src="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary.svg" class="max-h-200px" alt="" />
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->

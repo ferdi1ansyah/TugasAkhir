@@ -203,7 +203,7 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="col-xl-6 col-lg-6 order-first order-lg-last">
 <div class="about-img-2">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-2.png" alt="" class="w-100">
-<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-right-shape.svg" alt="" class="shape shape-1">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/right-dots.svg" alt="" class="shape shape-2">
 </div>
 </div>
@@ -324,7 +324,7 @@ Yang Kami Sediakan</h1>
     <div class="single-pricing">
     <div class="pricing-header">
     <h1 class="price">Daftar Guru</h1><br>
-    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
+    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
     
     </div>
     <div class="content">
@@ -333,6 +333,7 @@ Yang Kami Sediakan</h1>
     <li> <i class="lni lni-checkmark active"></i> Upload Materi </li>
     <li> <i class="lni lni-checkmark active"></i> Beri Nilai Untuk Siswa</li>
     <li> <i class="lni lni-checkmark active"></i> Melihat Laporan siswa perpekan</li>
+    <li> <i class="lni lni-checkmark active"></i> Dapat sumber Pembelajaran Aksesbilitas</li>
     
     
     </ul>
@@ -347,7 +348,7 @@ Yang Kami Sediakan</h1>
     <div class="single-pricing">
     <div class="pricing-header">
     <h1 class="price">Daftar Siswa</h1><br>
-    <img src="/assets/img/subscribe/online-learning.png" class="card-img-top" alt="...">
+    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/online-learning.png" class="card-img-top" alt="...">
     
     </div>
     <div class="content">
@@ -356,6 +357,7 @@ Yang Kami Sediakan</h1>
     <li> <i class="lni lni-checkmark active"></i> Soal Quiz </li>
     <li> <i class="lni lni-checkmark active"></i> File Pembelajaran</li>
     <li> <i class="lni lni-checkmark active"></i> Reward Pembelajaran</li>
+    <li> <i class="lni lni-checkmark active"></i> Dapat Mengetahui Pembelajaran Aksesbilitas</li>
     
     
     </ul>
@@ -423,7 +425,7 @@ Yang Kami Sediakan</h1>
     
   
   <div class="content">
-    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
+    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
 
     <h3>Daftar Guru</h3>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -437,7 +439,7 @@ Yang Kami Sediakan</h1>
     
   
   <div class="content">
-    <img src="/assets/img/subscribe/teacher.png" class="card-img-top" alt="...">
+    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
     <h3>Daftar Guru</h3>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
   </div>
@@ -524,6 +526,16 @@ Yang Kami Sediakan</h1>
 
 </section>
 <!---end video-->
+
+
+<div class="section-title text-center mb-35">
+<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Support By</h1>
+<p class="wow fadeInUp" data-wow-delay=".4s">Kelas pilihan dari kami untuk kamu baik untuk kamu mengalami buta warna maupin tidak .</p>
+<img src="<?php echo base_url() ?>/assets/saaspal/img/testimonal/Suarise-logo.png" >
+
+</div>
+
+
 
 
 

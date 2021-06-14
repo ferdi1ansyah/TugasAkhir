@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<head><base href="../../../">
 		<meta charset="utf-8" />
 
-		<title>Login Page 1 | Keenthemes</title>
+		<title>Register Siswa</title>
 
 
 
@@ -37,7 +37,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary.svg" />
 	</head>
 
 
@@ -61,7 +61,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="d-flex flex-column-auto flex-column pt-lg-40 pt-15">
 						<!--begin::Aside header-->
 						<a href="#" class="text-center mb-10">
-							<img src="<?php echo base_url() ?>/assets/metro/media/logos/logo-letter-1.png" class="max-h-70px" alt="" />
+							<img src="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary.svg" class="max-h-200px" alt="" />
 						</a>
 						<!--end::Aside header-->
 						<!--begin::Aside title-->
@@ -146,8 +146,10 @@ License: You must have a valid license purchased only from themeforest(the above
 								<!--begin::Form group-->
 								<div class="form-group d-flex flex-wrap pb-lg-0 pb-3">
 									<button type="submit" class="btn btn-primary font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-4">Submit</button>
-									<button type="button" id="kt_login_signup_cancel" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">Cancel</button>
-								</div>
+								
+									<a href="/login/index" class="btn btn-light-primary font-weight-bolder font-size-h6 px-8 py-4 my-3">
+                                            Cancel
+                                        </a>
 								<!--end::Form group-->
     </main>
  

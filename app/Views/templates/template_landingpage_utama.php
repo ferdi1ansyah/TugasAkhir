@@ -104,7 +104,7 @@
 <p class="wow fadeInUp" data-wow-delay=".6s">
 Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala yang lain
 </p>
-<a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Get Started</a>
+<a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s" >Get Started</a>
 <a href="#features" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
 </div>
 </div>

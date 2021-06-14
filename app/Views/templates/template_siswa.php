@@ -155,11 +155,10 @@
           <div class="hero-content">
             <h1 class="wow fadeInUp" data-wow-delay=".4s">Selamat Belajar secara nyaman tanpa halangan</h1>
             <p class="wow fadeInUp" data-wow-delay=".6s">
-              Scroll kebawah untuk memilih pelajaran yang ingin kau pelajari dan klik pada konten pembelajaran yang kau
-              pilih
+             Yuk belajar dengan pipel dengan para expert di bidang aksesbilitas dan lainnya
             </p>
-            <a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Menjadi
-              Pengajar</a>
+            <a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s"> Scroll Kebawah
+              </a>
             <a href="#course" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
           </div>
         </div>
@@ -458,15 +457,14 @@
             <div class="row align-items-center">
               <div class="col-xl-6 col-lg-7">
                 <div class="section-title mb-15">
-                  <h1 class="text-white mb-25">Ayo Mulai Kelas Sekarang</h1>
-                  <p class="text-white pr-5">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor</p>
+                  <h1 class="text-white mb-25">Silahkan Download Materi Aksesbilitas</h1>
+                  <p class="text-white pr-5">Download Sumber Belajar materi materi yang saya dapatkan dari expert dan praktiksir</p>
                 </div>
               </div>
               <div class="col-xl-6 col-lg-5">
                 <form action="#" class="subscribe-form">
 
-                  <button type="submit" class="btn-light" texr="main">Mulai Daftar</button>
+                  <button type="submit" class="btn-light" texr="main">Mulai Download</button>
                 </form>
               </div>
             </div>

@@ -58,7 +58,7 @@
                     <div class="hero-content">
                         <h1 class="wow fadeInUp" data-wow-delay=".4s">Memulai menjadi pengajar di Pipel</h1>
                         <p class="wow fadeInUp" data-wow-delay=".6s">
-                            Jika anda ingin mengetahui bagaimana cara memulai dan apa yang harus dilakukan untuk menjadi pengajar bisa scroll ke bawah ,ayau bisa mulai langsung
+                            Jika anda ingin mengetahui bagaimana cara memulai dan apa yang harus dilakukan untuk menjadi pengajar bisa scroll ke bawah ,atau bisa mulai langsung dengan klik mulai mengajar
                         </p>
                         <a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Menjadi Pengajar</a>
                         <a href="#features" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
@@ -217,7 +217,7 @@
                             <div class="logo mb-30">
                                 <a href="index-2.html"> <img src="assets/img/logo/logo2.svg" alt=""> </a>
                             </div>
-                            <p class="desc mb-30 text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt.</p>
+                            <p class="desc mb-30 text-white">Website ini dibuat untuk membantu pembelajaran secara aksesibel dan mengetahui aksesbilitas apa.</p>
                             <ul class="socials">
                                 <li>
                                     <a href="jvascript:void(0)"> <i class="lni lni-facebook-original"></i> </a>

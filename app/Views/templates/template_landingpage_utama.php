@@ -173,7 +173,7 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="about-content">
 <div class="section-title mb-30">
                                             <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Video Pembelajaran dari para ahli</h1>
-                                            <p class="wow fadeInUp" data-wow-delay=".4s">ctersedia video pembelajaran dari para ahli dibidang accesbility</p>
+                                            <p class="wow fadeInUp" data-wow-delay=".4s">tersedia video pembelajaran dari para ahli dibidang accesbility</p>
 </div>
 <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Discover More</a>
 </div>
@@ -189,13 +189,13 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="col-xl-6 col-lg-6">
 <div class="about-content">
 <div class="section-title mb-30">
-<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Buat Quiz menarik</h1>
+<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Buat Quiz materi</h1>
 <p class="wow fadeInUp" data-wow-delay=".4s">Buat quiz yang menarik dengan ini kamu bisa menjadi pengajar yang baik</p>
 </div>
 <ul>
-<li>Quick Access</li>
-<li>Easily to Manage</li>
-<li>24/7 Support</li>
+<li>A11y Tool</li>
+<li>Sumber belajar aksesibilitas</li>
+<li>Pengetahuan aksesbilitas</li>
 </ul>
 <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Learn More</a>
 </div>
@@ -223,7 +223,7 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="section-title text-center mb-60">
 <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Temui Kelas
 Yang Kami Sediakan</h1>
-<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+<p class="wow fadeInUp" data-wow-delay=".4s">Untuk saat ini kami memiliki kelas dari bantuan dari suarise.id untuk kelas yang lain masih dibuat</p>
 </div>
 </div>
 </div>
@@ -234,8 +234,8 @@ Yang Kami Sediakan</h1>
 <i class="lni lni-display"></i>
 </div>
 <div class="content">
-<h3>SaaS Focused</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<h3>A11y Tools</h3>
+<p>terdapat tools accesbility yang dapat membantumu</p>
 </div>
 </div>
 </div>
@@ -245,8 +245,8 @@ Yang Kami Sediakan</h1>
 <i class="lni lni-leaf"></i>
 </div>
 <div class="content">
-<h3>Awesome Design</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<h3>A11y for Design</h3>
+<p>Pengertian dan pengimplemtasian pada desain kamu</p>
 </div>
 </div>
 </div>
@@ -257,7 +257,7 @@ Yang Kami Sediakan</h1>
 </div>
 <div class="content">
 <h3>Ready to Use</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<p>Bisa digunakan oleh siapapun yang ingin belajar</p>
 </div>
 </div>
 </div>
@@ -267,8 +267,8 @@ Yang Kami Sediakan</h1>
 <i class="lni lni-javascript"></i>
 </div>
 <div class="content">
-<h3>Vanilla JS</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<h3>Web JS</h3>
+<p>Web library untuk aksesbilitas pada website</p>
 </div>
 </div>
 </div>
@@ -279,7 +279,7 @@ Yang Kami Sediakan</h1>
 </div>
 <div class="content">
 <h3>Essential Sections</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<p>Riset dengan komunitas difabel yang ada di indonesia</p>
 </div>
 </div>
 </div>
@@ -290,7 +290,7 @@ Yang Kami Sediakan</h1>
 </div>
 <div class="content">
 <h3>Highly Optimized</h3>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+<p>Pemberian dampak yang baik untuk masyarakat</p>
 </div>
 </div>
 </div>

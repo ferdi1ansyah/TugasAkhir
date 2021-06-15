@@ -172,8 +172,8 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="col-xl-6 col-lg-6">
 <div class="about-content">
 <div class="section-title mb-30">
-<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Perfect Solution Thriving Online Business</h1>
-<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet.</p>
+                                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Video Pembelajaran dari para ahli</h1>
+                                            <p class="wow fadeInUp" data-wow-delay=".4s">ctersedia video pembelajaran dari para ahli dibidang accesbility</p>
 </div>
 <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Discover More</a>
 </div>
@@ -189,8 +189,8 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="col-xl-6 col-lg-6">
 <div class="about-content">
 <div class="section-title mb-30">
-<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Easy to Use with Tons of Awesome Features</h1>
-<p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Buat Quiz menarik</h1>
+<p class="wow fadeInUp" data-wow-delay=".4s">Buat quiz yang menarik dengan ini kamu bisa menjadi pengajar yang baik</p>
 </div>
 <ul>
 <li>Quick Access</li>
@@ -205,6 +205,30 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-2.png" alt="" class="w-100">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/right-dots.svg" alt="" class="shape shape-2">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+section id="about" class="about-section pt-150">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-xl-6 col-lg-6">
+<div class="about-img">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-.png" alt="" class="w-100">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/left-dots.svg" alt="" class="shape shape-2">
+</div>
+</div>
+<div class="col-xl-6 col-lg-6">
+<div class="about-content">
+<div class="section-title mb-30">
+<h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Buat Konten Menarik untuk dijaarkan</h1>
+<p class="wow fadeInUp" data-wow-delay=".4s">o sbuat konten yang menarik untuk diajarkan.</p>
+</div>
+<a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Discover More</a>
 </div>
 </div>
 </div>

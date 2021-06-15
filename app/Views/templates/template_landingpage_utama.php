@@ -104,7 +104,7 @@
 <p class="wow fadeInUp" data-wow-delay=".6s">
 Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala yang lain
 </p>
-<a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s" >Get Started</a>
+<a href="/login/index" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s" >Get Started</a>
 <a href="#features" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
 </div>
 </div>
@@ -339,7 +339,7 @@ Yang Kami Sediakan</h1>
     </ul>
     </div>
     <div class="pricing-btn">
-      <a href="javascript:void(0)" class="main-btn btn-hover ">Get Start</a>
+      <a href="/register/opsi2" class="main-btn btn-hover ">Get Start</a>
     </div>
     </div>
     </div>
@@ -363,7 +363,7 @@ Yang Kami Sediakan</h1>
     </ul>
     </div>
     <div class="pricing-btn">
-      <a href="javascript:void(0)" class="main-btn btn-hover ">Get Start</a>
+      <a href="/register/opsi2" class="main-btn btn-hover ">Get Start</a>
     </div>
     </div>
     </div>
@@ -393,137 +393,7 @@ Yang Kami Sediakan</h1>
 
 </div>
 <div class="container mb-2">
-  <h3>
-    <p class="font-weight-bold mb-3">Kategori Kelas.</p>
-  </h3>
-
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Matematika</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Bhs.Indonesia</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Bhs.Inggris</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">IPA</a>
-    </li>
-    
-  </ul>
-
-<!-- card video fitur < -->
-
-<div class="tab-content mt-4" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">
-  <div class="d-flex flex-wrap justify-content-between">
-
-
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
   
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-  <div class="col-lg-4 row col-md-8 col-sm-4">
-  <div class="single-pricing">
-    
-  
-  <div class="content">
-    <img src="<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top" alt="...">
-
-    <h3>Daftar Guru</h3>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-  </div>
-</div>
- 
-  </div>
-
-  
-  
-
- 
-  
-
-  </div>
-    
-</div>
-</div>
-
 </section>
 <!---end video-->
 
@@ -531,7 +401,7 @@ Yang Kami Sediakan</h1>
 <div class="section-title text-center mb-35">
 <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Support By</h1>
 <p class="wow fadeInUp" data-wow-delay=".4s">Kelas pilihan dari kami untuk kamu baik untuk kamu mengalami buta warna maupin tidak .</p>
-<img src="<?php echo base_url() ?>/assets/saaspal/img/testimonal/Suarise-logo.png" >
+<img src="<?php echo base_url() ?>/assets/saaspal/img/testimonial/Suarise-logo.png" >
 
 </div>
 

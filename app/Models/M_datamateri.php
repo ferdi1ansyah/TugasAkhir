@@ -94,4 +94,21 @@ class M_datamateri extends Model{
         $this->db->table('data_materi_detail')->insert( $dataMateri );
         return redirect()->to(base_url('datamateri/detail/'. $id_materi));
     }
+
+
+
+    function updateDataMateriDetail( $id_materi, $id_materi_detail, $dataMateriDetail ) {
+
+        $this->db->table('data_materi_detail')->where('id_materi_detail', $id_materi_detail)->update( $dataMateriDetail );
+        return redirect()->to(base_url('datamateri/detail/'. $id_materi));
+    }
+
+
+
+    // hapus
+    function proseshapusmateridetail( $id_materi, $id_materi_detail ) {
+
+        $this->db->table('data_materi_detail')->where('id_materi_detail', $id_materi_detail)->delete();
+        return redirect()->to(base_url('datamateri/detail/'. $id_materi));
+    }
 }

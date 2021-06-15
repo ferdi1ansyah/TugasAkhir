@@ -1,8 +1,10 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\M_datamateri;
 use CodeIgniter\Controller;
+
+use App\Models\M_datamateri;
+use App\Models\M_quiz;
 
 
 class Datamateri extends Controller {
@@ -262,10 +264,14 @@ class Datamateri extends Controller {
         if ( $id_materi ) {
 
             $model = new M_datamateri();
+            $model_kuis = new M_quiz();
 
             $data['id_materi'] = $id_materi;
             $data['materi'] = $model->tampilDataMateriById( $id_materi );
             $data['materi_detail'] = $model->tampilDataMateriDetail(['id_materi' => $id_materi]);
+
+            // jumlah yang mengikuti kuis
+            $data['kuis']   = $model_kuis->model_getDataEnrollmentKuisByIdMateri( $id_materi );
 
            return view('guru/datamateri/V_datamateri_detail', $data);
 
@@ -302,7 +308,36 @@ class Datamateri extends Controller {
             // id tidak ditemukan, yaitu dengan menampilkan halaman 404
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
-    } 
+    }
+
+    
+    
+    // tambah detail 
+    function edit_detail( $id_materi, $id_materi_detail = null ) {
+
+
+        // cek id
+        if ( $id_materi ) {
+
+            $model = new M_datamateri();
+
+            $data['id_materi'] = $id_materi;
+            $data['id_materi_detail'] = $id_materi_detail;
+            $data['materi'] = $model->tampilDataMateriById( $id_materi );
+            
+            // data materi detail by id
+            $data['detail'] = $model->tampilDataMateriDetail( ['id_materi_detail' => $id_materi_detail] )->getRowArray();
+
+            return view('guru/datamateri/V_datamateri_detail_edit', $data);
+
+
+        } else {
+
+            // id tidak ditemukan, yaitu dengan menampilkan halaman 404
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    }
+
 
 
 
@@ -335,6 +370,65 @@ class Datamateri extends Controller {
 
 
     }
+
+
+
+    function proseseditdetail( $id_materi, $id_materi_detail ) {
+
+        // model 
+        $model = new M_datamateri();
+
+        $dataMateriDetail = array(
+
+            'judul'     => $this->request->getPost('judul_materi'),
+            'materi'    => $this->request->getPost('deskripsi'),
+            'tipe_materi' => $this->request->getPost('tipe_materi'),
+            'link_video'  => $this->request->getPost('link'),
+            'status_materi' => $this->request->getPost('status'),
+            'sumber_author' => $this->request->getPost('author'),
+            'sumber_link'   => $this->request->getPost('reference')
+        );
+
+        return $model->updateDataMateriDetail( $id_materi, $id_materi_detail, $dataMateriDetail );
+    }
+
+
+
+
+    // detail sub materi yang telah dibuat
+    function view( $id_materi, $id_materi_detail = null ) {
+
+        // cek id
+        if ( $id_materi_detail ) {
+
+            $model = new M_datamateri();
+
+            $data['id_materi_detail'] = $id_materi_detail;
+            $data['id_materi']  = $id_materi;
+            $data['materi'] = $model->tampilDataMateriDetail( ['id_materi_detail' => $id_materi_detail] )->getRowArray();
+
+            return view('guru/datamateri/V_datamateri_view', $data);
+
+
+        } else {
+
+            // id tidak ditemukan, yaitu dengan menampilkan halaman 404
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    }
+
+
+
+    // hapus materi detail
+    function delete_detail_materi( $id_materi, $id_materi_detail ) {
+
+        $model = new M_datamateri();
+        return $model->proseshapusmateridetail( $id_materi, $id_materi_detail );
+    }
+
+
+
+
     
 
 

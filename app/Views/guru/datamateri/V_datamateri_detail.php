@@ -76,9 +76,12 @@ $this->extend('templates/template_guru');
                     
                         <div class="card-body">
 
-                            <canvas width="100" class="analytics-users-by-device mt-3 mb-4"></canvas>
-                            <span class="badge badge-accent">Chart on progress . . .</span>
+                            <p>Kuis</p>
+                            <h2><?php echo $kuis->getNumRows() ?> Siswa</h2>
+                            <small>Telah mengikuti kuis ini</small>
 
+                            <hr>
+                            <a href="<?php echo base_url('quiz/preview/'. $id_materi) ?>" style="btn btn-xs btn-outline-secondary"><i class="material-icons">assignment</i> Lihat Soal</a>
                         
                         </div>
                     </div>
@@ -123,7 +126,7 @@ $this->extend('templates/template_guru');
                         
                     ?>
                     <!-- List item-->
-                    <a href="" style="text-decoration: none; color: inherit;">
+                    <a href="<?php echo base_url('datamateri/view/'. $id_materi.'/'.$row['id_materi_detail']) ?>" style="text-decoration: none; color: inherit;">
                         
 
                         <div class="card card-small link-card" style="margin-top: 10px; background-color: #<?php echo $status_active ?>">
@@ -142,7 +145,7 @@ $this->extend('templates/template_guru');
                                     </div>
                                     <div class="col-xs-9 col-md-9">
                                         <h5 style="margin: 0px"><?php echo $row['judul'] ?></h5>
-                                        <small><?php echo (strlen($row['materi']) < 120) ? strip_tags($row['materi']) : strip_tags(substr( $row['materi'], 0, 120 )).'...' ?></small>
+                                        <small><?php echo (strlen($row['materi']) < 85) ? strip_tags($row['materi']) : strip_tags(substr( $row['materi'], 0, 85 )).'...' ?></small>
                                     </div>
                                     <div class="col-xs-2 col-md-2">
                                         <small>Dibuat pada</small>

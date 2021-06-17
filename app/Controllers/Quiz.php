@@ -120,6 +120,17 @@ class Quiz extends Controller {
         $model = new M_quiz();
         return $model->model_deleteDataQuiz( $id_materi, $id_kuis_soal );
     }
+
+
+    function quizdiikuti(  ) {
+
+        return view('siswa/V_kuis');
+
+    }
+
+
+
+
 }
     
     /* End of file Quiz.php */

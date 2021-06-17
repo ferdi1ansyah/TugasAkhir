@@ -132,4 +132,11 @@ class Dashboard extends Controller {
     function index7() {
         return view('templates/template_landingGuru');
     }
+
+
+    function index8() {
+
+        // echo $this->session->get('sess_username');
+        return view('templates/template_siswadash');
+    }
 }

@@ -247,6 +247,15 @@ class Quiz extends Controller {
         $cart->destroy();
 
     }
+    function quizdiikuti(  ) {
+
+        return view('siswa/V_kuis');
+
+    }
+
+
+
+
 }
     
     /* End of file Quiz.php */

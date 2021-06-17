@@ -249,7 +249,10 @@ class Quiz extends Controller {
     }
     function quizdiikuti(  ) {
 
-        return view('siswa/V_kuis');
+        $model = new M_quiz();
+        $data['quiz'] = $model->nilaiQuizBySiswa();
+
+        return view('siswa/V_kuis', $data);
 
     }
 

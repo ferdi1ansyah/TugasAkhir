@@ -89,7 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <h1>Latihan Selesai</h1>
                 <p>Selamat Anda Telah Menyelesaikan Materi Pembelajaran Ini</p>
 
-                <a href="<?php echo base_url('dashboard/index3') ?>" class="btn btn-primary">Kembali ke Kelas</a>
+                <a href="<?php echo base_url('siswa/materi_kelas') ?>" class="btn btn-primary">Kembali ke dashboard</a>
             
             </div>
         

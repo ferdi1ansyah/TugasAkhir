@@ -134,9 +134,19 @@ class Dashboard extends Controller {
     }
 
 
-    function index8() {
+    // dashboard utama profile
+    function main() {
 
         // echo $this->session->get('sess_username');
         return view('templates/template_siswadash');
+    }
+
+
+
+
+    function profile() {
+
+
+        return view('siswa/v_profile');
     }
 }

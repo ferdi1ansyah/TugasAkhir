@@ -126,4 +126,37 @@ class M_datamateri extends Model{
         $this->db->table('data_materi_detail')->where('id_materi_detail', $id_materi_detail)->delete();
         return redirect()->to(base_url('datamateri/detail/'. $id_materi));
     }
+
+
+
+
+
+
+
+    /**
+     * 
+     * 
+     *      Siswa
+     * 
+     */
+
+
+     function ambilDaftarMateriBySiswa() {
+
+        $id_profile = $this->session->get('sess_id_profile');
+
+        $sql = "SELECT 
+
+                    pendaftaran_materi.*, data_materi.*, data_siswa.*, data_guru.*
+                
+                FROM pendaftaran_materi 
+                
+                JOIN data_materi ON data_materi.id_materi = pendaftaran_materi.id_materi
+                JOIN data_siswa ON data_siswa.id_profile = pendaftaran_materi.id_profile
+                JOIN data_guru ON data_guru.id_profile = data_materi.id_profile
+                
+                WHERE pendaftaran_materi.id_profile = '$id_profile'";
+
+        return $this->db->query( $sql );
+     }
 }

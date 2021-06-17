@@ -122,6 +122,28 @@ class M_quiz extends Model{
 
         return redirect()->to(base_url('dashboard/achievement'));
     }
+
+
+
+
+
+
+
+
+
+    // nilai kuis by siswa
+    function nilaiQuizBySiswa() {
+
+        $id_profile = $this->session->get('sess_id_profile');
+        $sql = "SELECT rekap_info_kuis.*, data_materi.* 
+
+                FROM rekap_info_kuis 
+                JOIN data_materi ON data_materi.id_materi = rekap_info_kuis.id_materi
+                
+                WHERE rekap_info_kuis.id_profile = '$id_profile'";
+
+        return $this->db->query( $sql );
+    }
         
 }
     

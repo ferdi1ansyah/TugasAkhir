@@ -82,7 +82,7 @@
                   <span>Quiz</span>
                 </a>
                
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "profile siswa" ) echo "active"; ?>" href="/datamateri">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "profile siswa" ) echo "active"; ?>" href="/dashboard/profile">
                   <i class="material-icons">person</i>
                   <span>Profile</span>
                 </a>

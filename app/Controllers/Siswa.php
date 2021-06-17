@@ -2,6 +2,8 @@
 namespace App\Controllers;
 
 use App\Models\M_quiz;
+use App\Models\M_datamateri;
+
 use CodeIgniter\Controller;
 
 
@@ -25,20 +27,24 @@ class Siswa extends Controller {
 
             exit(); 
         }
+    }
+
                                                           
 
     // show all quiz
     public function index(){
-            
-        function materi_kelas(  ) {
 
-            return view('siswa/materi_kelas');
     
-        }
-    
-    
-    
-    
+    }
+
+
+    function materi_kelas() {
+
+        $model = new M_datamateri();
+        $data['materi'] = $model->ambilDaftarMateriBySiswa();
+
+        return view('siswa/materi_kelas', $data);
+
     }
 }
 

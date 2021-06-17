@@ -81,17 +81,17 @@
 
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboard">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboard/index">
                   <i class="material-icons">home</i>
                   <span>Halaman Utama</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "category" ) { echo "active"; }  ?>" href="/category/index">
                   <i class="material-icons">assignment</i>
                   <span>Master Kategori</span>
                 </a>
-              </li>
+              </li> -->
 
 
               <li class="nav-item">

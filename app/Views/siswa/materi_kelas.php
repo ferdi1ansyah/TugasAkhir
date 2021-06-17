@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
 Author: KeenThemes
@@ -23,9 +23,9 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Global Theme Styles(used by all pages)-->
-		<link href="assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/metro/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/metro/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="/assets/metro/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->

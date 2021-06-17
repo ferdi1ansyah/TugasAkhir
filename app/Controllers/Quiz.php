@@ -122,9 +122,9 @@ class Quiz extends Controller {
     }
 
 
-    function quizdiikuti( $id_materi, $id_kuis_soal ) {
+    function quizdiikuti(  ) {
 
-        return view('siswa/V_kuiz');
+        return view('siswa/V_kuis');
 
     }
 

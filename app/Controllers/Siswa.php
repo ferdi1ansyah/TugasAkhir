@@ -28,7 +28,12 @@ class Siswa extends Controller {
                                                           
 
     // show all quiz
+<<<<<<< HEAD
      
+=======
+    public function index(){
+            
+>>>>>>> b13a2da430b57fffd7975d5ec1bae8e23ee96a34
         function materi_kelas(  ) {
 
             return view('siswa/materi_kelas');
@@ -39,6 +44,7 @@ class Siswa extends Controller {
     
     
     }
+}
 
 
     

@@ -25,12 +25,12 @@ class Siswa extends Controller {
 
             exit(); 
         }
-    }M                                                                                      M                                                           
+                                                          
 
     // show all quiz
     public function index(){
             
-        function quizdiikuti(  ) {
+        function materi_kelas(  ) {
 
             return view('siswa/materi_kelas');
     
@@ -40,5 +40,6 @@ class Siswa extends Controller {
     
     
     }
+}
 
     

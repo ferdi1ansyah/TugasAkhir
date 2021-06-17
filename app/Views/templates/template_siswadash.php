@@ -68,16 +68,16 @@
 
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/siswa/v_dashsiswa">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboard">
                   <i class="material-icons">home</i>
                   <span>Dashboard</span>
                 </a>
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "kelas" ) echo "active"; ?>" href="/siswa/v_kelas">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "kelas" ) echo "active"; ?>" href="/kelas/materi_kelas">
                   <i class="material-icons">class</i>
                   <span>Kelas Saya</span>
                 </a>
 
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "Quiz" ) echo "active"; ?>" href="/datamateri">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "Quiz" ) echo "active"; ?>" href="/quiz/quizdiikuti(">
                   <i class="material-icons">school</i>
                   <span>Quiz</span>
                 </a>

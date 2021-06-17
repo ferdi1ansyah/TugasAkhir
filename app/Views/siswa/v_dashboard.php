@@ -1,4 +1,4 @@
-Manuk 
+
 
 <?php
 

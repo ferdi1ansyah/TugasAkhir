@@ -120,6 +120,133 @@ class Quiz extends Controller {
         $model = new M_quiz();
         return $model->model_deleteDataQuiz( $id_materi, $id_kuis_soal );
     }
+
+
+
+
+
+
+
+    // start assignemnt
+    function assignment( $id_materi ) {
+
+
+        $model = new M_quiz();
+
+        // start time
+        $this->session->set('sess_time_start', date('Y-m-d H:i:s'));
+
+        $data['sess_id_profile']       = $this->session->get('sess_id_profile');
+        $data['id_materi']      = $id_materi;
+        $data['preview']        = $model->model_getDataQuizByIdMateri( $id_materi );
+
+        $data['cart']   = cart();
+
+        return view('guru/quiz/V_quiz_assignment', $data);
+    }   
+
+
+
+
+
+
+
+    // data quiz
+    function answer( $id_materi, $id_kuis_soal ) {
+
+
+        $cart = cart();
+        $rowid = $this->request->getPost('rowid');
+
+        if ( !empty( $rowid ) )  {
+
+            $cart->remove($rowid);
+
+            // refresh
+            $cart->insert(array(
+
+                'id'      => $id_kuis_soal,
+                'qty'     => 1,
+                'price'   => 0,
+                'name'    => $this->request->getPost('pilihan')
+            ));
+
+        } else {
+
+
+            $cart->insert(array(
+
+                'id'      => $id_kuis_soal,
+                'qty'     => 1,
+                'price'   => 0,
+                'name'    => $this->request->getPost('pilihan')
+            ));
+        }
+
+
+        return redirect()->to(base_url('quiz/assignment/'. $id_materi.'?soal='. $id_kuis_soal));
+    }
+
+
+
+
+    // save answer
+    function finishAssignment( $id_materi ) {
+
+        $cart = cart();
+        $data = array();
+
+        $model_quiz = new M_quiz();
+        $skor = $model_quiz->model_hitungskor();
+
+        $this->session->set('skor', $skor);
+
+        // insert data info
+        $dataInfo = array(
+
+            'id_materi' => $id_materi,
+            'id_profile'=> $this->session->get('sess_id_profile'), 
+            'started_at'=> $this->session->get('sess_time_start'),
+            'ended_at'  => date('Y-m-d H:i:s'),
+            'skor'      => $skor
+        );
+
+
+        $last_id = $model_quiz->model_insertrekap_infokuis( $dataInfo );
+
+
+
+        foreach ( $cart->contents() AS $row ) {
+
+            array_push( $data, array(
+
+                'id_infokuis'   => $last_id,
+                'id_profile'    => $this->session->get('sess_id_profile'),
+                'id_kuis_soal'  => $row['id'],
+                'jawaban'       => $row['name']
+            ) );
+        }
+
+
+        return $model_quiz->model_insertrekap_detailkuis( $data, $id_materi );
+    }
+
+    // function testing() {
+
+    //     $cart = cart();
+    //     // Call the cart service using the helper function
+    //     print_r( $cart->contents() );
+    // }
+
+
+
+
+    function destroyCart() {
+
+        $cart = cart();
+        $cart->destroy();
+
+    }
 }
     
     /* End of file Quiz.php */

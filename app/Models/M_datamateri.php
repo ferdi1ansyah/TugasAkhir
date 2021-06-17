@@ -18,6 +18,17 @@ class M_datamateri extends Model{
 
 
 
+    function tampilAllDataMateri() {
+
+        $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
+                JOIN profile ON profile.id_profile = data_materi.id_profile
+                JOIN data_guru ON data_guru.id_profile = profile.id_profile";
+
+        $query = $this->db->query( $sql );
+        return $query;
+    }
+
+
 
     // fungsi tampil materi
     function tampilDataMateri() {
@@ -33,7 +44,11 @@ class M_datamateri extends Model{
     // tampil materi by id
     function tampilDataMateriById( $id_materi ) {
 
-        $sql = "SELECT * FROM data_materi WHERE id_materi = '$id_materi'";
+        $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
+                JOIN profile ON profile.id_profile = data_materi.id_profile
+                JOIN data_guru ON data_guru.id_profile = profile.id_profile 
+                
+                WHERE id_materi = '$id_materi'";
 
         $query = $this->db->query( $sql );
         return $query->getRowArray();
@@ -46,11 +61,11 @@ class M_datamateri extends Model{
 
         if ( $where ) {
 
-            $builder = $this->db->table('data_materi_detail')->where($where)->orderBy('created_at', 'DESC');
+            $builder = $this->db->table('data_materi_detail')->where($where);
             return $builder->get();
         } else {
 
-            return $this->db->table('data_materi_detail')->orderBy('created_at', 'DESC')->get();
+            return $this->db->table('data_materi_detail')->get();
         }
     }
 

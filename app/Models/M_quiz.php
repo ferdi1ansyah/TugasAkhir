@@ -67,6 +67,61 @@ class M_quiz extends Model{
         $this->db->table('data_kuis_soal')->where('id_kuis_soal', $id_kuis_soal)->delete();
         return redirect()->to(base_url('quiz/preview/'. $id_materi));
     }
+
+
+
+
+
+    // hitung skor
+    function model_hitungskor() {
+
+        $cart = cart();
+
+
+        $totalBenar = 0;
+        foreach ( $cart->contents() AS $row ) {
+
+            $id_kuis_soal = $row['id'];
+            $jawaban      = $row['name'];
+
+            $kunci = $this->db->table('data_kuis_soal')->where('id_kuis_soal', $id_kuis_soal)->get()->getRowArray();
+            
+            if ( $jawaban == $kunci['soal_jawaban'] ) {
+
+                $totalBenar++;
+            }
+            
+            // echo 'jawaban dari '. $id_kuis_soal.' |'.$kunci['soal_jawaban']. ' = '.$jawaban.'<br>';
+        }
+
+        $jumlah_soal = count( $cart->contents() );
+        $skor = $totalBenar / $jumlah_soal * 100;
+
+
+        return intval( $skor );
+    }
+
+
+    // insert assignemnt
+    function model_insertrekap_infokuis( $dataInfo ){
+
+        $this->db->table('rekap_info_kuis')->insert($dataInfo);
+        $last_id = $this->db->insertID();
+
+        return $last_id;
+    }
+
+
+
+    function model_insertrekap_detailkuis( $data, $id_materi ) {
+
+        $cart = cart();
+        $cart->destroy();
+
+        $this->db->table('rekap_detail_kuis')->insertBatch( $data );
+
+        return redirect()->to(base_url('dashboard/achievement'));
+    }
         
 }
     

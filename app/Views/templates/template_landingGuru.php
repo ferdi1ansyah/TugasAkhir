@@ -60,7 +60,7 @@
                         <p class="wow fadeInUp" data-wow-delay=".6s">
                             Jika anda ingin mengetahui bagaimana cara memulai dan apa yang harus dilakukan untuk menjadi pengajar bisa scroll ke bawah ,atau bisa mulai langsung dengan klik mulai mengajar
                         </p>
-                        <a href="javascript:void(0)" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Menjadi Pengajar</a>
+                        <a href="<?php echo base_url('starter/launch') ?>" class="main-btn border-btn btn-hover wow fadeInUp" data-wow-delay=".6s">Menjadi Pengajar</a>
                         <a href="#features" class="scroll-bottom"> <i class="lni lni-arrow-down"></i></a>
                     </div>
                 </div>

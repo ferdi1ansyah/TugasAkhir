@@ -72,7 +72,7 @@
                   <i class="material-icons">home</i>
                   <span>Halaman Utama</span>
                 </a>
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) echo "active"; ?>" href="/datamateri">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) echo "active"; ?>" href="/datamateri/index">
                   <i class="material-icons">book</i>
                   <span>Data Materi</span>
                 </a>

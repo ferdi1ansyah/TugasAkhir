@@ -41,63 +41,84 @@
                  *  @param $password = merupakan variabel yang menampung nilai dari view
                  *  @param $data['password] = merupakan variabel untuk mengambil nilai dari database (profile)
                  */
-                if ( password_verify( $password, $data['password'] ) ) {
 
 
-                    $NilaiSession = array(
-
-                        'sess_id_profile'   => $data['id_profile'],
-                        'sess_username'     => $data['username'],
-                        'sess_hak_akses'     => $data['hak_akses'],
-                    );
-
-                    $session->set( $NilaiSession );
-
-                    switch( $data['hak_akses'] ) {
-
-                        case "superadmin":
-
-                            return redirect()->to( base_url('dashboard/index') );
-                            break;
-
-                        case "guru":
-
-                            // data guru 
-                            $id_profile = $data['id_profile'];
-                            $query = "SELECT * FROM `data_guru` WHERE id_profile = '$id_profile'";
-                            $getGuruByIdProfile = $db->query( $query );
+                if ( $data['status_akun'] == "aktif" ) {
 
 
-                            $data_guru = $getGuruByIdProfile->getRowArray();
+                    if ( password_verify( $password, $data['password'] ) ) {
 
-                            // session guru
-                            $session->set('sess_id_guru', $data_guru['id_guru']);
-                            $session->set('sess_nama_lengkap', $data_guru['nama_lengkap']);
 
-                            return redirect()->to( base_url('dashboard/index2') );
-                            break;
+                        $NilaiSession = array(
 
-                        case "siswa":
-                            
-                            return redirect()->to (base_url('dashboard/index3') );
-                            break;
-                        // . . .
+                            'sess_id_profile'   => $data['id_profile'],
+                            'sess_username'     => $data['username'],
+                            'sess_hak_akses'     => $data['hak_akses'],
+                        );
+
+                        $session->set( $NilaiSession );
+
+                        switch( $data['hak_akses'] ) {
+
+                            case "superadmin":
+
+                                return redirect()->to( base_url('dashboard/index') );
+                                break;
+
+                            case "guru":
+
+                                // data guru 
+                                $id_profile = $data['id_profile'];
+                                $query = "SELECT * FROM `data_guru` WHERE id_profile = '$id_profile'";
+                                $getGuruByIdProfile = $db->query( $query );
+
+
+                                $data_guru = $getGuruByIdProfile->getRowArray();
+
+                                // session guru
+                                $session->set('sess_id_guru', $data_guru['id_guru']);
+                                $session->set('sess_nama_lengkap', $data_guru['nama_lengkap']);
+
+                                if ( $data['starter'] == 1 ) {
+
+
+                                    return redirect()->to( base_url('dashboard/index2') );
+                                } else {
+
+                                    return redirect()->to( base_url('starter/index7') );
+                                }
+
+                                
+                                break;
+
+                            case "siswa":
+                                
+                                return redirect()->to (base_url('dashboard/index3') );
+                                break;
+                            // . . .
+                        }
+
+                        
+
+
+                    } 
+                    
+                    
+                    
+                    else{ // wrong password
+
+                        // memasang session flashdata untuk menampilkan pesan 
+                        $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';
+                        $session->setFlashdata('pesan', $elementHTML);
+                        
+                        return redirect()->to( base_url( 'login/index' ) );
                     }
 
-                    
+                } else {
 
+                    $session->setFlashdata('pesan', "Akun anda belum ter-verifikasi, harap cek email anda");
 
-                } 
-                
-                
-                
-                else{ // wrong password
-
-                    // memasang session flashdata untuk menampilkan pesan 
-                    $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';
-                    $session->setFlashdata('pesan', $elementHTML);
-                    
-                    return redirect()->to( base_url( 'login/index' ) );
+                    return redirect()->to( base_url('login/index') );
                 }
 
             

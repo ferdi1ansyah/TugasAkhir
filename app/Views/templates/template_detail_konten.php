@@ -125,17 +125,28 @@ License: You must have a valid license purchased only from themeforest(the above
 															<div class="col-xxl-5 mb-11 mb-xxl-0">
 																<!--begin::Image-->
 																<div class="card card-custom card-stretch">
+
+																	<?php
+																	
+																		$img = "https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png"; // gambar default
+
+																		// gambar terdapat upload
+																		if ( $materi['media'] ) {
+												
+																			$img = base_url('assets/images/thumbnail-material/'. $materi['media']);
+																		}
+																	?>
 																	<div class="card-body p-0 rounded px-10 py-15 d-flex align-items-center justify-content-center" style="background-color: #FFCC69;">
-																		<img src="<?php echo base_url() ?>/assets/metro/media/products/21.png" class="mw-100 w-200px" style="transform: scale(1.6);" />
+																		<img src="<?php echo $img ?>" class="mw-100 w-200px" style="transform: scale(1.6); object-fit: cover" />
 																	</div>
 																</div>
 																<!--end::Image-->
 															</div>
 															<div class="col-xxl-7 pl-xxl-11">
-																<h2 class="font-weight-bolder text-dark mb-7" style="font-size: 32px;">Apple Earbuds Amazing Headset</h2>
+																<h2 class="font-weight-bolder text-dark mb-7" style="font-size: 32px;"><?php echo $materi['judul'] ?></h2>
 																<div class="font-size-h2 mb-7 text-dark-50">From
-																<span class="text-info font-weight-boldest ml-2">Mamang Suderahat</span></div>
-																<div class="line-height-xl">You also need to be able to accept that not every post is going to get your motor running. Some posts will feel like a chore, but if you have editorial control over what you write about, then choose topics you’d want to read – even if they relate to niche industries. The more excited you can be about your topic, the more excited your readers</div>
+																<span class="text-info font-weight-boldest ml-2"><?php echo $materi['nama_lengkap'] ?></span></div>
+																<div class="line-height-xl"><?php echo $materi['deskripsi'] ?></div>
 															</div>
 														</div>
 														<div class="row mb-6">
@@ -143,7 +154,27 @@ License: You must have a valid license purchased only from themeforest(the above
 														</div>
 														<!--begin::Buttons-->
 														<div class="d-flex">
-															<button type="button" class="btn btn-primary font-weight-bolder mr-6 px-6 font-size-sm">
+															
+															<?php
+															
+															
+																$text_btn = "";
+																$link 	  = "";
+
+																if ( $cek_pendaftaran->getNumRows() > 0 ) {
+
+																	$text_btn = "Lanjutkan Kelas";
+																	$link  	  = base_url('dashboard/course/'. $materi['id_materi'].'?page='. $cek_pendaftaran->getRowArray()['index_materi']);
+																} else {
+
+
+																	$text_btn = "Mulai Kelas";
+																	$link 	  = base_url('dashboard/course/'. $materi['id_materi'].'?page=start');
+																}
+															?>
+															
+															
+															<a href="<?php echo $link ?>" class="btn btn-primary font-weight-bolder mr-6 px-6 font-size-sm">
 															<span class="svg-icon">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File-plus.svg-->
 																<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -154,7 +185,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</g>
 																</svg> -->
 																<!--end::Svg Icon-->
-															</span>Mulai</button>
+															</span><?php echo $text_btn ?></a>
+
 															<button type="button" class="btn btn-light-primary font-weight-bolder px-8 font-size-sm">
 															<span class="svg-icon">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File-done.svg-->

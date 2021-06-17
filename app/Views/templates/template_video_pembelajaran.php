@@ -73,150 +73,46 @@ License: You must have a valid license purchased only from themeforest(the above
 									<h3 class="p-2 p-lg-3 my-1 my-lg-3">Part Video</h3>
 									<!--begin::List-->
 									<div class="list list-hover">
+										
+										<?php 
+										$urutan = 1;
+										foreach ( $detail->getResultArray() AS $list ) : ?>
 										<!--begin::Item-->
 										<div class="list-item hoverable p-2 p-lg-3 mb-2">
 											<div class="d-flex align-items-center">
 												<!--begin::Symbol-->
 												<div class="symbol symbol-40 symbol-light mr-4">
 													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/satu.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">Introduction</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 1</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/dua.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">mengoding</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 2</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/tiga.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">html</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 3</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/empat.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">css</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 4</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/lima.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">harus ngapain</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 5</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/enam.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">Project</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 6</a>
-												</div>
-												<!--begin::End-->
-											</div>
-										</div>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<div class="list-item hoverable p-2 p-lg-3 mb-2">
-											<div class="d-flex align-items-center">
-												<!--begin::Symbol-->
-												<div class="symbol symbol-40 symbol-light mr-4">
-													<span class="symbol-label bg-hover-white">
-														<img src="<?php echo base_url() ?>/assets/metro/media/svg/misc/tujuh.svg" class="h-50 align-self-center" />
-													</span>
-												</div>
-												<!--end::Symbol-->
-												<!--begin::Text-->
-												<div class="d-flex flex-column flex-grow-1 mr-2">
-													<span class="text-dark-75 font-size-h6 mb-0">Nolep</span>
-													<a href="#" class="text-muted text-hover-primary font-weight-bold">Part 7</a>
-												</div>
+														<?php 
+														
+															$img = "";
 
-												
+															if ( $list['tipe_materi'] == "text_content" ) {
 
+																$img = base_url('img/notes.png');
+															} else {
 
+																$img = base_url('img/play.png'); // visual
+															}
+														?>
+														<img src="<?php echo $img ?>" class="h-50 align-self-center" />
+													</span>
+												</div>
+												<!--end::Symbol-->
+												<!--begin::Text-->
+												<div class="d-flex flex-column flex-grow-1 mr-2">
+													<span class="text-dark-75 font-size-h6 mb-0"><?php echo $list['judul'] ?></span>
+													<a href="<?php echo base_url('dashboard/course/'. $list['id_materi'].'?page='. $list['id_materi_detail']) ?>" class="text-muted text-hover-primary font-weight-bold">Bagian <?php echo $urutan ?></a>
+												</div>
 												<!--begin::End-->
 											</div>
-
-											
-
-											
 										</div>
+										<!--end::Item-->
+										<?php $urutan++; endforeach; ?>
 
                                         <!--Button sidebar-->
 										
-										<a href="#" class="btn btn-primary btn-shadow  btn-lg btn-block font-weight-bold mr-2">Ikuti Quiz</a>
+										<a href="<?php echo base_url('quiz/assignment/'. $id_materi) ?>" onclick="return confirm('Apakah anda ingin memulai kuis dari materi ini ?')" class="btn btn-primary btn-shadow  btn-lg btn-block font-weight-bold mr-2">Ikuti Quiz</a>
 
 											<!--end button sidebar-->
 										<!--end::Item-->
@@ -301,30 +197,49 @@ License: You must have a valid license purchased only from themeforest(the above
 
 									
 								
-									<div class="col-md-4">
+									<div class="col-md-12">
 										<body> 
 
-											<video width="940" controls>
-											  <source src="mov_bbb.mp4" type="video/mp4">
-											  <source src="mov_bbb.ogg" type="video/ogg">
-											  Your browser does not support HTML video.
-											</video>
-											
-											<p>
-											Video courtesy of 
-											<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
-											</p>
-											
+										<?php
+												$link = "";
+
+												if ( $terbuka['link_video'] ) {
+
+													$join = "https://drive.google.com/file/d/";
+													$explode = explode('https://drive.google.com/file/d/', $terbuka['link_video']);
+													$getLabel = $explode[1];
+
+													$getID = explode('/', $getLabel);
+													$link = 'https://drive.google.com/file/d/'. $getID[0].'/preview';
+
+
+													echo '<iframe src="'.$link.'" style="width: 100%; border-radius: 5px" height="480"></iframe>';
+												}
+											?>											
 
 											<div class="card card-custom">
 												<div class="card-header">
 													<div class="card-title">
 														
-														<h3 class="card-label">Description
-														<small>sub title</small></h3>
+														<h3 class="card-label"><?php echo $terbuka['judul'] ?></h3>
 													</div>
 												</div>
-												<div class="card-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</div>
+												<div class="card-body">
+												
+													<?php if ( !empty($terbuka['sumber_author']) ) {
+
+
+													echo 'Pemateri : <b>'.$terbuka['sumber_author'].'</b> <br>';
+													echo 'Sumber : <a href="'.$terbuka['sumber_link'].'">'.$terbuka['sumber_link'].'</a>';
+													} ?> <hr>
+													<?php echo $terbuka['materi'] ?>
+													
+												</div>
+												
+												<hr>
+
+												
+
 											</div>
 											</body> 
 

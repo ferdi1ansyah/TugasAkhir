@@ -29,4 +29,31 @@ class M_register extends model {
                 $db->table('data_guru')->insert( $dataGuru );
 
     }
+
+
+
+    function model_prosesverifikasi( $id_profile, $data ) {
+
+        $db = \Config\Database::connect();
+        $session = \Config\Services::session();
+
+        $db->table('profile')->where('id_profile', $id_profile)->update( $data );
+
+        // memasang session flashdata untuk menampilkan pesan 
+        $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';
+        $session->setFlashdata('pesan', $elementHTML);
+
+        return redirect()->to(base_url('login/index'));
+    }
+
+
+
+    function model_prosesupdatestarter( $id_profile, $data ) {
+
+        $db = \Config\Database::connect();
+        $session = \Config\Services::session();
+
+        $db->table('profile')->where('id_profile', $id_profile)->update( $data );
+        return redirect()->to(base_url('dashboard/index2'));
+    }
 }        

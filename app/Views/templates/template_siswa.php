@@ -191,9 +191,9 @@
           <h3 class="mb-25 wow fadeInUp">Kategori Kelas</p>
           </h3>
 
-         <a href="/quiz/preview"
+         <!-- <a href="/quiz/preview"> -->
 
-          </ul>
+          <!-- </ul> -->
 
           <!-- card video fitur < -->
               </div>
@@ -221,97 +221,36 @@
             <div class="d-flex flex-wrap justify-content-between">
 
 
+              <?php foreach ( $materi->getResultArray() AS $row ) : ?>
               <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
+                <div class="single-pricing" style="border: 1px solid #e0e0e0; padding: 12px">
 
-
+                  <a href="<?php echo base_url('dashboard/detail/'. $row['id_materi']) ?>">
                   <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
 
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
+                    <?php
+                    
+                        $img = "https://pertaniansehat.com/v01/wp-content/uploads/2015/08/default-placeholder.png"; // gambar default
+
+                        // gambar terdapat upload
+                        if ( $row['media'] ) {
+
+                            $img = base_url('assets/images/thumbnail-material/'. $row['media']);
+                        }
+                    ?>
+                    <img src="<?php echo $img ?>" class="card-img-top" alt="Thumnail" style="object-fit: cover; height: 150px">
+
+                    <h3><?php echo $row['judul'] ?></h3>
+                    <p class="card-text"><?php echo $row['deskripsi'] ?>.</p>
                   </div>
+                  </a>
+
                 </div>
 
               </div>
+              <?php endforeach; ?>
 
-              <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
-
-
-                  <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
-
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
-
-
-                  <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
-
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
-
-
-                  <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
-
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
-
-
-                  <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
-
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing">
-
-
-                  <div class="content">
-                    <img src="/<?php echo base_url() ?>/assets/saaspal/img/subscribe/teacher.png" class="card-img-top"
-                      alt="...">
-
-                    <h3>Daftar Guru</h3>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
-                  </div>
-                </div>
-
-              </div>
+            
 
 
 

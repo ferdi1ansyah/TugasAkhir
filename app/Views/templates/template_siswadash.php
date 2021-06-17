@@ -77,7 +77,7 @@
                   <span>Kelas Saya</span>
                 </a>
 
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "Quiz" ) echo "active"; ?>" href="/quiz/quizdiikuti(">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "Quiz" ) echo "active"; ?>" href="/quiz/quizdiikuti">
                   <i class="material-icons">school</i>
                   <span>Quiz</span>
                 </a>

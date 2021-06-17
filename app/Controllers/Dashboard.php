@@ -82,6 +82,6 @@ class Dashboard extends Controller {
     function index8() {
 
         // echo $this->session->get('sess_username');
-        return view('templates/templates_siswadash');
+        return view('templates/template_siswadash');
     }
 }

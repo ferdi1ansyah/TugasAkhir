@@ -40,7 +40,7 @@ class M_register extends model {
         $db->table('profile')->where('id_profile', $id_profile)->update( $data );
 
         // memasang session flashdata untuk menampilkan pesan 
-        $elementHTML = '<div class="alert alert-danger">Pemberitahuan <br> <small>Maaf kata sandi yang anda masukkan salah !</small></div>';
+        $elementHTML = '<div class="alert alert-success">Silahkan melakukan login</small></div>';
         $session->setFlashdata('pesan', $elementHTML);
 
         return redirect()->to(base_url('login/index'));

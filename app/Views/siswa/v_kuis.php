@@ -1,6 +1,22 @@
 <?php
 
-$this->extend('templates/template_siswadash');
+
+
+
+$session = \Config\Services::session();
+
+if ( $session->get('sess_hak_akses') == "superadmin" ) {
+
+    $this->extend('templates/template_admin');
+} else if ( $session->get('sess_hak_akses') == "guru" ) {
+
+    $this->extend('templates/template_guru');
+} else {
+
+    $this->extend('templates/template_siswadash');
+}
+
+
 $this->section('content')
 
 ?>
@@ -44,8 +60,8 @@ $this->section('content')
               <tr>
                 
                 <td><?php echo $no ?></td>
-                <td><?php echo $row['judul'] ?></td>
-                <td><?php echo $row['started_at'] ?></td>
+                <td><?php echo $row['judul'].' <br> <small>Oleh : '.$row['nama_lengkap'].'</small>' ?></td>
+                <td><?php echo $row['started_at'].'<br><small>Siswa : '.$row['username'].'</small>' ?></td>
                 <td><?php echo $row['skor'] ?></td>
                 
               </tr>

@@ -22,7 +22,7 @@
   </head>
   <body class="h-100">
     
-    <div class="color-switcher-toggle animated pulse infinite">
+  <div class="color-switcher-toggle animated pulse infinite">
       <i class="material-icons">settings</i>
     </div>
     <div class="container-fluid">
@@ -50,10 +50,10 @@
             <div class="input-group input-group-seamless ml-3">
               <div class="input-group-prepend">
                 <div class="input-group-text">
-                  <i class="fas fa-search"></i>
+                 
                 </div>
               </div>
-              <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search">
+              < class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search">
             </div>
           </form>
           <div class="nav-wrapper">
@@ -68,7 +68,7 @@
 
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboardguru">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "dashboard" ) echo "active"; ?>" href="/dashboard/index2">
                   <i class="material-icons">home</i>
                   <span>Halaman Utama</span>
                 </a>
@@ -103,6 +103,7 @@
                   <div class="input-group-prepend">
                    
                   </div>
+                  
                   <!-- <input class="navbar-search form-control" type="text" placeholder="Search for something..." aria-label="Search"> -->
                 </div>
               </form>
@@ -115,7 +116,7 @@
                     ?>/assets/images/avatars/guru.png" alt="User Avatar"> <span class="d-none d-md-inline-block"><?php echo ucfirst($session->get('sess_username')) ?></span>
                     </a>
                   <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item" href="user-profile-lite.html"><i class="material-icons">&#xE7FD;</i> Profile</a>
+                    <a class="dropdown-item" href=""><i class="material-icons">&#xE7FD;</i> Profile</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="/login/proseslogout">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>

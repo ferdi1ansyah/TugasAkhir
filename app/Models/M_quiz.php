@@ -135,13 +135,44 @@ class M_quiz extends Model{
     function nilaiQuizBySiswa() {
 
         $id_profile = $this->session->get('sess_id_profile');
-        $sql = "SELECT rekap_info_kuis.*, data_materi.* 
+        $level = $this->session->get('sess_hak_akses');
+
+        if ( $level == "superadmin" ) {
+
+            $sql = "SELECT rekap_info_kuis.*, data_materi.*, data_guru.nama_lengkap, profile.username
 
                 FROM rekap_info_kuis 
                 JOIN data_materi ON data_materi.id_materi = rekap_info_kuis.id_materi
                 
+                JOIN profile ON profile.id_profile = rekap_info_kuis.id_profile
+                LEFT JOIN data_guru ON data_guru.id_profile = data_materi.id_profile";
+                
+
+        } else if ( $level == "guru" ) {
+
+
+            $sql = "SELECT rekap_info_kuis.*, data_materi.*, data_guru.nama_lengkap, profile.username
+
+                FROM rekap_info_kuis 
+                JOIN data_materi ON data_materi.id_materi = rekap_info_kuis.id_materi
+                JOIN data_guru ON data_guru.id_profile = data_materi.id_profile
+                JOIN profile ON profile.id_profile = rekap_info_kuis.id_profile
+                
+                WHERE data_materi.id_profile = '$id_profile'";
+
+        } else {
+
+
+            $sql = "SELECT rekap_info_kuis.*, data_materi.*, data_guru.nama_lengkap, profile.username
+
+                FROM rekap_info_kuis 
+                JOIN data_materi ON data_materi.id_materi = rekap_info_kuis.id_materi
+                JOIN data_guru ON guru.id_profile = data_materi.id_profile
+                JOIN profile ON profile.id_profile = rekap_info_kuis.id_profile
+                
                 WHERE rekap_info_kuis.id_profile = '$id_profile'";
 
+        }
         return $this->db->query( $sql );
     }
         

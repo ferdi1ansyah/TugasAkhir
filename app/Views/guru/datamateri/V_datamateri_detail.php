@@ -1,7 +1,15 @@
     
 <?php
 
-$this->extend('templates/template_guru');
+$session = \Config\Services::session();
+
+if ( $session->get('sess_hak_akses') == "superadmin" ) {
+
+    $this->extend('templates/template_admin');
+} else {
+
+    $this->extend('templates/template_guru');
+}
 
 ?>
 

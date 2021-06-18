@@ -115,9 +115,16 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link <?php if ( $uri->getSegment(1) == "Datamateriadmin" ) { echo "active"; }  ?>" href="/Datamateriadmin/index">
+                <a class="nav-link <?php if ( $uri->getSegment(1) == "datamateri" ) { echo "active"; }  ?>" href="/datamateri/index">
                   <i class="material-icons">cake</i>
                   <span>Data Materi</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+              <a class="nav-link <?php if ( $uri->getSegment(1) == "Quiz" ) echo "active"; ?>" href="/quiz/quizdiikuti">
+                  <i class="material-icons">school</i>
+                  <span>Quiz</span>
                 </a>
               </li>
 

@@ -247,7 +247,7 @@ class Quiz extends Controller {
         $cart->destroy();
 
     }
-    function quizdiikuti(  ) {
+    function quizdiikuti() {
 
         $model = new M_quiz();
         $data['quiz'] = $model->nilaiQuizBySiswa();

@@ -20,9 +20,19 @@ class M_datamateri extends Model{
 
     function tampilAllDataMateri() {
 
-        $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
+        if ( $this->session->get('sess_hak_akses') == "superadmin" ) {
+
+            $sql = "SELECT data_materi.*, profile.* FROM data_materi
+                    JOIN profile ON profile.id_profile = data_materi.id_profile
+                    LEFT JOIN data_guru ON data_guru.id_profile = profile.id_profile";
+
+
+        } else {
+
+            $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
                 JOIN profile ON profile.id_profile = data_materi.id_profile
                 JOIN data_guru ON data_guru.id_profile = profile.id_profile";
+        }
 
         $query = $this->db->query( $sql );
         return $query;
@@ -33,8 +43,14 @@ class M_datamateri extends Model{
     // fungsi tampil materi
     function tampilDataMateri() {
 
-        $sess_id_profile = $this->session->get('sess_id_profile');
-        $sql = "SELECT * FROM data_materi WHERE id_profile = '$sess_id_profile'";
+        if ( $this->session->get('sess_hak_akses') == "superadmin" ) {
+
+            $sql = "SELECT * FROM data_materi";
+        } else {
+
+            $sess_id_profile = $this->session->get('sess_id_profile');
+            $sql = "SELECT * FROM data_materi WHERE id_profile = '$sess_id_profile'";
+        }
 
         $query = $this->db->query( $sql );
         return $query;
@@ -44,11 +60,24 @@ class M_datamateri extends Model{
     // tampil materi by id
     function tampilDataMateriById( $id_materi ) {
 
-        $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
+        if ( $this->session->get('sess_hak_akses') == "superadmin" ) {
+
+            $sql = "SELECT data_materi.*, profile.* FROM data_materi
                 JOIN profile ON profile.id_profile = data_materi.id_profile
-                JOIN data_guru ON data_guru.id_profile = profile.id_profile 
+                LEFT JOIN data_guru ON data_guru.id_profile = profile.id_profile 
                 
                 WHERE id_materi = '$id_materi'";
+
+        } else {
+
+            $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
+                    JOIN profile ON profile.id_profile = data_materi.id_profile
+                    JOIN data_guru ON data_guru.id_profile = profile.id_profile 
+                    
+                    WHERE id_materi = '$id_materi'";
+
+        }
+
 
         $query = $this->db->query( $sql );
         return $query->getRowArray();

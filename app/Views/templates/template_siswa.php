@@ -174,47 +174,17 @@
 
   <!----Kelas Koneten-->
 
-  <section id="course" class="pricing-section pt-60 pb-120">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xxl-5 col-xl-6 col-lg-8 col-md-9">
-          <div class="section-title text-center mb-35">
-           
-          </div>
-        </div>
-      </div>
-      <div class="pricing-nav-wrapper ">
-
-      </div>
-      <div class="container mb-2">
-        <h3>
-          <h3 class="mb-25 wow fadeInUp">Kategori Kelas</p>
-          </h3>
-
-         <!-- <a href="/quiz/preview"> -->
-
-          <!-- </ul> -->
-
-          <!-- card video fitur < -->
-              </div>
-
-            </div>
-          </div>
-
-  </section>
-
   <!----Kelas Koneten-->
 
 
   
 
 
-
-  <section class="testimonial-section">
+  <section id="course" class="pricing-section pt-60 pb-120">
   
   
     <div class="container mb-2">
-        <h3 class="mb-25 wow fadeInUp">Kategori Kelas</p></h3>
+        <h3 class="mb-25 wow fadeInUp">Materi Kelas</p></h3>
 
         <div class="tab-content mt-4" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab">

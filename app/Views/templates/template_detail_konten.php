@@ -188,6 +188,9 @@ License: You must have a valid license purchased only from themeforest(the above
 															</span><?php echo $text_btn ?></a>
 
 															<button type="button" class="btn btn-light-primary font-weight-bolder px-8 font-size-sm">
+															<a href="/dashboard/index3" class="svg-icon">
+                                        Batal
+                                        </a>
 															<span class="svg-icon">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File-done.svg-->
 																<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -198,7 +201,8 @@ License: You must have a valid license purchased only from themeforest(the above
 																	</g>
 																</svg> -->
 																<!--end::Svg Icon-->
-															</span>Batal</button>
+																
+														
 														</div>
 														<!--end::Buttons-->
 													</div>

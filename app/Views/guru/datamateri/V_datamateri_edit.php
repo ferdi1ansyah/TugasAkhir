@@ -91,7 +91,7 @@
 
 
                                     <div class="form-group text-right">
-                                    <button><a href="/datamateri" class="btn btn- btn-sm"> Batal </button>  
+                                    <a href="<?php echo base_url('datamateri/index') ?>" class="btn btn-outline-secondary"><i class="material-icons"></i> Kembali</a>
                                         <button type="submit" class="btn btn-warning btn-sm">Perbarui</button>
                                     </div>
                                 </div>

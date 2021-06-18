@@ -53,7 +53,7 @@
               <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
                   <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="<?php echo base_url() ?>/assets/images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-                  <span class="d-none d-md-inline ml-1">Pipel Admin</span>
+                  <span class="d-none d-md-inline ml-1">Halaman Admin</span>
                 </div>
               </a>
               <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -94,12 +94,12 @@
               </li> -->
 
 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "report" ) { echo "active"; }  ?>" href="/report/index">
                   <i class="material-icons">help</i>
                   <span>Laporan</span>
                 </a>
-              </li>
+              </li> -->
 
               <li class="nav-item">
                 <a class="nav-link <?php if ( $uri->getSegment(1) == "dataguru" ) { echo "active"; }  ?>" href="/dataguru/index">
@@ -186,7 +186,7 @@
                     ?>/assets/images/avatars/admin.png" alt="User Avatar"> <span class="d-none d-md-inline-block"><?php echo ucfirst($session->get('sess_username')) ?></span>
                   </a>
                   <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item" href="user-profile-lite.html"><i class="material-icons">&#xE7FD;</i> Profile</a>
+                    <a class="dropdown-item" href=""><i class="material-icons">&#xE7FD;</i> Profile</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="/login/proseslogout">
                       <i class="material-icons text-danger">&#xE879;</i> Logout </a>
@@ -209,21 +209,6 @@
                 
 
         <?php $this->renderSection('content') ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

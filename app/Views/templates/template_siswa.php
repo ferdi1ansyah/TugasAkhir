@@ -222,8 +222,9 @@
 
 
               <?php foreach ( $materi->getResultArray() AS $row ) : ?>
+              
               <div class="col-lg-4 row col-md-8 col-sm-4">
-                <div class="single-pricing" style="border: 1px solid #e0e0e0; padding: 12px">
+              <div class="single-pricing">
 
                   <a href="<?php echo base_url('dashboard/detail/'. $row['id_materi']) ?>">
                   <div class="content">

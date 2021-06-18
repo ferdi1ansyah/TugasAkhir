@@ -103,7 +103,7 @@ if ( $session->get('sess_hak_akses') == "superadmin" ) {
 
                         <div class="col-md-12" style="text-align: right;">
                             <a href="<?php echo base_url('datamateri/tambah_detail/'. $id_materi) ?>" class="btn btn-primary"><i class="material-icons">add</i> Tambah Baru</a>
-                            <a href="<?php echo base_url('datamateri') ?>" class="btn btn-outline-secondary"><i class="material-icons">arrow_back</i> Kembali</a>
+                            <a href="<?php echo base_url('datamateri/index') ?>" class="btn btn-outline-secondary"><i class="material-icons">arrow_back</i> Kembali</a>
                         </div>
                     </div>
 

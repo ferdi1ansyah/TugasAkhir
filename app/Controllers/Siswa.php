@@ -32,7 +32,16 @@ class Siswa extends Controller {
                                                           
 
     // show all quiz
+<<<<<<< HEAD
+     
+=======
     public function index(){
+<<<<<<< HEAD
+            
+>>>>>>> b13a2da430b57fffd7975d5ec1bae8e23ee96a34
+        function materi_kelas(  ) {
+=======
+>>>>>>> 8536c4028d44dde40decfbef6254487d23f8f4bc
 
     
     }
@@ -47,5 +56,6 @@ class Siswa extends Controller {
 
     }
 }
+
 
     

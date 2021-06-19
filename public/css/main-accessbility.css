@@ -1,0 +1,185 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+@-webkit-keyframes here {
+  0% {
+    background: #cccc00;
+  }
+  50% {
+    background: inherit;
+  }
+}
+
+@keyframes here {
+  0% {
+    background: #cccc00;
+  }
+  50% {
+    background: inherit;
+  }
+}
+.menu {
+  position: absolute;
+  right: -78px;
+  top: 490px;
+  float: left;
+  -webkit-filter: url("../css/goo.svg#goo");
+  filter: url("../css/goo.svg#goo");
+}
+@media all and (max-width: 765px) {
+  .menu {
+    display: none !important;
+  }
+}
+@media all and (max-width: 1080px) {
+  .menu {
+    right: -21px;
+    z-index: 10;
+  }
+}
+@media all and (max-width: 920px) {
+  .menu {
+    top: 16px;
+    right: 32px;
+    width: 62px;
+    position: fixed;
+    z-index: 10;
+    height: 62px;
+  }
+}
+
+/*
+   CSS accecss : FALSE
+   */
+body.zones {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+}
+body.zones:hover {
+  -webkit-box-shadow: inset 0 0 0 1px purple !important;
+  box-shadow: inset 0 0 0 1px purple !important;
+}
+body.zones * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+}
+body.zones *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px red !important;
+  box-shadow: inset 0 0 0 1px red !important;
+}
+body.zones * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+}
+body.zones * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px blue !important;
+  box-shadow: inset 0 0 0 1px blue !important;
+}
+body.zones * + * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+}
+body.zones * + * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px green !important;
+  box-shadow: inset 0 0 0 1px green !important;
+}
+body.zones * + * + * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+}
+body.zones * + * + * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px purple !important;
+  box-shadow: inset 0 0 0 1px purple !important;
+}
+body.zones * + * + * + * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+}
+body.zones * + * + * + * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px red !important;
+  box-shadow: inset 0 0 0 1px red !important;
+}
+body.zones * + * + * + * + * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+}
+body.zones * + * + * + * + * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px blue !important;
+  box-shadow: inset 0 0 0 1px blue !important;
+}
+body.zones * + * + * + * + * + * + * {
+  -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+}
+body.zones * + * + * + * + * + * + *:hover {
+  -webkit-box-shadow: inset 0 0 0 1px green !important;
+  box-shadow: inset 0 0 0 1px green !important;
+}
+body.zones.grayscale, body.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+body.zones.colorblind1, body.colorblind1 {
+  -webkit-filter: url("css/filters.svg#protanopia") grayscale(0) !important;
+  filter: url("css/filters.svg#protanopia") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind1,
+body _:-moz-tree-row(hover), body.colorblind1 {
+  filter: url("../css/filters.svg#protanopia") grayscale(0) !important;
+}
+body.zones.colorblind2, body.colorblind2 {
+  -webkit-filter: url("css/filters.svg#protanomaly") grayscale(0) !important;
+  filter: url("css/filters.svg#protanomaly") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind2,
+body _:-moz-tree-row(hover), body.colorblind2 {
+  filter: url("../css/filters.svg#protanomaly") grayscale(0) !important;
+}
+body.zones.colorblind3, body.colorblind3 {
+  -webkit-filter: url("css/filters.svg#deuteranopia") grayscale(0) !important;
+  filter: url("css/filters.svg#deuteranopia") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind3,
+body _:-moz-tree-row(hover), body.colorblind3 {
+  filter: url("../css/filters.svg#deuteranopia") grayscale(0) !important;
+}
+body.zones.colorblind4, body.colorblind4 {
+  -webkit-filter: url("css/filters.svg#deuteranomaly") grayscale(0) !important;
+  filter: url("css/filters.svg#deuteranomaly") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind4,
+body _:-moz-tree-row(hover), body.colorblind4 {
+  filter: url("../css/filters.svg#deuteranomaly") grayscale(0) !important;
+}
+body.zones.colorblind5, body.colorblind5 {
+  -webkit-filter: url("css/filters.svg#tritanopia") grayscale(0) !important;
+  filter: url("css/filters.svg#tritanopia") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind5,
+body _:-moz-tree-row(hover), body.colorblind5 {
+  filter: url("../css/filters.svg#tritanopia") grayscale(0) !important;
+}
+body.zones.colorblind6, body.colorblind6 {
+  -webkit-filter: url("css/filters.svg#tritanomaly") grayscale(0) !important;
+  filter: url("css/filters.svg#tritanomaly") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind6,
+body _:-moz-tree-row(hover), body.colorblind6 {
+  filter: url("../css/filters.svg#tritanomaly") grayscale(0) !important;
+}
+body.zones.colorblind7, body.colorblind7 {
+  -webkit-filter: url("css/filters.svg#achromatopsia") grayscale(0) !important;
+  filter: url("css/filters.svg#achromatopsia") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind7,
+body _:-moz-tree-row(hover), body.colorblind7 {
+  filter: url("../css/filters.svg#achromatopsia") grayscale(0) !important;
+}
+body.zones.colorblind8, body.colorblind8 {
+  -webkit-filter: url("css/filters.svg#achromatomaly") grayscale(0) !important;
+  filter: url("css/filters.svg#achromatomaly") grayscale(0) !important;
+}
+body _:-moz-tree-row(hover), body.zones.colorblind8,
+body _:-moz-tree-row(hover), body.colorblind8 {
+  filter: url("../css/filters.svg#achromatomaly") grayscale(0) !important;
+}

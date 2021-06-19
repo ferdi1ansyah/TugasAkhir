@@ -31,7 +31,7 @@ class M_datamateri extends Model{
 
             $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
                 JOIN profile ON profile.id_profile = data_materi.id_profile
-                JOIN data_guru ON data_guru.id_profile = profile.id_profile";
+                LEFT JOIN data_guru ON data_guru.id_profile = profile.id_profile";
         }
 
         $query = $this->db->query( $sql );
@@ -72,7 +72,7 @@ class M_datamateri extends Model{
 
             $sql = "SELECT data_materi.*, profile.*, data_guru.* FROM data_materi
                     JOIN profile ON profile.id_profile = data_materi.id_profile
-                    JOIN data_guru ON data_guru.id_profile = profile.id_profile 
+                    LEFT JOIN data_guru ON data_guru.id_profile = profile.id_profile 
                     
                     WHERE id_materi = '$id_materi'";
 
@@ -180,9 +180,9 @@ class M_datamateri extends Model{
                 
                 FROM pendaftaran_materi 
                 
-                JOIN data_materi ON data_materi.id_materi = pendaftaran_materi.id_materi
+                LEFT JOIN data_materi ON data_materi.id_materi = pendaftaran_materi.id_materi
                 JOIN data_siswa ON data_siswa.id_profile = pendaftaran_materi.id_profile
-                JOIN data_guru ON data_guru.id_profile = data_materi.id_profile
+                LEFT JOIN data_guru ON data_guru.id_profile = data_materi.id_profile
                 
                 WHERE pendaftaran_materi.id_profile = '$id_profile'";
 

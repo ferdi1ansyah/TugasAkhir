@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\M_datamateri;
 use App\Models\M_modules;
+use App\Models\M_profile;
 
 class Dashboard extends Controller {
 
@@ -146,7 +147,38 @@ class Dashboard extends Controller {
 
     function profile() {
 
+        $id_profile = $this->session->get('sess_id_profile');
+        $model = new M_profile();
 
-        return view('siswa/v_profile');
+        $data['edit'] = $model->getProfileById( $id_profile );
+
+        return view('siswa/v_profile', $data);
+    }
+
+
+
+    // proses update
+    function prosespengubahanprofile() {
+
+        $model = new M_profile();
+
+        $id_profile = $this->session->get('sess_id_profile');
+        $data = array(
+
+            'nama_lengkap'  => $this->request->getPost('nama_lengkap'),
+            'domisili'      => $this->request->getPost('domisili'),
+            'email'         => $this->request->getPost('email'),
+            'telp'          => $this->request->getPost('telp'),
+            'alamat'        => $this->request->getPost('alamat'),
+            'pendidikan_sekarang' => $this->request->getPost('pendidikan_sekarang'),
+            'asal_sekolah'        => $this->request->getPost('asal_sekolah'),
+        );
+
+
+
+        return $model->model_prosespengubahanakun( $data, $id_profile );
+
+
+        // $model->model_prosespengubahanakun();
     }
 }

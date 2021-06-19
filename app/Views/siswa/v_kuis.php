@@ -56,11 +56,19 @@ $this->section('content')
 
               <?php
               $no = 1;
-              foreach ( $quiz->getResultArray() AS $row ) : ?>
+              foreach ( $quiz->getResultArray() AS $row ) :
+              
+              
+                $nama = "SuperAdmin";
+                if ( $row['nama_lengkap'] ) {
+
+                  $nama = $row['nama_lengkap'];
+                }
+              ?>
               <tr>
                 
                 <td><?php echo $no ?></td>
-                <td><?php echo $row['judul'].' <br> <small>Oleh : '.$row['nama_lengkap'].'</small>' ?></td>
+                <td><?php echo $row['judul'].' <br> <small>Oleh : '.$nama.'</small>' ?></td>
                 <td><?php echo $row['started_at'].'<br><small>Siswa : '.$row['username'].'</small>' ?></td>
                 <td><?php echo $row['skor'] ?></td>
                 

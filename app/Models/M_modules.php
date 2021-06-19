@@ -50,6 +50,7 @@ class M_modules extends Model{
             // ambil data materi pertama by id materi 
             $dataMateriPertama = $this->db->table('data_materi_detail')->where('id_materi', $id_materi)->get()->getRowArray();
             
+            
             $data = array(
 
                 'id_materi' => $id_materi,

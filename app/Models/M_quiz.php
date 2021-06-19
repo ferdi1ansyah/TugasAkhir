@@ -167,7 +167,7 @@ class M_quiz extends Model{
 
                 FROM rekap_info_kuis 
                 JOIN data_materi ON data_materi.id_materi = rekap_info_kuis.id_materi
-                JOIN data_guru ON guru.id_profile = data_materi.id_profile
+                LEFT JOIN data_guru ON data_guru.id_profile = data_materi.id_profile
                 JOIN profile ON profile.id_profile = rekap_info_kuis.id_profile
                 
                 WHERE rekap_info_kuis.id_profile = '$id_profile'";

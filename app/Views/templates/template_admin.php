@@ -29,6 +29,10 @@
 
     <!-- DataTables -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
+
+    <!-- Accessbility -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>/css/main-accessbility.css">
+
     
 
 
@@ -37,7 +41,7 @@
   </head>
   <body class="h-100">
     
-    <div class="color-switcher-toggle animated pulse infinite">
+    <div class="color-switcher-toggle animated pulse infinite" id="change-accessbility">
       <i class="material-icons">settings</i>
     </div>
     <div class="container-fluid">
@@ -237,6 +241,26 @@
         </main>
       </div>
     </div>
+
+
+    <div class="promo-popup animated">
+      <div class="pp-intro-bar"> Color Blind Mode <span class="close">
+          <i class="material-icons">close</i>
+        </span>
+        <span class="up">
+          <i class="material-icons">keyboard_arrow_up</i>
+        </span>
+      </div>
+      <div class="classes_list" style="padding: 32px">
+        <h2>Pemilihan Menu</h2>
+        <p>Pilih tombol dibawah ini untuk mengubah mode warna.</p>
+        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="zones">Normal</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="colorblind1">Protanopia</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="tritanopia">Tritanopia</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="deuteranopia">Deuteranopia</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="grayscale">Achromatopsia</a>
+      </div>
+    </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -256,8 +280,53 @@
     <script>
     
       $(document).ready( function () {
+
+
+          var body = document.body;
+          var demos = document.querySelectorAll('.classes_list a');
         
           $('#myTable').DataTable();
+
+
+          function hasClass(el, cls) {
+            return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+          }
+
+
+          [].forEach.call(demos, function (button) {
+
+              button.addEventListener('click', function () {
+
+                var c = this.getAttribute('id');
+
+                if ( hasClass(body, c)) {
+                  body.className = '';
+                  deactiveButton(this);
+                } else {
+                  body.className = c;
+                  deactiveAllButtons();
+                  this.className += ' active ';
+                }
+
+
+
+                // alert(c);
+
+              });
+          });
+
+
+          function deactiveAllButtons () {
+
+            [].forEach.call(demos, function (button) {
+              deactiveButton(button);
+            });
+
+          }
+
+          function deactiveButton (elem) {
+            elem.className = elem.className.replace(' active ', '');
+          }
       });
 
     </script>

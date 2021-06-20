@@ -87,8 +87,8 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-content">
                         <div class="section-title mb-30">
-                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Perfect Solution Thriving Online Business</h1>
-                            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet.</p>
+                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Part 1 : Pilih data materi</h1>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Pilih data materi untuk guru mengupload video pembelajaran untuk yang akan diajarkan</p>
                         </div>
                         <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Discover More</a>
                     </div>
@@ -104,13 +104,15 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-content">
                         <div class="section-title mb-30">
-                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Easy to Use with Tons of Awesome Features</h1>
-                            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Part 2 : Upload Materi</h1>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Upload materi yang diajarkan untuk belajar disini kamu bisa mengupload materi </p>
                         </div>
                         <ul>
-                            <li>Quick Access</li>
-                            <li>Easily to Manage</li>
-                            <li>24/7 Support</li>
+                            <li>Modul</li>
+                            <li>Deskripsi</li>
+                            <li>Thumbnail Materi</li>
+                            <li>Status Materi</li>
+
                         </ul>
                         <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Learn More</a>
                     </div>
@@ -132,7 +134,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-img">
-                        <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-1.png" alt="" class="w-100">
+                        <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-3.png" alt="" class="w-100">
                         <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
                         <img src="<?php echo base_url() ?>/assets/saaspal/img/about/left-dots.svg" alt="" class="shape shape-2">
                     </div>
@@ -140,8 +142,8 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-content">
                         <div class="section-title mb-30">
-                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Perfect Solution Thriving Online Business</h1>
-                            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem.Lorem ipsum dolor sit amet.</p>
+                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Part 3 : Edit siswa Untuk Upload materi</h1>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">disini kamu menekan icon edit untuk memasukkan video dan quiz</p>
                         </div>
                         <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Discover More</a>
                     </div>
@@ -157,20 +159,20 @@
                 <div class="col-xl-6 col-lg-6">
                     <div class="about-content">
                         <div class="section-title mb-30">
-                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Easy to Use with Tons of Awesome Features</h1>
-                            <p class="wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <h1 class="mb-25 wow fadeInUp" data-wow-delay=".2s">Part 4 :  Tambah Video & Quiz</h1>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">Tambah video dan quiz untuk menambahkan konten pembelajaran yang diajarkan</p>
                         </div>
                         <ul>
-                            <li>Quick Access</li>
-                            <li>Easily to Manage</li>
-                            <li>24/7 Support</li>
+                            <li>Embed video dari Gdrive</li>
+                            <li>Masukan Soal untuk quiz</li>
+                            <li>Nilai siswa</li>
                         </ul>
                         <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp" data-wow-delay=".6s">Learn More</a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 order-first order-lg-last">
                     <div class="about-img-2">
-                        <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-2.png" alt="" class="w-100">
+                        <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-4.png" alt="" class="w-100">
                         <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-right-shape.svg" alt="" class="shape shape-1">
                         <img src="<?php echo base_url() ?>/assets/saaspal/img/about/right-dots.svg" alt="" class="shape shape-2">
                     </div>
@@ -199,7 +201,8 @@
                     <div class="col-xl-6 col-lg-5">
                         <form action="#" class="subscribe-form">
 
-                            <button type="submit" class="btn-light" texr="main">Download</button>
+                            <button type="submit"  texr="main">Download</button>
+                            <a href="https://drive.google.com/drive/folders/1sk7gHfOXIecj9f2Cp4iWJECPuG1YNXSv?usp=sharing" class="btn-light" target="_blank" rel="noopener noreferrer">Download</a>
                         </form>
                     </div>
                 </div>

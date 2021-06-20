@@ -23,68 +23,65 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>/assets/styles/extras.1.1.0.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-
     <!-- Plugins -->
-
-
     <!-- DataTables -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
     <!-- CSS -->
-    <style>
+      <style>
 
 
-      @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+        @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 
-      @-webkit-keyframes here {
-        0% {
-          background: #cccc00;
+        @-webkit-keyframes here {
+          0% {
+            background: #cccc00;
+          }
+          50% {
+            background: inherit;
+          }
         }
-        50% {
-          background: inherit;
-        }
-      }
 
-      @keyframes here {
-        0% {
-          background: #cccc00;
+        @keyframes here {
+          0% {
+            background: #cccc00;
+          }
+          50% {
+            background: inherit;
+          }
         }
-        50% {
-          background: inherit;
-        }
-      }
-      .menu {
-        position: absolute;
-        right: -78px;
-        top: 490px;
-        float: left;
-        -webkit-filter: url("../css/goo.svg#goo");
-        filter: url("../css/goo.svg#goo");
-      }
-      @media all and (max-width: 765px) {
         .menu {
-          display: none !important;
+          position: absolute;
+          right: -78px;
+          top: 490px;
+          float: left;
+          -webkit-filter: url("../css/goo.svg#goo");
+          filter: url("../css/goo.svg#goo");
         }
-      }
-      @media all and (max-width: 1080px) {
-        .menu {
-          right: -21px;
-          z-index: 10;
+        @media all and (max-width: 765px) {
+          .menu {
+            display: none !important;
+          }
         }
-      }
-      @media all and (max-width: 920px) {
-        .menu {
-          top: 16px;
-          right: 32px;
-          width: 62px;
-          position: fixed;
-          z-index: 10;
-          height: 62px;
+        @media all and (max-width: 1080px) {
+          .menu {
+            right: -21px;
+            z-index: 10;
+          }
         }
-      }
+        @media all and (max-width: 920px) {
+          .menu {
+            top: 16px;
+            right: 32px;
+            width: 62px;
+            position: fixed;
+            z-index: 10;
+            height: 62px;
+          }
+        }
 
       /*
         CSS accecss : FALSE
@@ -439,10 +436,10 @@
         </span>
       </div>
       <div class="classes_list" style="padding: 32px">
-        <h2>Pemilihan Menu</h2>
+        <h2>Pemilihan Mode</h2>
         <p>Pilih tombol dibawah ini untuk mengubah mode warna.</p>
-        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="normal">Normal</a>
-        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="zones">Zones</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="normal">Normal</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="zones">Zones</a>
         <a class="pp-cta extra-action" href="javascript:void(0)" id="protanopia">Protanopia</a>
         <a class="pp-cta extra-action" href="javascript:void(0)" id="tritanopia">Tritanopia</a>
         <a class="pp-cta extra-action" href="javascript:void(0)" id="deuteranopia">Deuteranopia</a>
@@ -483,7 +480,7 @@
           // Load setting  colorblind
           $.ajax({
 
-            type : "GET", // POST | GET
+            type : "GET", // POST | GET 
             url  : "<?php echo base_url('starter/get_colorblind') ?>",
             dataType : "json",
             success: function( data ){

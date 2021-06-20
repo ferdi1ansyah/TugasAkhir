@@ -30,9 +30,196 @@
     <!-- DataTables -->
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
 
-    <!-- Accessbility -->
-    <link rel="stylesheet" href="<?php echo base_url() ?>/css/main-accessbility.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
+    <!-- CSS -->
+    <style>
+
+
+      @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+      @-webkit-keyframes here {
+        0% {
+          background: #cccc00;
+        }
+        50% {
+          background: inherit;
+        }
+      }
+
+      @keyframes here {
+        0% {
+          background: #cccc00;
+        }
+        50% {
+          background: inherit;
+        }
+      }
+      .menu {
+        position: absolute;
+        right: -78px;
+        top: 490px;
+        float: left;
+        -webkit-filter: url("../css/goo.svg#goo");
+        filter: url("../css/goo.svg#goo");
+      }
+      @media all and (max-width: 765px) {
+        .menu {
+          display: none !important;
+        }
+      }
+      @media all and (max-width: 1080px) {
+        .menu {
+          right: -21px;
+          z-index: 10;
+        }
+      }
+      @media all and (max-width: 920px) {
+        .menu {
+          top: 16px;
+          right: 32px;
+          width: 62px;
+          position: fixed;
+          z-index: 10;
+          height: 62px;
+        }
+      }
+
+      /*
+        CSS accecss : FALSE
+        */
+      body.zones {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+      }
+      body.zones:hover {
+        -webkit-box-shadow: inset 0 0 0 1px purple !important;
+        box-shadow: inset 0 0 0 1px purple !important;
+      }
+      body.zones * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+      }
+      body.zones *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px red !important;
+        box-shadow: inset 0 0 0 1px red !important;
+      }
+      body.zones * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+      }
+      body.zones * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px blue !important;
+        box-shadow: inset 0 0 0 1px blue !important;
+      }
+      body.zones * + * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+      }
+      body.zones * + * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px green !important;
+        box-shadow: inset 0 0 0 1px green !important;
+      }
+      body.zones * + * + * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+      }
+      body.zones * + * + * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px purple !important;
+        box-shadow: inset 0 0 0 1px purple !important;
+      }
+      body.zones * + * + * + * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+      }
+      body.zones * + * + * + * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px red !important;
+        box-shadow: inset 0 0 0 1px red !important;
+      }
+      body.zones * + * + * + * + * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+      }
+      body.zones * + * + * + * + * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px blue !important;
+        box-shadow: inset 0 0 0 1px blue !important;
+      }
+      body.zones * + * + * + * + * + * + * {
+        -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+      }
+      body.zones * + * + * + * + * + * + *:hover {
+        -webkit-box-shadow: inset 0 0 0 1px green !important;
+        box-shadow: inset 0 0 0 1px green !important;
+      }
+      body.zones.grayscale, body.grayscale {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+      }
+      
+      /* -----------------------------------------------
+      
+        Protanopia
+      */
+      body.zones.protanopia, body.protanopia {
+        -webkit-filter: url("css/filters.svg#protanopia") grayscale(0) !important;
+        filter: url("<?php echo base_url() ?>/css/filters.svg#protanopia") grayscale(0) !important;
+      }
+      body _:-moz-tree-row(hover), body.zones.protanopia,
+      body _:-moz-tree-row(hover), body.protanopia {
+        filter: url("<?php echo base_url() ?>/css/filters.svg#protanopia") grayscale(0) !important;
+      }
+
+
+
+      /* -----------------------------------------------
+      
+        Deuteranopia
+      */
+      body.zones.deuteranopia, body.deuteranopia {
+        -webkit-filter: url("css/filters.svg#deuteranopia") grayscale(0) !important;
+        filter: url("<?php echo base_url() ?>/css/filters.svg#deuteranopia") grayscale(0) !important;
+      }
+      body _:-moz-tree-row(hover), body.zones.deuteranopia,
+      body _:-moz-tree-row(hover), body.deuteranopia {
+        filter: url("<?php echo base_url() ?>/css/filters.svg#deuteranopia") grayscale(0) !important;
+      }
+
+
+      /* -----------------------------------------------
+      
+        Tritanopia
+      */
+      body.zones.tritanopia, body.tritanopia {
+        -webkit-filter: url("css/filters.svg#tritanopia") grayscale(0) !important;
+        filter: url("<?php echo base_url() ?>/css/filters.svg#tritanopia") grayscale(0) !important;
+      }
+      body _:-moz-tree-row(hover), body.zones.tritanopia,
+      body _:-moz-tree-row(hover), body.tritanopia {
+        filter: url("<?php echo base_url() ?>/css/filters.svg#tritanopia") grayscale(0) !important;
+      }
+
+
+
+      /* -----------------------------------------------
+      
+        Achromatopsia
+      */
+      body.zones.achromatopsia, body.achromatopsia {
+        -webkit-filter: url("css/filters.svg#achromatopsia") grayscale(0) !important;
+        filter: url("<?php echo base_url() ?>/css/filters.svg#achromatopsia") grayscale(0) !important;
+      }
+      body _:-moz-tree-row(hover), body.zones.achromatopsia,
+      body _:-moz-tree-row(hover), body.achromatopsia {
+        filter: url("<?php echo base_url() ?>/css/filters.svg#achromatopsia") grayscale(0) !important;
+      }
+
+
+
+
+
+    </style>
     
 
 
@@ -242,7 +429,7 @@
       </div>
     </div>
 
-
+    <!-- Pop up -->
     <div class="promo-popup animated">
       <div class="pp-intro-bar"> Color Blind Mode <span class="close">
           <i class="material-icons">close</i>
@@ -254,11 +441,12 @@
       <div class="classes_list" style="padding: 32px">
         <h2>Pemilihan Menu</h2>
         <p>Pilih tombol dibawah ini untuk mengubah mode warna.</p>
-        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="zones">Normal</a>
-        <a class="pp-cta extra-action" href="javascript:void(0)" id="colorblind1">Protanopia</a>
+        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="normal">Normal</a>
+        <a class="btn btn-xs btn-secondary" href="javascript:void(0)" id="zones">Zones</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="protanopia">Protanopia</a>
         <a class="pp-cta extra-action" href="javascript:void(0)" id="tritanopia">Tritanopia</a>
         <a class="pp-cta extra-action" href="javascript:void(0)" id="deuteranopia">Deuteranopia</a>
-        <a class="pp-cta extra-action" href="javascript:void(0)" id="grayscale">Achromatopsia</a>
+        <a class="pp-cta extra-action" href="javascript:void(0)" id="achromatopsia">Achromatopsia</a>
       </div>
     </div>
     
@@ -277,6 +465,12 @@
 
     <!-- DataTables -->
     <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- Notif -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    
+    <!-- Colorblind -->
     <script>
     
       $(document).ready( function () {
@@ -284,6 +478,24 @@
 
           var body = document.body;
           var demos = document.querySelectorAll('.classes_list a');
+
+          //  - - - - - - - - - - - - - - - -
+          // Load setting  colorblind
+          $.ajax({
+
+            type : "GET", // POST | GET
+            url  : "<?php echo base_url('starter/get_colorblind') ?>",
+            dataType : "json",
+            success: function( data ){
+
+              // alert("Okee perubahan disimpan !");
+              // alert("Nilai yang digunakan adalah " + data.colorblind)
+
+              body.className = data.colorblind;
+            } 
+          });
+
+          //  - - - - - - - - - - - - - - - -
         
           $('#myTable').DataTable();
 
@@ -298,6 +510,22 @@
               button.addEventListener('click', function () {
 
                 var c = this.getAttribute('id');
+                
+                
+
+                // jquery start
+                $.ajax({
+
+                  type : "GET", // POST | GET
+                  url  : "<?php echo base_url('starter/change_colorblind') ?>",
+                  data : "colorblind=" + c,
+                  success: function(){
+
+                    toastr["success"]("Perubahan Colorblind menjadi " + c + " berhasil disimpan")
+                  } 
+                });
+
+
 
                 if ( hasClass(body, c)) {
                   body.className = '';
@@ -327,6 +555,25 @@
           function deactiveButton (elem) {
             elem.className = elem.className.replace(' active ', '');
           }
+
+
+          toastr.options = {
+              "closeButton": false,
+              "debug": false,
+              "newestOnTop": false,
+              "progressBar": false,
+              "positionClass": "toast-top-right",
+              "preventDuplicates": false,
+              "onclick": null,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "5000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            }
       });
 
     </script>

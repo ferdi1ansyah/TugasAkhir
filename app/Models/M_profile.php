@@ -18,7 +18,25 @@ class M_profile extends Model{
 
 
 
+    // fungsi perubahan colorblind 
+    function model_perubahancolorblind( $data ) {
 
+        $id_profile = $this->session->get('sess_id_profile');
+        $this->db->table('profile')->where('id_profile', $id_profile)->update( $data );
+        
+    }
+
+    // data user login
+    function getProfileAkun() {
+
+        $id_profile = $this->session->get('sess_id_profile');
+        $query = $this->db->table('profile')->where('id_profile', $id_profile)->get();
+        
+        return $query->getRowArray();
+    }
+
+
+    // data siswa
     function getProfileById( $id_profile ) {
 
         $query = $this->db->table('data_siswa')->where('id_profile', $id_profile)->get();

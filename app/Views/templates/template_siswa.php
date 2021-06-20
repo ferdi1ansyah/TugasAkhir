@@ -256,7 +256,8 @@
               <div class="col-xl-6 col-lg-5">
                 <form action="#" class="subscribe-form">
 
-                  <button type="submit" class="btn-light" texr="main">Mulai Download</button>
+                <button type="submit"  texr="main">Download</button>
+                            <a href="https://drive.google.com/drive/folders/1sk7gHfOXIecj9f2Cp4iWJECPuG1YNXSv?usp=sharing" class="btn-light" target="_blank" rel="noopener noreferrer">Download</a>
                 </form>
               </div>
             </div>
@@ -276,8 +277,8 @@
                     <a href="index-2.html"> <img src="<?php echo base_url() ?>/assets/saaspal/img/logo/logo2.svg"
                         alt=""> </a>
                   </div>
-                  <p class="desc mb-30 text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy
-                    eirmod tempor invidunt.</p>
+                  <p class="desc mb-30 text-white">Website Pembelajaran aksesibilitas pertamaa kali di indonesia dengan fitur aksesbilitas
+                    .</p>
                   <ul class="socials">
                     <li>
                       <a href="jvascript:void(0)"> <i class="lni lni-facebook-original"></i> </a>
@@ -301,7 +302,7 @@
                     <li> <a href="javascript:void(0)">Home</a> </li>
                     <li> <a href="javascript:void(0)">Feature</a> </li>
                     <li> <a href="javascript:void(0)">About</a> </li>
-                    <li> <a href="javascript:void(0)">Testimonials</a> </li>
+                    <li> <a href="javascript:void(0)">Kelas</a> </li>
                   </ul>
                 </div>
               </div>
@@ -320,10 +321,10 @@
                 <div class="footer-widget">
                   <h3>Other Products</h3>
                   <ul class="links">
-                    <li> <a href="jvascript:void(0)">Accounting Software</a> </li>
-                    <li> <a href="jvascript:void(0)">Billing Software</a> </li>
-                    <li> <a href="jvascript:void(0)">Booking System</a> </li>
-                    <li> <a href="jvascript:void(0)">Tracking System</a> </li>
+                    <li> <a href="jvascript:void(0)">Quiz</a> </li>
+                    <li> <a href="jvascript:void(0)">Video Pembelajaran </a> </li>
+                    <li> <a href="jvascript:void(0)">Materi Aksesibilitas</a> </li>
+                    <li> <a href="jvascript:void(0)">Coloe Blind Fitur</a> </li>
                   </ul>
                 </div>
               </div>

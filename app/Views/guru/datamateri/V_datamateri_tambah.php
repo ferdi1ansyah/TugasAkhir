@@ -88,10 +88,7 @@ if ( $session->get('sess_hak_akses') == "superadmin" ) {
                                                     <input type="radio" id="customRadioInline1" name="status" class="custom-control-input" value="publish">
                                                     <label class="custom-control-label" for="customRadioInline1">Publikasi</label>
                                                 </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2" name="status" class="custom-control-input" value="draft">
-                                                    <label class="custom-control-label" for="customRadioInline2">Simpan</label>
-                                                </div><br>
+                                               
                                                 <small>Pilih status materi</small>
                                             </div>
                                         </div>
@@ -100,7 +97,7 @@ if ( $session->get('sess_hak_akses') == "superadmin" ) {
 
 
                                     <div class="form-group text-right">
-                                  <button><a href="/datamateri" class="btn btn- btn-sm"> Batal </button>                                    
+                                  <button><a href="/datamateri/index" class="btn btn- btn-sm"> Batal </button>                                    
                                         <button type="submit" class="btn btn-primary btn-sm">Simpan</button>
                                     </div>
                                 </div>

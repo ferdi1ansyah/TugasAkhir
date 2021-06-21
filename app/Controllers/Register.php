@@ -185,14 +185,14 @@ class Register extends Controller {
             $mail->isSMTP();
             $mail->Host       = 'smtp.googlemail.com';   
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'hanifjauhar99@gmail.com'; // silahkan ganti dengan alamat email Anda
-            $mail->Password   = 'jstpuweoepawmuqg'; // silahkan ganti dengan password email Anda
+            $mail->Username   = 'pipel.learn34@gmail.com'; // silahkan ganti dengan alamat email Anda
+            $mail->Password   = '1234'; // silahkan ganti dengan password email Anda
             $mail->SMTPSecure = 'ssl';
             $mail->Port       = 465;
  
-            $mail->setFrom('pipel@gmail.com', 'Ilmu Coding'); // silahkan ganti dengan alamat email Anda
+            $mail->setFrom('pipel.learn34@gmail.com', 'Pipel Learning'); // silahkan ganti dengan alamat email Anda
             $mail->addAddress($to);
-            $mail->addReplyTo('pipel@gmail.com', 'Ilmu Coding'); // silahkan ganti dengan alamat email Anda
+            $mail->addReplyTo('pipel.learn34@gmail.com', 'Pipel Learning'); // silahkan ganti dengan alamat email Anda
             // Content
             $mail->isHTML(true);
             $mail->Subject = $subject;

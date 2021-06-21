@@ -619,18 +619,18 @@ Yang Kami Sediakan</h1>
           <span class="btn-floating fab-tip" id="zones">Zones</span>
         </div>
 
-        <div class="fab blue child btn-floating" data-tooltip="I am A" data-subitem="3">C
-          <span class="btn-floating fab-tip" id="protanopia">Pratanopia</span>
+        <div class="fab blue child btn-floating" data-subitem="3">C
+            <span class="btn-floating fab-tip" id="protanopia">Protanopia</span>
         </div>
         
-        <div class="fab blue child btn-floating" data-tooltip="I am A" data-subitem="4">D
-          <span class="btn-floating fab-tip">Tritanopia</span>
+        <div class="fab blue child btn-floating" data-tooltip="I am D" data-subitem="4">D
+          <span class="btn-floating fab-tip" id="tritanopia"> Tritanopia</span>
         </div>
-        <div class="fab blue child btn-floating" data-tooltip="I am A" data-subitem="5">E
-          <span class="btn-floating fab-tip">Deuteranopia</span>
+        <div class="fab blue child btn-floating" data-tooltip="I am E" data-subitem="5">E
+          <span class="btn-floating fab-tip" id="deuteranopia">Deuteranopia</span>
         </div>
-        <div class="fab blue child btn-floating" data-tooltip="I am A" data-subitem="6">F
-          <span class="btn-floating fab-tip">Achromatopsia</span>
+        <div class="fab blue child btn-floating" data-tooltip="I am F" data-subitem="6">F
+          <span class="btn-floating fab-tip" id="achromatopsia">Achromatopsia</span>
         </div>
       </div>
 
@@ -707,23 +707,6 @@ Yang Kami Sediakan</h1>
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <footer class="footer">
 <div class="container">
 <div class="widget-wrapper">
@@ -733,7 +716,7 @@ Yang Kami Sediakan</h1>
 <div class="logo mb-30">
 <a href="index-2.html"> <img src="<?php echo base_url() ?>assets/saaspal/img/logo/logo2.svg" alt=""> </a>
 </div>
-<p class="desc mb-30 text-white">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed dinonumy eirmod tempor invidunt.</p>
+<p class="desc mb-30 text-white"></p>
 <ul class="socials">
 <li>
 <a href="jvascript:void(0)"> <i class="lni lni-facebook-original"></i> </a>
@@ -792,21 +775,6 @@ Yang Kami Sediakan</h1>
 <!-- <a href="#" class="scroll-top btn-hover">
   <i class="lni lni-chevron-up"></i>
 </a> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script src="<?php echo base_url() ?>/assets/saaspal/js/bootstrap.5.0.0.alpha-2-min.js"></script>
@@ -932,19 +900,19 @@ $(function(){
 
           //  - - - - - - - - - - - - - - - -
           // Load setting  colorblind
-          // $.ajax({
+          $.ajax({
 
-          //   type : "GET", // POST | GET
-          //   url  : "<?php echo base_url('starter/get_colorblind') ?>",
-          //   dataType : "json",
-          //   success: function( data ){
+            type : "GET", // POST | GET
+            url  : "<?php echo base_url('starter/get_colorblind') ?>",
+            dataType : "json",
+            success: function( data ){
 
-          //     // alert("Okee perubahan disimpan !");
-          //     // alert("Nilai yang digunakan adalah " + data.colorblind)
+              // alert("Okee perubahan disimpan !");
+              // alert("Nilai yang digunakan adalah " + data.colorblind)
 
-          //     body.className = data.colorblind;
-          //   } 
-          // });
+              body.className = data.colorblind;
+            } 
+          });
 
           //  - - - - - - - - - - - - - - - -
 
@@ -962,6 +930,21 @@ $(function(){
                 var c = this.getAttribute('id');
                                 
                 // toastr["info"]("Perubahan Colorblind menjadi " + c + " berhasil disimpan")
+
+
+
+                // $.ajax({
+
+              // type : "GET", // POST | GET
+              // url  : "<?php echo base_url('starter/change_colorblind') ?>",
+              // data : "colorblind=" + c,
+              // success: function(){
+
+              //   toastr["success"]("Perubahan Colorblind menjadi " + c + " berhasil disimpan")
+              // } 
+              // });
+
+
 
 
                 if ( hasClass(body, c)) {

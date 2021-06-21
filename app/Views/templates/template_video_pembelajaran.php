@@ -34,7 +34,257 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="<?php echo base_url() ?>/assets/metro/media/logos/logo-primary.svg" />
+
+
+		<style>
+  
+  .search-module{
+
+
+    width: 100%;
+    color: #311b92;
+    padding: 8px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    /* border-bottom: 2px solid #f5f5f5; */
+    background-color: #d1c4e9;
+    border-radius: 5px
+  }
+  .fab-tip {
+  position: fixed;
+  right: 115px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto;
+}
+.fab {
+  background: #03A9F4;
+  width: 64px;
+  z-index: 1000;
+  height: 64px;
+  border-radius: 50%;
+  text-align: center;
+  color: #FFF;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  font-size: 2.6667em;
+  display: inline-block;
+  cursor: default;
+}
+.fab span {
+  vertical-align: middle;
+}
+.fab.child {
+  right: 58.66666667px;
+  width: 42.66666667px;
+  height: 42.66666667px;
+  display: none;
+  opacity: 0;
+  font-size: 2em;
+}
+
+  </style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+<style>
+
+
+  @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+
+  @-webkit-keyframes here {
+    0% {
+      background: #cccc00;
+    }
+    50% {
+      background: inherit;
+    }
+  }
+
+  @keyframes here {
+    0% {
+      background: #cccc00;
+    }
+    50% {
+      background: inherit;
+    }
+  }
+  .menu {
+    position: absolute;
+    right: -78px;
+    top: 490px;
+    float: left;
+    -webkit-filter: url("../css/goo.svg#goo");
+    filter: url("../css/goo.svg#goo");
+  }
+  @media all and (max-width: 765px) {
+    .menu {
+      display: none !important;
+    }
+  }
+  @media all and (max-width: 1080px) {
+    .menu {
+      right: -21px;
+      z-index: 10;
+    }
+  }
+  @media all and (max-width: 920px) {
+    .menu {
+      top: 16px;
+      right: 32px;
+      width: 62px;
+      position: fixed;
+      z-index: 10;
+      height: 62px;
+    }
+  }
+
+   /*
+    CSS accecss : FALSE
+    */
+  body.zones {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+  }
+  body.zones:hover {
+    -webkit-box-shadow: inset 0 0 0 1px purple !important;
+    box-shadow: inset 0 0 0 1px purple !important;
+  }
+  body.zones * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+  }
+  body.zones *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px red !important;
+    box-shadow: inset 0 0 0 1px red !important;
+  }
+  body.zones * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+  }
+  body.zones * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px blue !important;
+    box-shadow: inset 0 0 0 1px blue !important;
+  }
+  body.zones * + * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+  }
+  body.zones * + * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px green !important;
+    box-shadow: inset 0 0 0 1px green !important;
+  }
+  body.zones * + * + * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(128, 0, 128, 0.1) !important;
+  }
+  body.zones * + * + * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px purple !important;
+    box-shadow: inset 0 0 0 1px purple !important;
+  }
+  body.zones * + * + * + * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.1) !important;
+  }
+  body.zones * + * + * + * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px red !important;
+    box-shadow: inset 0 0 0 1px red !important;
+  }
+  body.zones * + * + * + * + * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 255, 0.1) !important;
+  }
+  body.zones * + * + * + * + * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px blue !important;
+    box-shadow: inset 0 0 0 1px blue !important;
+  }
+  body.zones * + * + * + * + * + * + * {
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+    box-shadow: inset 0 0 0 1px rgba(0, 128, 0, 0.1) !important;
+  }
+  body.zones * + * + * + * + * + * + *:hover {
+    -webkit-box-shadow: inset 0 0 0 1px green !important;
+    box-shadow: inset 0 0 0 1px green !important;
+  }
+  body.zones.grayscale, body.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  /* -----------------------------------------------
+  
+    Protanopia
+  */
+  body.zones.protanopia, body.protanopia {
+    -webkit-filter: url("css/filters.svg#protanopia") grayscale(0) !important;
+    filter: url("<?php echo base_url() ?>/css/filters.svg#protanopia") grayscale(0) !important;
+  }
+  body _:-moz-tree-row(hover), body.zones.protanopia,
+  body _:-moz-tree-row(hover), body.protanopia {
+    filter: url("<?php echo base_url() ?>/css/filters.svg#protanopia") grayscale(0) !important;
+  }
+
+
+
+  /* -----------------------------------------------
+  
+    Deuteranopia
+  */
+  body.zones.deuteranopia, body.deuteranopia {
+    -webkit-filter: url("css/filters.svg#deuteranopia") grayscale(0) !important;
+    filter: url("<?php echo base_url() ?>/css/filters.svg#deuteranopia") grayscale(0) !important;
+  }
+  body _:-moz-tree-row(hover), body.zones.deuteranopia,
+  body _:-moz-tree-row(hover), body.deuteranopia {
+    filter: url("<?php echo base_url() ?>/css/filters.svg#deuteranopia") grayscale(0) !important;
+  }
+
+
+  /* -----------------------------------------------
+  
+    Tritanopia
+  */
+  body.zones.tritanopia, body.tritanopia {
+    -webkit-filter: url("css/filters.svg#tritanopia") grayscale(0) !important;
+    filter: url("<?php echo base_url() ?>/css/filters.svg#tritanopia") grayscale(0) !important;
+  }
+  body _:-moz-tree-row(hover), body.zones.tritanopia,
+  body _:-moz-tree-row(hover), body.tritanopia {
+    filter: url("<?php echo base_url() ?>/css/filters.svg#tritanopia") grayscale(0) !important;
+  }
+
+
+
+  /* -----------------------------------------------
+  
+    Achromatopsia
+  */
+  body.zones.achromatopsia, body.achromatopsia {
+    -webkit-filter: url("css/filters.svg#achromatopsia") grayscale(0) !important;
+    filter: url("<?php echo base_url() ?>/css/filters.svg#achromatopsia") grayscale(0) !important;
+  }
+  body _:-moz-tree-row(hover), body.zones.achromatopsia,
+  body _:-moz-tree-row(hover), body.achromatopsia {
+    filter: url("<?php echo base_url() ?>/css/filters.svg#achromatopsia") grayscale(0) !important;
+  }
+
+
+</style>
+
+		
 	</head>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="center"></script>
+
+
+
 	<!--end::Head-->
 	<!--begin::Body-->
 	<body id="kt_body" class="header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-secondary-enabled page-loading">
@@ -263,57 +513,59 @@ License: You must have a valid license purchased only from themeforest(the above
 											
 									</div>
 
-									
-
-				
-				
-
-
-									
-
-									
-
-									
-								
-
-									
-
-									
-
+						
 									
 								</div>
 							</div>
 						</div>
-
-						
-									
-
-
+					
 					</div>
 					<!--end::Content-->
 
-
 				</div>
 				<!--end::Wrapper-->
-
-				
-
-				
-
 			</div>
-		
+					<div class="backdrop_gray"></div>
 
+		<div class="classes_list">
+
+		<div class="fab blue child btn-floating" data-subitem="1">A
+			<span class="btn-floating fab-tip" id="normal">Normal</span>
+		</div>
+
+		<div class="fab blue child btn-floating" data-tooltip="I am B" data-subitem="2">B
 			
+			<span class="btn-floating fab-tip" id="zones">Zones</span>
+		</div>
+
+		<div class="fab blue child btn-floating" data-subitem="3">C
+			<span class="btn-floating fab-tip" id="protanopia">Protanopia</span>
+		</div>
 		
+		<div class="fab blue child btn-floating" data-tooltip="I am D" data-subitem="4">D
+			<span class="btn-floating fab-tip" id="tritanopia"> Tritanopia</span>
+		</div>
+		<div class="fab blue child btn-floating" data-tooltip="I am E" data-subitem="5">E
+			<span class="btn-floating fab-tip" id="deuteranopia">Deuteranopia</span>
+		</div>
+		<div class="fab blue child btn-floating" data-tooltip="I am F" data-subitem="6">F
+			<span class="btn-floating fab-tip" id="achromatopsia">Achromatopsia</span>
+		</div>
+		</div>
+
+		<div class="fab" id="masterfab"><span>+</span></div>
+
+		</div>
+		</div>
+		</div>
+
+
 		
-						
-
-					
-
-				
+		</div>
 			
-
-			
+			</div>
+			</div>
+			</section>
 
 		  
 			<!-- Captions are optional -->
@@ -335,6 +587,216 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--begin::Page Scripts(used by this page)-->
 		<script src="<?php echo base_url() ?>assets/metro/js/pages/widgets.js"></script>
 		<!--end::Page Scripts-->
+
+
+			<script>
+		
+		(function () {
+			window.onload = function () {
+			window.setTimeout(fadeout, 500);
+			}
+
+			function fadeout() {
+			document.querySelector('.preloader').style.opacity = '0';
+			document.querySelector('.preloader').style.display = 'none';
+			}
+			window.onscroll = function () {
+			var header_navbar = document.querySelector(".navbar-area");
+			var sticky = header_navbar.offsetTop;
+			var logo = document.querySelector('.navbar-brand img');
+			if (window.pageYOffset > sticky) {
+				header_navbar.classList.add("sticky");
+				logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2B.svg') ?>';
+			} else {
+				header_navbar.classList.remove("sticky");
+				logo.src = '<?php echo base_url('assets/saaspal/img/logo/logo2.svg') ?>';
+			}
+			var backToTo = document.querySelector(".scroll-top");
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+				backToTo.style.display = "flex";
+			} else {
+				backToTo.style.display = "none";
+			}
+			};
+			var pageLink = document.querySelectorAll('.page-scroll');
+			pageLink.forEach(elem => {
+			elem.addEventListener('click', e => {
+				e.preventDefault();
+				document.querySelector(elem.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth',
+				offsetTop: 1 - 60,
+				});
+			});
+			});
+			
+			new WOW().init();
+			tns({
+			container: '.testimonial-active',
+			slideBy: 'page',
+			mode: 'gallery',
+			autoplay: false,
+			mouseDrag: true,
+			gutter: 0,
+			nav: false,
+			controls: true,
+			controlsText: ['<i class="lni lni-chevron-left prev"></i>', '<i class="lni lni-chevron-right next"></i>'],
+			items: 1,
+			});
+		})();
+
+
+		
+		</script>
+
+
+				<!-- Fab -->
+				<script>
+
+			$(function(){
+				$(".fab,.backdrop_gray").click(function(){
+					if($(".backdrop_gray").is(":visible")){
+						$(".backdrop_gray").fadeOut(125);
+						$(".fab.child")
+							.stop()
+							.animate({
+								bottom	: $("#masterfab").css("bottom"),
+								opacity	: 0
+							},125,function(){
+								$(this).hide();
+							});
+					}else{
+						$(".backdrop_gray").fadeIn(125);
+						$(".fab.child").each(function(){
+							$(this)
+								.stop()
+								.show()
+								.animate({
+									bottom	: (parseInt($("#masterfab").css("bottom")) + parseInt($("#masterfab").outerHeight()) + 70 * $(this).data("subitem") - $(".fab.child").outerHeight()) + "px",
+									opacity	: 1
+								},125);
+						});
+					}
+				});
+			});
+
+			</script>
+
+
+
+				<!-- Notif -->
+				<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+					
+
+				<!-- Colorblind -->
+				<script>
+					
+					$(document).ready( function () {
+
+
+						var body = document.body;
+						var demos = document.querySelectorAll('.classes_list span');
+
+						//  - - - - - - - - - - - - - - - -
+						// Load setting  colorblind
+						$.ajax({
+
+						type : "GET", // POST | GET
+						url  : "<?php echo base_url('starter/get_colorblind') ?>",
+						dataType : "json",
+						success: function( data ){
+
+							// alert("Okee perubahan disimpan !");
+							// alert("Nilai yang digunakan adalah " + data.colorblind)
+
+							body.className = data.colorblind;
+						} 
+						});
+
+						//  - - - - - - - - - - - - - - - -
+
+
+
+						function hasClass(el, cls) {
+						return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+						}
+
+
+						[].forEach.call(demos, function (button) {
+
+							button.addEventListener('click', function () {
+
+							var c = this.getAttribute('id');
+											
+							toastr["info"]("Perubahan Colorblind menjadi " + c + " berhasil disimpan")
+
+
+
+							$.ajax({
+
+							type : "GET", // POST | GET
+							url  : "<?php echo base_url('starter/change_colorblind') ?>",
+							data : "colorblind=" + c,
+							success: function(){
+
+								toastr["success"]("Perubahan Colorblind menjadi " + c + " berhasil disimpan")
+							} 
+							});
+
+
+
+
+							if ( hasClass(body, c)) {
+								body.className = '';
+								deactiveButton(this);
+							} else {
+								body.className = c;
+								deactiveAllButtons();
+								this.className += ' active ';
+							}
+
+
+
+							// alert(c);
+
+							});
+						});
+
+
+						function deactiveAllButtons () {
+
+						[].forEach.call(demos, function (button) {
+							deactiveButton(button);
+						});
+
+						}
+
+						function deactiveButton (elem) {
+						elem.className = elem.className.replace(' active ', '');
+						}
+
+
+						toastr.options = {
+							"closeButton": false,
+							"debug": false,
+							"newestOnTop": false,
+							"progressBar": false,
+							"positionClass": "toast-top-right",
+							"preventDuplicates": false,
+							"onclick": null,
+							"showDuration": "300",
+							"hideDuration": "1000",
+							"timeOut": "5000",
+							"extendedTimeOut": "1000",
+							"showEasing": "swing",
+							"hideEasing": "linear",
+							"showMethod": "fadeIn",
+							"hideMethod": "fadeOut"
+						}
+					});
+
+					</script>
+
+
 	</body>
 	<!--end::Body-->
 </html>

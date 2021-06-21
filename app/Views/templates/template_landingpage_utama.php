@@ -401,7 +401,7 @@ Layanan Pembelajaran bagi seluruh orang yang ingin belajar dengan tanpa kendala 
 <div class="row align-items-center">
 <div class="col-xl-6 col-lg-6">
 <div class="about-img">
-<img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-1.png" alt="" class="w-100">
+<img src="<?php echo base_url() ?>/assets/saaspal/img/about/video-1.png" alt="" class="w-100">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/about-left-shape.svg" alt="" class="shape shape-1">
 <img src="<?php echo base_url() ?>/assets/saaspal/img/about/left-dots.svg" alt="" class="shape shape-2">
 </div>
